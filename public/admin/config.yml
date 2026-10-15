@@ -3,7 +3,7 @@
 
 backend:
   name: github
-  repo: vincenzoasaro/album-of-the-week
+  repo: YOUR-GITHUB-USERNAME/YOUR-REPO
   branch: main
 
 media_folder: public/images
@@ -44,8 +44,8 @@ collections:
 
       # ---------- Listening ----------
       - { name: spotifyAlbumId, label: Spotify album ID, widget: string, required: false, i18n: duplicate, hint: "The part after /album/ in the Spotify link." }
-      - { name: youtubePlaylistId, label: YouTube playlist ID, widget: string, required: false, i18n: duplicate, hint: "Preferred. The part after list= in the playlist link." }
-      - { name: youtubeVideoId, label: YouTube video ID (full album), widget: string, required: false, i18n: duplicate, hint: "Only if there's no playlist. The part after v= in the link. Then fill in each track's start time." }
+      - { name: youtubePlaylistId, label: YouTube playlist ID, widget: string, required: false, i18n: duplicate, hint: "Preferred. Paste the playlist link (YouTube or YouTube Music) or just its ID." }
+      - { name: youtubeVideoId, label: YouTube video ID (full album), widget: string, required: false, i18n: duplicate, hint: "Only if there's no playlist. Paste the video link or its ID, then fill in each track's start time." }
       - { name: appleMusicUrl, label: Apple Music link, widget: string, required: false, i18n: duplicate, hint: "In Apple Music: ••• › Share › Copy Link, and paste it here. Leave empty if the album isn't on Apple Music." }
       - { name: amazonMusicEmbed, label: Amazon Music embed code, widget: text, required: false, i18n: duplicate, hint: "On music.amazon: Share › Embed, copy the code and paste it here. Leave empty if the album isn't on Amazon Music." }
 
@@ -165,6 +165,24 @@ collections:
               - { name: url, label: Link, widget: string, required: false }
               - { name: image, label: Image, widget: image, required: false }
               - { name: affiliate, label: Affiliate link, widget: boolean, default: true }
+
+  - name: pages
+    label: Pages
+    files:
+      - name: privacy_en
+        label: Privacy (English)
+        file: src/content/pages/en/privacy.md
+        fields:
+          - { name: title, label: Title, widget: string }
+          - { name: updated, label: Last updated, widget: datetime, time_format: false, date_format: YYYY-MM-DD }
+          - { name: body, label: Text, widget: markdown, hint: "Replace everything in [square brackets] with your details." }
+      - name: privacy_it
+        label: Privacy (Italian)
+        file: src/content/pages/it/privacy.md
+        fields:
+          - { name: title, label: Titolo, widget: string }
+          - { name: updated, label: Ultimo aggiornamento, widget: datetime, time_format: false, date_format: YYYY-MM-DD }
+          - { name: body, label: Testo, widget: markdown, hint: "Sostituisci tutto ciò che è tra [parentesi quadre] con i tuoi dati." }
 
   - name: settings
     label: Settings

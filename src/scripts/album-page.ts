@@ -1,11 +1,13 @@
 import { controllable, player, type PlayerConfig, type Source } from './player';
+import { shareCard, type CardData } from './share-card';
 
 interface TrackInfo { side: string; title: string; time: string; note: string }
 interface PageData {
   player: PlayerConfig;
   sources: Source[];
   tracks: TrackInfo[];
-  labels: { play: string; pause: string; side: string };
+  labels: { play: string; pause: string; side: string; ytError: string; ytOpen: string };
+  card: CardData;
 }
 
 const $ = <T extends Element = HTMLElement>(sel: string, root: ParentNode = document) => root.querySelector<T>(sel);
@@ -16,7 +18,7 @@ if (dataEl) init(JSON.parse(dataEl.textContent || '{}') as PageData);
 
 function init(data: PageData) {
   const total = data.tracks.length;
-  if (data.sources.length) player.init(data.player, data.sources[0]);
+  if (data.sources.length) player.init({ ...data.player, messages: { ytError: data.labels.ytError, ytOpen: data.labels.ytOpen } }, data.sources[0]);
 
   /* ----- Play / pause buttons (hero + listening mode) ----- */
   for (const btn of $$<HTMLButtonElement>('[data-action="toggle-play"]')) {
@@ -144,6 +146,16 @@ function init(data: PageData) {
 
   initQuiz();
   initArchiveFilters();
+
+  /* ----- Share card ----- */
+  for (const btn of $$<HTMLButtonElement>('[data-action="share-card"]')) {
+    btn.addEventListener('click', async () => {
+      btn.disabled = true;
+      let score: string | null = null;
+      try { score = sessionStorage.getItem(`quiz:${data.card.slug}`); } catch { /* storage unavailable */ }
+      try { await shareCard(data.card, score); } finally { btn.disabled = false; }
+    });
+  }
 }
 
 /* ---------- Quiz: one question at a time, score at the end ---------- */
@@ -181,7 +193,7 @@ function initQuiz() {
         questions.forEach((x) => (x.hidden = true));
         $('[data-score]', result!)!.textContent = `${score}/${questions.length}`;
         result!.hidden = false;
-        try { sessionStorage.setItem(`quiz:${root.dataset.quiz}`, String(score)); } catch { /* storage unavailable */ }
+        try { sessionStorage.setItem(`quiz:${root.dataset.quiz}`, `${score}/${questions.length}`); } catch { /* storage unavailable */ }
       }
     });
   });

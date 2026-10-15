@@ -30,6 +30,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="theme-color" content="#0E1116" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
     <link rel="icon" type="image/svg+xml" href={url('favicon.svg')} />
     <link rel="canonical" href={canonical} />
     {alternateUrl && <link rel="alternate" hreflang={otherLang} href={new URL(alternateUrl, Astro.site)} />}

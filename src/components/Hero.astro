@@ -2,7 +2,7 @@
 import Turntable from './Turntable.astro';
 import Icon from './Icon.astro';
 import { useTranslations } from '../i18n/ui';
-import { formatWeek, homeUrl, shopUrl, url, type Album } from '../lib/albums';
+import { formatWeek, homeUrl, privacyUrl, shopUrl, url, type Album } from '../lib/albums';
 import { controllable, type Source } from '../scripts/player';
 
 interface Props { album: Album; isCurrent: boolean; sources: Source[] }
@@ -65,7 +65,10 @@ const firstControllable = sources.length > 0 && controllable(sources[0]);
             <div class:list={['player-slot', i === 0 && 'is-active']} data-slot={s}>
               <div class="player-consent">
                 <p>{t(consentKey[s])}</p>
-                <button class="pill" type="button" data-action="load-player" data-source={s}>{t('player.load')}</button>
+                <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap">
+                  <button class="pill" type="button" data-action="load-player" data-source={s}>{t('player.load')}</button>
+                  <a class="mono muted" href={privacyUrl(lang)}>{t('footer.privacy')}</a>
+                </div>
               </div>
             </div>
           </div>

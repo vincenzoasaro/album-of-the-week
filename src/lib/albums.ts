@@ -51,6 +51,7 @@ export function url(path = ''): string {
 
 export const homeUrl = (lang: Lang) => url(lang === 'en' ? '' : 'it/');
 export const albumUrl = (lang: Lang, slug: string) => url(`${lang === 'en' ? '' : 'it/'}albums/${slug}/`);
+export const privacyUrl = (lang: Lang) => url(`${lang === 'en' ? '' : 'it/'}privacy/`);
 export const shopUrl = (lang: Lang, slug: string) => url(`${lang === 'en' ? '' : 'it/'}shop/${slug}/`);
 
 /** Dark or light text, whichever reads better on the accent colour. */
@@ -78,6 +79,32 @@ export function toSeconds(time: string): number | null {
   const parts = time.split(':').map(Number);
   if (parts.some(Number.isNaN)) return null;
   return parts.reduce((total, p) => total * 60 + p, 0);
+}
+
+/**
+ * Reads the YouTube fields, accepting either a bare ID or a full link
+ * (youtube.com, music.youtube.com, youtu.be). Returns clean IDs.
+ */
+export function youtubeIds(playlistField: string, videoField: string): { playlistId: string; videoId: string } {
+  const parse = (input: string) => {
+    const raw = input.trim();
+    if (!raw) return { list: '', v: '' };
+    try {
+      const u = new URL(raw);
+      const short = u.hostname === 'youtu.be' ? u.pathname.slice(1) : '';
+      const embed = u.pathname.match(/\/(?:embed|shorts|live)\/([\w-]{6,})/)?.[1] ?? '';
+      return { list: u.searchParams.get('list') ?? '', v: u.searchParams.get('v') || short || embed };
+    } catch {
+      return { list: '', v: '' }; // not a link: treat it as a bare ID below
+    }
+  };
+  const fromPlaylist = parse(playlistField);
+  const fromVideo = parse(videoField);
+  const bare = (s: string) => (/^[\w-]{6,}$/.test(s.trim()) ? s.trim() : '');
+  return {
+    playlistId: fromPlaylist.list || fromVideo.list || bare(playlistField),
+    videoId: fromVideo.v || fromPlaylist.v || bare(videoField),
+  };
 }
 
 /** Apple Music share link -> embeddable player URL. Empty string when it isn't an Apple Music link. */

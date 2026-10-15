@@ -94,4 +94,10 @@ const albums = defineCollection({
   }),
 });
 
-export const collections = { albums };
+// Fixed pages such as the privacy policy: one Markdown file per language.
+const pages = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/pages', generateId: ({ entry }) => entry.replace(/\.md$/, '') }),
+  schema: z.object({ title: z.string(), updated: z.coerce.date().optional() }),
+});
+
+export const collections = { albums, pages };

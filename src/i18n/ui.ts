@@ -25,6 +25,8 @@ export const ui = {
     'player.consent.apple': 'The player loads from Apple Music, which may set cookies on your device. Apple Music subscribers signed in on the web hear full tracks, others hear previews.',
     'player.consent.amazon': 'The player loads from Amazon Music, which may set cookies on your device. Amazon Music subscribers hear full tracks, others hear previews.',
     'player.load': 'Load player',
+    'player.ytError': 'YouTube won’t play this here.',
+    'player.ytOpen': 'Watch it on YouTube',
     'intro.title': 'Before you press play',
     'intro.play': 'Play the spoken introduction',
     'intro.pause': 'Pause the spoken introduction',
@@ -55,6 +57,10 @@ export const ui = {
     'quiz.wrong': 'Not quite.',
     'quiz.score': 'You scored',
     'quiz.retry': 'Try again',
+    'share.button': 'Share your card',
+    'share.kicker': 'This week I really listened to',
+    'share.score': 'Quiz score',
+    'share.yourTurn': 'Your turn →',
 
     'archive.title': 'Previous weeks',
     'archive.all': 'All',
@@ -82,6 +88,7 @@ export const ui = {
 
     'footer.note': 'Music plays through YouTube and Spotify. Some shop links are affiliate links.',
     'footer.contact': 'Contact',
+    'footer.privacy': 'Privacy and cookies',
   },
   it: {
     'nav.story': 'La storia',
@@ -105,6 +112,8 @@ export const ui = {
     'player.consent.apple': 'Il player viene caricato da Apple Music, che potrebbe salvare cookie sul tuo dispositivo. Gli abbonati che hanno effettuato l’accesso sul web ascoltano i brani completi, gli altri delle anteprime.',
     'player.consent.amazon': 'Il player viene caricato da Amazon Music, che potrebbe salvare cookie sul tuo dispositivo. Gli abbonati ascoltano i brani completi, gli altri delle anteprime.',
     'player.load': 'Carica il player',
+    'player.ytError': 'YouTube non permette di riprodurlo qui.',
+    'player.ytOpen': 'Guardalo su YouTube',
     'intro.title': 'Prima di premere play',
     'intro.play': 'Ascolta l’introduzione',
     'intro.pause': 'Metti in pausa l’introduzione',
@@ -135,6 +144,10 @@ export const ui = {
     'quiz.wrong': 'Non proprio.',
     'quiz.score': 'Hai totalizzato',
     'quiz.retry': 'Riprova',
+    'share.button': 'Condividi la tua card',
+    'share.kicker': 'Questa settimana ho davvero ascoltato',
+    'share.score': 'Punteggio del quiz',
+    'share.yourTurn': 'Tocca a te →',
 
     'archive.title': 'Le settimane precedenti',
     'archive.all': 'Tutti',
@@ -162,6 +175,7 @@ export const ui = {
 
     'footer.note': 'La musica viene riprodotta tramite YouTube e Spotify. Alcuni link dello shop sono link di affiliazione.',
     'footer.contact': 'Contatti',
+    'footer.privacy': 'Privacy e cookie',
   },
 } as const;
 

@@ -1,12 +1,17 @@
 ---
 import site from '../data/site.json';
 import { useTranslations, type Lang } from '../i18n/ui';
+import { privacyUrl } from '../lib/albums';
 interface Props { lang: Lang }
-const t = useTranslations(Astro.props.lang);
+const { lang } = Astro.props;
+const t = useTranslations(lang);
 ---
 <footer class="site-footer">
   <div class="wrap">
     <p>{t('footer.note')}</p>
-    {site.contactEmail && <a href={`mailto:${site.contactEmail}`}>{t('footer.contact')}</a>}
+    <nav aria-label="Footer" style="display:flex;gap:20px;flex-wrap:wrap">
+      <a href={privacyUrl(lang)}>{t('footer.privacy')}</a>
+      {site.contactEmail && <a href={`mailto:${site.contactEmail}`}>{t('footer.contact')}</a>}
+    </nav>
   </div>
 </footer>

@@ -1,0 +1,27 @@
+---
+import { getEntry, render } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import Header from './Header.astro';
+import Footer from './Footer.astro';
+import site from '../data/site.json';
+import type { Lang } from '../i18n/ui';
+import { privacyUrl } from '../lib/albums';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const entry = await getEntry('pages', `${lang}/privacy`);
+if (!entry) throw new Error(`Missing src/content/pages/${lang}/privacy.md`);
+const { Content } = await render(entry);
+const updated = entry.data.updated
+  ? new Intl.DateTimeFormat(lang === 'it' ? 'it-IT' : 'en-GB', { dateStyle: 'long', timeZone: 'Europe/Rome' }).format(entry.data.updated)
+  : '';
+---
+<Base lang={lang} title={`${entry.data.title} | ${site.siteName}`} alternateUrl={privacyUrl(lang === 'en' ? 'it' : 'en')}>
+  <Header lang={lang} alternateUrl={privacyUrl(lang === 'en' ? 'it' : 'en')} showNav={false} />
+  <main class="wrap prose">
+    <h1 class="section-title">{entry.data.title}</h1>
+    {updated && <p class="mono muted">{lang === 'it' ? 'Aggiornata il' : 'Last updated'} {updated}</p>}
+    <Content />
+  </main>
+  <Footer lang={lang} />
+</Base>

@@ -21,6 +21,7 @@ export interface PlayerConfig {
   appleEmbedUrl?: string;
   amazonEmbedUrl?: string;
   trackStarts: (number | null)[]; // seconds, only used with a single full-album YouTube video
+  messages?: { ytError: string; ytOpen: string };
 }
 
 declare global {
@@ -108,13 +109,41 @@ async function loadYouTube(autoplay: boolean) {
       width: '100%',
       height: '100%',
       videoId: usePlaylist ? undefined : config.youtubeVideoId,
-      playerVars: usePlaylist
-        ? { listType: 'playlist', list: config.youtubePlaylistId, playsinline: 1, rel: 0 }
-        : { playsinline: 1, rel: 0 },
+      playerVars: {
+        ...(usePlaylist ? { listType: 'playlist', list: config.youtubePlaylistId } : {}),
+        playsinline: 1,
+        rel: 0,
+        origin: window.location.origin,
+      },
       events: {
         onReady: () => {
           el.classList.add('is-loaded');
           if (autoplay) yt.playVideo();
+          resolve();
+        },
+        // A wrong ID, a removed video or a video whose owner blocks embedding:
+        // show a clear message and a link instead of an empty black box.
+        onError: (e: { data: number }) => {
+          console.warn(`YouTube player error ${e.data}`);
+          const watch = usePlaylist
+            ? `https://www.youtube.com/playlist?list=${encodeURIComponent(config.youtubePlaylistId!)}`
+            : `https://www.youtube.com/watch?v=${encodeURIComponent(config.youtubeVideoId!)}`;
+          const msg = config.messages ?? { ytError: 'YouTube won’t play this here.', ytOpen: 'Watch it on YouTube' };
+          const box = document.createElement('div');
+          box.className = 'player-consent';
+          const p = document.createElement('p');
+          p.textContent = `${msg.ytError} (${e.data})`;
+          const a = document.createElement('a');
+          a.href = watch;
+          a.target = '_blank';
+          a.rel = 'noopener';
+          a.className = 'pill';
+          a.style.cssText = 'display:inline-flex;align-items:center;text-decoration:none';
+          a.textContent = `${msg.ytOpen} ↗`;
+          box.append(p, a);
+          el.replaceChildren(box);
+          el.classList.remove('is-loaded');
+          setPlaying(false);
           resolve();
         },
         onStateChange: (e: { data: number }) => {

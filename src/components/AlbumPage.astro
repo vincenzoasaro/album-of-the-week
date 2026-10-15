@@ -10,7 +10,7 @@ import Footer from './Footer.astro';
 import ListeningMode from './ListeningMode.astro';
 import site from '../data/site.json';
 import { useTranslations } from '../i18n/ui';
-import { amazonEmbedUrl, appleEmbedUrl, toSeconds, url, type Album } from '../lib/albums';
+import { amazonEmbedUrl, appleEmbedUrl, inkOn, toSeconds, url, youtubeIds, type Album } from '../lib/albums';
 import { controllable, type Source } from '../scripts/player';
 
 interface Props {
@@ -23,8 +23,9 @@ const { album, archive, isCurrent, alternateUrl } = Astro.props;
 const lang = album.lang;
 const t = useTranslations(lang);
 
+const yt = youtubeIds(album.youtubePlaylistId, album.youtubeVideoId);
 const sources: Source[] = [];
-if (album.youtubePlaylistId || album.youtubeVideoId) sources.push('youtube');
+if (yt.playlistId || yt.videoId) sources.push('youtube');
 if (album.spotifyAlbumId) sources.push('spotify');
 // A service is only shown when the album has a valid link for it.
 const apple = appleEmbedUrl(album.appleMusicUrl);
@@ -37,8 +38,8 @@ const canControl = sources.some(controllable);
 
 const pageData = {
   player: {
-    youtubePlaylistId: album.youtubePlaylistId,
-    youtubeVideoId: album.youtubeVideoId,
+    youtubePlaylistId: yt.playlistId,
+    youtubeVideoId: yt.videoId,
     spotifyAlbumId: album.spotifyAlbumId,
     appleEmbedUrl: apple,
     amazonEmbedUrl: amazon,
@@ -46,7 +47,18 @@ const pageData = {
   },
   sources,
   tracks: album.tracks.map((tr) => ({ side: tr.side || 'A', title: tr.title, time: tr.time, note: tr.note })),
-  labels: { play: t('hero.play'), pause: t('hero.pause'), side: t('tracks.side') },
+  labels: { play: t('hero.play'), pause: t('hero.pause'), side: t('tracks.side'), ytError: t('player.ytError'), ytOpen: t('player.ytOpen') },
+  card: {
+    slug: album.slug,
+    title: album.title,
+    artist: album.artist,
+    year: album.year,
+    issue: album.issue,
+    accent: album.accent,
+    onAccent: inkOn(album.accent),
+    siteName: site.siteName,
+    labels: { kicker: t('share.kicker'), score: t('share.score'), yourTurn: t('share.yourTurn') },
+  },
 };
 const title = isCurrent
   ? `${album.title} · ${album.artist} | ${site.siteName}`
@@ -58,6 +70,11 @@ const title = isCurrent
     <Hero album={album} isCurrent={isCurrent} sources={sources} />
     <Story album={album} canPlay={canControl} />
     <Quiz album={album} />
+    {album.quiz.length === 0 && (
+      <section class="wrap" style="padding-top:64px">
+        <button class="btn btn--primary" type="button" data-action="share-card">{t('share.button')}</button>
+      </section>
+    )}
     <Archive lang={lang} albums={archive} />
     <Newsletter lang={lang} />
   </main>

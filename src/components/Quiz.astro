@@ -30,7 +30,10 @@ const total = album.quiz.length;
         <p class="mono muted" style="margin:0 0 8px">{t('quiz.score')}</p>
         <p class="quiz-score" data-score></p>
       </div>
-      <button class="btn" type="button" data-retry>{t('quiz.retry')}</button>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <button class="btn btn--primary" type="button" data-action="share-card">{t('share.button')}</button>
+        <button class="btn" type="button" data-retry>{t('quiz.retry')}</button>
+      </div>
     </div>
   </div>
 </section>

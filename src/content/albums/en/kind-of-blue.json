@@ -13,51 +13,176 @@
   "introAudio": "",
   "introLength": "",
   "spotifyAlbumId": "4sb0eMpDn3upAFfyi4q2rw",
-  "youtubePlaylistId": "",
+  "youtubePlaylistId": "RDvDqULFUg6CY",
   "youtubeVideoId": "",
+  "appleMusicUrl": "",
+  "amazonMusicEmbed": "",
   "sessionsHeadline": "Two days.\nOne room.",
   "sessionsText": "Columbia's 30th Street Studio in New York, a converted church known for its natural reverb. Davis arrived with sketches rather than full arrangements, and the band met most of the material in the studio.",
   "sessions": [
-    { "date": "2 Mar", "label": "1959 · Session one", "tracks": "So What · Freddie Freeloader · Blue in Green" },
-    { "date": "22 Apr", "label": "1959 · Session two", "tracks": "All Blues · Flamenco Sketches" }
+    {
+      "date": "2 Mar",
+      "label": "1959 · Session one",
+      "tracks": "So What · Freddie Freeloader · Blue in Green"
+    },
+    {
+      "date": "22 Apr",
+      "label": "1959 · Session two",
+      "tracks": "All Blues · Flamenco Sketches"
+    }
   ],
   "lineupHeadline": "Seven players.\nOne sextet.",
   "musicians": [
-    { "name": "Miles Davis", "instrument": "Trumpet, leader", "plays": "All five tracks" },
-    { "name": "John Coltrane", "instrument": "Tenor saxophone", "plays": "All five tracks" },
-    { "name": "Cannonball Adderley", "instrument": "Alto saxophone", "plays": "All except Blue in Green" },
-    { "name": "Bill Evans", "instrument": "Piano", "plays": "All except Freddie Freeloader" },
-    { "name": "Wynton Kelly", "instrument": "Piano", "plays": "Freddie Freeloader" },
-    { "name": "Paul Chambers", "instrument": "Double bass", "plays": "All five tracks" },
-    { "name": "Jimmy Cobb", "instrument": "Drums", "plays": "All five tracks" }
+    {
+      "name": "Miles Davis",
+      "instrument": "Trumpet, leader",
+      "plays": "All five tracks"
+    },
+    {
+      "name": "John Coltrane",
+      "instrument": "Tenor saxophone",
+      "plays": "All five tracks"
+    },
+    {
+      "name": "Cannonball Adderley",
+      "instrument": "Alto saxophone",
+      "plays": "All except Blue in Green"
+    },
+    {
+      "name": "Bill Evans",
+      "instrument": "Piano",
+      "plays": "All except Freddie Freeloader"
+    },
+    {
+      "name": "Wynton Kelly",
+      "instrument": "Piano",
+      "plays": "Freddie Freeloader"
+    },
+    {
+      "name": "Paul Chambers",
+      "instrument": "Double bass",
+      "plays": "All five tracks"
+    },
+    {
+      "name": "Jimmy Cobb",
+      "instrument": "Drums",
+      "plays": "All five tracks"
+    }
   ],
   "tracks": [
-    { "side": "A", "title": "So What", "time": "9:22", "recorded": "2 Mar 1959", "instrumental": true, "note": "Opens with a quiet piano-and-bass exchange before the horns answer with two notes. The whole tune moves between just two scales." },
-    { "side": "A", "title": "Freddie Freeloader", "time": "9:46", "recorded": "2 Mar 1959", "instrumental": true, "note": "The one straight-ahead blues on the record, and the only track with Wynton Kelly at the piano instead of Bill Evans." },
-    { "side": "A", "title": "Blue in Green", "time": "5:37", "recorded": "2 Mar 1959", "instrumental": true, "note": "Cannonball Adderley sits this one out. Credited to Davis, though Evans long maintained he wrote it." },
-    { "side": "B", "title": "All Blues", "time": "11:33", "recorded": "22 Apr 1959", "instrumental": true, "note": "A blues in a rolling 6/8 lilt, built over a repeating bass figure." },
-    { "side": "B", "title": "Flamenco Sketches", "time": "9:26", "recorded": "22 Apr 1959", "instrumental": true, "note": "Five scales, played in order. Each soloist decides how long to stay on each one before moving to the next." }
+    {
+      "side": "A",
+      "title": "So What",
+      "time": "9:22",
+      "recorded": "2 Mar 1959",
+      "note": "Opens with a quiet piano-and-bass exchange before the horns answer with two notes. The whole tune moves between just two scales.",
+      "instrumental": true,
+      "lyricsUrl": "",
+      "ytStart": ""
+    },
+    {
+      "side": "A",
+      "title": "Freddie Freeloader",
+      "time": "9:46",
+      "recorded": "2 Mar 1959",
+      "note": "The one straight-ahead blues on the record, and the only track with Wynton Kelly at the piano instead of Bill Evans.",
+      "instrumental": true,
+      "lyricsUrl": "",
+      "ytStart": ""
+    },
+    {
+      "side": "A",
+      "title": "Blue in Green",
+      "time": "5:37",
+      "recorded": "2 Mar 1959",
+      "note": "Cannonball Adderley sits this one out. Credited to Davis, though Evans long maintained he wrote it.",
+      "instrumental": true,
+      "lyricsUrl": "",
+      "ytStart": ""
+    },
+    {
+      "side": "B",
+      "title": "All Blues",
+      "time": "11:33",
+      "recorded": "22 Apr 1959",
+      "note": "A blues in a rolling 6/8 lilt, built over a repeating bass figure.",
+      "instrumental": true,
+      "lyricsUrl": "",
+      "ytStart": ""
+    },
+    {
+      "side": "B",
+      "title": "Flamenco Sketches",
+      "time": "9:26",
+      "recorded": "22 Apr 1959",
+      "note": "Five scales, played in order. Each soloist decides how long to stay on each one before moving to the next.",
+      "instrumental": true,
+      "lyricsUrl": "",
+      "ytStart": ""
+    }
   ],
   "worldHeadline": "Meanwhile…",
   "world": [
-    { "when": "January", "what": "Batista flees Cuba and Fidel Castro's revolutionaries take power." },
-    { "when": "3 February", "what": "Buddy Holly, Ritchie Valens and The Big Bopper die in a plane crash in Iowa." },
-    { "when": "9 March", "what": "Barbie makes her debut at the American Toy Fair in New York." },
-    { "when": "21 August", "what": "Hawaii becomes the 50th US state, four days after this album comes out." }
+    {
+      "when": "January",
+      "what": "Batista flees Cuba and Fidel Castro's revolutionaries take power."
+    },
+    {
+      "when": "3 February",
+      "what": "Buddy Holly, Ritchie Valens and The Big Bopper die in a plane crash in Iowa."
+    },
+    {
+      "when": "9 March",
+      "what": "Barbie makes her debut at the American Toy Fair in New York."
+    },
+    {
+      "when": "21 August",
+      "what": "Hawaii becomes the 50th US state, four days after this album comes out."
+    }
   ],
   "alsoThisYear": [
-    { "title": "Giant Steps", "artist": "John Coltrane" },
-    { "title": "Time Out", "artist": "Dave Brubeck Quartet" },
-    { "title": "Mingus Ah Um", "artist": "Charles Mingus" },
-    { "title": "The Shape of Jazz to Come", "artist": "Ornette Coleman" }
+    {
+      "title": "Giant Steps",
+      "artist": "John Coltrane"
+    },
+    {
+      "title": "Time Out",
+      "artist": "Dave Brubeck Quartet"
+    },
+    {
+      "title": "Mingus Ah Um",
+      "artist": "Charles Mingus"
+    },
+    {
+      "title": "The Shape of Jazz to Come",
+      "artist": "Ornette Coleman"
+    }
   ],
   "release": [
-    { "label": "Released", "value": "17 August 1959" },
-    { "label": "Label", "value": "Columbia" },
-    { "label": "Catalogue", "value": "CL 1355 (mono) · CS 8163 (stereo)" },
-    { "label": "Producers", "value": "Teo Macero, Irving Townsend" },
-    { "label": "Engineer", "value": "Fred Plaut" },
-    { "label": "Liner notes", "value": "Bill Evans" }
+    {
+      "label": "Released",
+      "value": "17 August 1959"
+    },
+    {
+      "label": "Label",
+      "value": "Columbia"
+    },
+    {
+      "label": "Catalogue",
+      "value": "CL 1355 (mono) · CS 8163 (stereo)"
+    },
+    {
+      "label": "Producers",
+      "value": "Teo Macero, Irving Townsend"
+    },
+    {
+      "label": "Engineer",
+      "value": "Fred Plaut"
+    },
+    {
+      "label": "Liner notes",
+      "value": "Bill Evans"
+    }
   ],
   "trivia": [
     "For decades, side A played slightly sharp: a tape machine at the first session ran a little slow. Later reissues corrected the pitch.",
@@ -67,19 +192,34 @@
   "quiz": [
     {
       "question": "On how many of the five tracks does Wynton Kelly replace Bill Evans at the piano?",
-      "options": ["None", "One", "Two", "All five"],
+      "options": [
+        "None",
+        "One",
+        "Two",
+        "All five"
+      ],
       "answer": 2,
       "explanation": "Only Freddie Freeloader, the album's one conventional blues."
     },
     {
       "question": "Where was Kind of Blue recorded?",
-      "options": ["Van Gelder Studio, New Jersey", "Columbia 30th Street Studio, New York", "Capitol Studios, Los Angeles", "Abbey Road, London"],
+      "options": [
+        "Van Gelder Studio, New Jersey",
+        "Columbia 30th Street Studio, New York",
+        "Capitol Studios, Los Angeles",
+        "Abbey Road, London"
+      ],
       "answer": 2,
       "explanation": "Columbia's 30th Street Studio, a former church in Manhattan."
     },
     {
       "question": "Who wrote the album's original liner notes?",
-      "options": ["Miles Davis", "John Coltrane", "Bill Evans", "Teo Macero"],
+      "options": [
+        "Miles Davis",
+        "John Coltrane",
+        "Bill Evans",
+        "Teo Macero"
+      ],
       "answer": 3,
       "explanation": "Bill Evans, who also played piano on four of the five tracks."
     }
@@ -90,16 +230,52 @@
       "title": "Own the record",
       "subtitle": "The album itself, in the format you play.",
       "items": [
-        { "kind": "Vinyl LP", "name": "Kind of Blue", "note": "", "price": "", "retailer": "", "url": "", "image": "", "affiliate": true },
-        { "kind": "CD", "name": "Kind of Blue", "note": "", "price": "", "retailer": "", "url": "", "image": "", "affiliate": true }
+        {
+          "kind": "Vinyl LP",
+          "name": "Kind of Blue",
+          "note": "",
+          "price": "",
+          "retailer": "",
+          "url": "",
+          "image": "",
+          "affiliate": true
+        },
+        {
+          "kind": "CD",
+          "name": "Kind of Blue",
+          "note": "",
+          "price": "",
+          "retailer": "",
+          "url": "",
+          "image": "",
+          "affiliate": true
+        }
       ]
     },
     {
       "title": "Go deeper",
       "subtitle": "Books for after the last track.",
       "items": [
-        { "kind": "Book", "name": "Kind of Blue: The Making of the Miles Davis Masterpiece", "note": "Ashley Kahn's session-by-session account of how the album was made.", "price": "", "retailer": "", "url": "", "image": "", "affiliate": true },
-        { "kind": "Book", "name": "Miles: The Autobiography", "note": "Davis telling his own story, written with Quincy Troupe.", "price": "", "retailer": "", "url": "", "image": "", "affiliate": true }
+        {
+          "kind": "Book",
+          "name": "Kind of Blue: The Making of the Miles Davis Masterpiece",
+          "note": "Ashley Kahn's session-by-session account of how the album was made.",
+          "price": "",
+          "retailer": "",
+          "url": "",
+          "image": "",
+          "affiliate": true
+        },
+        {
+          "kind": "Book",
+          "name": "Miles: The Autobiography",
+          "note": "Davis telling his own story, written with Quincy Troupe.",
+          "price": "",
+          "retailer": "",
+          "url": "",
+          "image": "",
+          "affiliate": true
+        }
       ]
     }
   ]

@@ -13,62 +13,254 @@
   "introAudio": "",
   "introLength": "",
   "spotifyAlbumId": "6dVIqQ8qmQ5GBnJ9shOYGE",
-  "youtubePlaylistId": "",
+  "youtubePlaylistId": "https://www.youtube.com/playlist?list=OLAK5uy_nEGbRK3IZ018QZqnVmZtq-0k-vtJdysnA",
   "youtubeVideoId": "",
   "appleMusicUrl": "",
   "amazonMusicEmbed": "",
   "sessionsHeadline": "Un capanno.\nUna villa.",
   "sessionsText": "Dopo il successo di The Bends, i Radiohead decisero di registrare senza scadenze da studio. Cominciarono a Canned Applause, la loro sala prove vicino a Didcot, con Nigel Godrich alla produzione, poi si trasferirono a St Catherine's Court, una dimora storica alle porte di Bath, dove le stanze stesse diventarono parte del suono.",
   "sessions": [
-    { "date": "Set 95", "label": "Londra · The Help Album", "tracks": "Lucky, registrata in un solo giorno per un disco benefico di War Child" },
-    { "date": "1996", "label": "Canned Applause, Didcot", "tracks": "Le prime sessioni nella sala prove della band" },
-    { "date": "Autunno 96", "label": "St Catherine's Court, Bath", "tracks": "Gran parte dell'album, comprese Exit Music e Let Down" }
+    {
+      "date": "Set 95",
+      "label": "Londra · The Help Album",
+      "tracks": "Lucky, registrata in un solo giorno per un disco benefico di War Child"
+    },
+    {
+      "date": "1996",
+      "label": "Canned Applause, Didcot",
+      "tracks": "Le prime sessioni nella sala prove della band"
+    },
+    {
+      "date": "Autunno 96",
+      "label": "St Catherine's Court, Bath",
+      "tracks": "Gran parte dell'album, comprese Exit Music e Let Down"
+    }
   ],
   "lineupHeadline": "Cinque musicisti.\nUna voce da Mac.",
   "musicians": [
-    { "name": "Thom Yorke", "instrument": "Voce, chitarra, pianoforte", "plays": "Tutte le tracce tranne Fitter Happier" },
-    { "name": "Jonny Greenwood", "instrument": "Chitarra, tastiere, arrangiamenti per archi", "plays": "Tutte e dodici le tracce" },
-    { "name": "Ed O'Brien", "instrument": "Chitarra, cori", "plays": "Tutte e dodici le tracce" },
-    { "name": "Colin Greenwood", "instrument": "Basso", "plays": "Tutte e dodici le tracce" },
-    { "name": "Phil Selway", "instrument": "Batteria, percussioni", "plays": "Tutte e dodici le tracce" },
-    { "name": "Nigel Godrich", "instrument": "Produttore, tecnico del suono", "plays": "Al banco di regia per tutto il disco" }
+    {
+      "name": "Thom Yorke",
+      "instrument": "Voce, chitarra, pianoforte",
+      "plays": "Tutte le tracce tranne Fitter Happier"
+    },
+    {
+      "name": "Jonny Greenwood",
+      "instrument": "Chitarra, tastiere, arrangiamenti per archi",
+      "plays": "Tutte e dodici le tracce"
+    },
+    {
+      "name": "Ed O'Brien",
+      "instrument": "Chitarra, cori",
+      "plays": "Tutte e dodici le tracce"
+    },
+    {
+      "name": "Colin Greenwood",
+      "instrument": "Basso",
+      "plays": "Tutte e dodici le tracce"
+    },
+    {
+      "name": "Phil Selway",
+      "instrument": "Batteria, percussioni",
+      "plays": "Tutte e dodici le tracce"
+    },
+    {
+      "name": "Nigel Godrich",
+      "instrument": "Produttore, tecnico del suono",
+      "plays": "Al banco di regia per tutto il disco"
+    }
   ],
   "tracks": [
-    { "side": "A", "title": "Airbag", "time": "4:44", "recorded": "", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "Una canzone sul sopravvivere a un incidente d'auto. La batteria di Phil Selway è stata tagliata e ricomposta al computer, ispirandosi ai beat campionati di DJ Shadow." },
-    { "side": "A", "title": "Paranoid Android", "time": "6:23", "recorded": "", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "Diversi frammenti di canzoni cuciti insieme, sulla scia di Happiness Is a Warm Gun dei Beatles. Il titolo prende in prestito Marvin, il robot depresso della Guida galattica per gli autostoppisti." },
-    { "side": "A", "title": "Subterranean Homesick Alien", "time": "4:27", "recorded": "", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "Il titolo strizza l'occhio a Subterranean Homesick Blues di Bob Dylan. Il protagonista sogna di essere portato via dagli alieni, e immagina che nessuno gli creda." },
-    { "side": "B", "title": "Exit Music (For a Film)", "time": "4:24", "recorded": "", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "Scritta per Romeo + Giulietta di Baz Luhrmann e usata sui titoli di coda. Comincia con sola voce e chitarra acustica e cresce fino a un basso distorto e alla batteria." },
-    { "side": "B", "title": "Let Down", "time": "4:59", "recorded": "", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "Registrata nel cuore della notte nella sala da ballo di St Catherine's Court. Il disegno di chitarra di Jonny Greenwood segue un metro diverso da quello del resto della band." },
-    { "side": "B", "title": "Karma Police", "time": "4:21", "recorded": "", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "Il nome nasce da una battuta interna alla band durante un tour. Una canzone guidata dal pianoforte che nel finale si sgretola in un'onda di feedback di chitarra." },
-    { "side": "C", "title": "Fitter Happier", "time": "1:57", "recorded": "", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "Nessuno canta: un elenco di slogan da manuale di auto-miglioramento letto da 'Fred', una voce sintetica dei computer Apple Macintosh, su pianoforte e campionamenti." },
-    { "side": "C", "title": "Electioneering", "time": "3:50", "recorded": "", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "Il brano più rumoroso e diretto del disco, su politica e compromessi. Fate caso al campanaccio." },
-    { "side": "C", "title": "Climbing Up the Walls", "time": "4:45", "recorded": "", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "Il momento più cupo dell'album. Jonny Greenwood ha scritto gli archi in modo che scivolino tra note distanti un quarto di tono, prendendo spunto dal compositore polacco Krzysztof Penderecki." },
-    { "side": "D", "title": "No Surprises", "time": "3:48", "recorded": "", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "Una ninna nanna guidata dal glockenspiel. La dolcezza del suono contrasta con un testo su una routine tranquilla e soffocante." },
-    { "side": "D", "title": "Lucky", "time": "4:19", "recorded": "4 set 1995", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "La prima canzone di OK Computer a essere completata, registrata in un solo giorno per The Help Album, un disco benefico di War Child a favore delle vittime della guerra in Bosnia." },
-    { "side": "D", "title": "The Tourist", "time": "5:24", "recorded": "", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "Scritta da Jonny Greenwood dopo aver visto dei turisti attraversare di corsa una cittadina francese per vedere tutto e subito. Un invito a rallentare, che si chiude con un solo rintocco di campanello." }
+    {
+      "side": "A",
+      "title": "Airbag",
+      "time": "4:44",
+      "recorded": "",
+      "note": "Una canzone sul sopravvivere a un incidente d'auto. La batteria di Phil Selway è stata tagliata e ricomposta al computer, ispirandosi ai beat campionati di DJ Shadow.",
+      "instrumental": false,
+      "lyricsUrl": "",
+      "ytStart": ""
+    },
+    {
+      "side": "A",
+      "title": "Paranoid Android",
+      "time": "6:23",
+      "recorded": "",
+      "note": "Diversi frammenti di canzoni cuciti insieme, sulla scia di Happiness Is a Warm Gun dei Beatles. Il titolo prende in prestito Marvin, il robot depresso della Guida galattica per gli autostoppisti.",
+      "instrumental": false,
+      "lyricsUrl": "",
+      "ytStart": ""
+    },
+    {
+      "side": "A",
+      "title": "Subterranean Homesick Alien",
+      "time": "4:27",
+      "recorded": "",
+      "note": "Il titolo strizza l'occhio a Subterranean Homesick Blues di Bob Dylan. Il protagonista sogna di essere portato via dagli alieni, e immagina che nessuno gli creda.",
+      "instrumental": false,
+      "lyricsUrl": "",
+      "ytStart": ""
+    },
+    {
+      "side": "B",
+      "title": "Exit Music (For a Film)",
+      "time": "4:24",
+      "recorded": "",
+      "note": "Scritta per Romeo + Giulietta di Baz Luhrmann e usata sui titoli di coda. Comincia con sola voce e chitarra acustica e cresce fino a un basso distorto e alla batteria.",
+      "instrumental": false,
+      "lyricsUrl": "",
+      "ytStart": ""
+    },
+    {
+      "side": "B",
+      "title": "Let Down",
+      "time": "4:59",
+      "recorded": "",
+      "note": "Registrata nel cuore della notte nella sala da ballo di St Catherine's Court. Il disegno di chitarra di Jonny Greenwood segue un metro diverso da quello del resto della band.",
+      "instrumental": false,
+      "lyricsUrl": "",
+      "ytStart": ""
+    },
+    {
+      "side": "B",
+      "title": "Karma Police",
+      "time": "4:21",
+      "recorded": "",
+      "note": "Il nome nasce da una battuta interna alla band durante un tour. Una canzone guidata dal pianoforte che nel finale si sgretola in un'onda di feedback di chitarra.",
+      "instrumental": false,
+      "lyricsUrl": "",
+      "ytStart": ""
+    },
+    {
+      "side": "C",
+      "title": "Fitter Happier",
+      "time": "1:57",
+      "recorded": "",
+      "note": "Nessuno canta: un elenco di slogan da manuale di auto-miglioramento letto da 'Fred', una voce sintetica dei computer Apple Macintosh, su pianoforte e campionamenti.",
+      "instrumental": false,
+      "lyricsUrl": "",
+      "ytStart": ""
+    },
+    {
+      "side": "C",
+      "title": "Electioneering",
+      "time": "3:50",
+      "recorded": "",
+      "note": "Il brano più rumoroso e diretto del disco, su politica e compromessi. Fate caso al campanaccio.",
+      "instrumental": false,
+      "lyricsUrl": "",
+      "ytStart": ""
+    },
+    {
+      "side": "C",
+      "title": "Climbing Up the Walls",
+      "time": "4:45",
+      "recorded": "",
+      "note": "Il momento più cupo dell'album. Jonny Greenwood ha scritto gli archi in modo che scivolino tra note distanti un quarto di tono, prendendo spunto dal compositore polacco Krzysztof Penderecki.",
+      "instrumental": false,
+      "lyricsUrl": "",
+      "ytStart": ""
+    },
+    {
+      "side": "D",
+      "title": "No Surprises",
+      "time": "3:48",
+      "recorded": "",
+      "note": "Una ninna nanna guidata dal glockenspiel. La dolcezza del suono contrasta con un testo su una routine tranquilla e soffocante.",
+      "instrumental": false,
+      "lyricsUrl": "",
+      "ytStart": ""
+    },
+    {
+      "side": "D",
+      "title": "Lucky",
+      "time": "4:19",
+      "recorded": "4 set 1995",
+      "note": "La prima canzone di OK Computer a essere completata, registrata in un solo giorno per The Help Album, un disco benefico di War Child a favore delle vittime della guerra in Bosnia.",
+      "instrumental": false,
+      "lyricsUrl": "",
+      "ytStart": ""
+    },
+    {
+      "side": "D",
+      "title": "The Tourist",
+      "time": "5:24",
+      "recorded": "",
+      "note": "Scritta da Jonny Greenwood dopo aver visto dei turisti attraversare di corsa una cittadina francese per vedere tutto e subito. Un invito a rallentare, che si chiude con un solo rintocco di campanello.",
+      "instrumental": false,
+      "lyricsUrl": "",
+      "ytStart": ""
+    }
   ],
   "worldHeadline": "Nel frattempo…",
   "world": [
-    { "when": "1 maggio", "what": "Il Partito Laburista stravince le elezioni nel Regno Unito e Tony Blair diventa primo ministro." },
-    { "when": "11 maggio", "what": "Il computer Deep Blue di IBM batte per la prima volta in un match completo il campione del mondo di scacchi Garry Kasparov." },
-    { "when": "1 luglio", "what": "Hong Kong torna sotto la sovranità cinese, lo stesso giorno in cui OK Computer esce negli Stati Uniti." },
-    { "when": "31 agosto", "what": "Diana, principessa del Galles, muore in un incidente stradale a Parigi." }
+    {
+      "when": "1 maggio",
+      "what": "Il Partito Laburista stravince le elezioni nel Regno Unito e Tony Blair diventa primo ministro."
+    },
+    {
+      "when": "11 maggio",
+      "what": "Il computer Deep Blue di IBM batte per la prima volta in un match completo il campione del mondo di scacchi Garry Kasparov."
+    },
+    {
+      "when": "1 luglio",
+      "what": "Hong Kong torna sotto la sovranità cinese, lo stesso giorno in cui OK Computer esce negli Stati Uniti."
+    },
+    {
+      "when": "31 agosto",
+      "what": "Diana, principessa del Galles, muore in un incidente stradale a Parigi."
+    }
   ],
   "alsoThisYear": [
-    { "title": "Homogenic", "artist": "Björk" },
-    { "title": "Ladies and Gentlemen We Are Floating in Space", "artist": "Spiritualized" },
-    { "title": "Urban Hymns", "artist": "The Verve" },
-    { "title": "Homework", "artist": "Daft Punk" }
+    {
+      "title": "Homogenic",
+      "artist": "Björk"
+    },
+    {
+      "title": "Ladies and Gentlemen We Are Floating in Space",
+      "artist": "Spiritualized"
+    },
+    {
+      "title": "Urban Hymns",
+      "artist": "The Verve"
+    },
+    {
+      "title": "Homework",
+      "artist": "Daft Punk"
+    }
   ],
   "release": [
-    { "label": "Uscita", "value": "21 maggio 1997 (Giappone) · 16 giugno 1997 (Regno Unito) · 1 luglio 1997 (USA)" },
-    { "label": "Etichetta", "value": "Parlophone (Regno Unito) · Capitol (USA)" },
-    { "label": "Produttori", "value": "Nigel Godrich, Radiohead" },
-    { "label": "Studi", "value": "Canned Applause, Didcot · St Catherine's Court, Bath" },
-    { "label": "Copertina", "value": "Stanley Donwood e Thom Yorke" },
-    { "label": "Singoli", "value": "Paranoid Android · Karma Police · No Surprises" },
-    { "label": "Classifiche", "value": "N. 1 nel Regno Unito · N. 21 negli USA" },
-    { "label": "Premi", "value": "Grammy come miglior album di musica alternativa (1998)" }
+    {
+      "label": "Uscita",
+      "value": "21 maggio 1997 (Giappone) · 16 giugno 1997 (Regno Unito) · 1 luglio 1997 (USA)"
+    },
+    {
+      "label": "Etichetta",
+      "value": "Parlophone (Regno Unito) · Capitol (USA)"
+    },
+    {
+      "label": "Produttori",
+      "value": "Nigel Godrich, Radiohead"
+    },
+    {
+      "label": "Studi",
+      "value": "Canned Applause, Didcot · St Catherine's Court, Bath"
+    },
+    {
+      "label": "Copertina",
+      "value": "Stanley Donwood e Thom Yorke"
+    },
+    {
+      "label": "Singoli",
+      "value": "Paranoid Android · Karma Police · No Surprises"
+    },
+    {
+      "label": "Classifiche",
+      "value": "N. 1 nel Regno Unito · N. 21 negli USA"
+    },
+    {
+      "label": "Premi",
+      "value": "Grammy come miglior album di musica alternativa (1998)"
+    }
   ],
   "trivia": [
     "Il titolo viene da una battuta della versione radiofonica della Guida galattica per gli autostoppisti, che la band ascoltava sul pullman del tour.",
@@ -79,25 +271,45 @@
   "quiz": [
     {
       "question": "Dove hanno registrato i Radiohead gran parte di OK Computer?",
-      "options": ["Abbey Road, Londra", "St Catherine's Court, vicino a Bath", "Rockfield Studios, Galles", "The Manor, Oxfordshire"],
+      "options": [
+        "Abbey Road, Londra",
+        "St Catherine's Court, vicino a Bath",
+        "Rockfield Studios, Galles",
+        "The Manor, Oxfordshire"
+      ],
       "answer": 2,
       "explanation": "A St Catherine's Court, una dimora storica alle porte di Bath, dopo le prime sessioni nella sala prove vicino a Didcot."
     },
     {
       "question": "Per quale film è stata scritta Exit Music (For a Film)?",
-      "options": ["Trainspotting", "Romeo + Giulietta", "Fight Club", "The Truman Show"],
+      "options": [
+        "Trainspotting",
+        "Romeo + Giulietta",
+        "Fight Club",
+        "The Truman Show"
+      ],
       "answer": 2,
       "explanation": "Romeo + Giulietta di Baz Luhrmann, dove accompagna i titoli di coda."
     },
     {
       "question": "Chi 'legge' Fitter Happier?",
-      "options": ["Thom Yorke, rallentato", "Un giornalista della BBC", "Una voce sintetica di un Macintosh", "Jonny Greenwood"],
+      "options": [
+        "Thom Yorke, rallentato",
+        "Un giornalista della BBC",
+        "Una voce sintetica di un Macintosh",
+        "Jonny Greenwood"
+      ],
       "answer": 3,
       "explanation": "'Fred', una delle voci di sintesi vocale incluse nei computer Apple Macintosh."
     },
     {
       "question": "Da dove viene il titolo dell'album?",
-      "options": ["Un messaggio di errore del computer", "La Guida galattica per gli autostoppisti", "Un verso dei Kraftwerk", "Il titolo di un giornale"],
+      "options": [
+        "Un messaggio di errore del computer",
+        "La Guida galattica per gli autostoppisti",
+        "Un verso dei Kraftwerk",
+        "Il titolo di un giornale"
+      ],
       "answer": 2,
       "explanation": "Da una battuta della serie radiofonica della Guida galattica per gli autostoppisti, che ha dato il nome anche a Paranoid Android."
     }
@@ -108,18 +320,72 @@
       "title": "Il disco",
       "subtitle": "L'album, nel formato che preferisci.",
       "items": [
-        { "kind": "Doppio vinile LP", "name": "OK Computer", "note": "Le dodici tracce originali su quattro lati.", "price": "", "retailer": "", "url": "", "image": "", "affiliate": true },
-        { "kind": "Triplo vinile LP", "name": "OK Computer OKNOTOK 1997 2017", "note": "L'album rimasterizzato, con i lati B e tre brani inediti dell'epoca.", "price": "", "retailer": "", "url": "", "image": "", "affiliate": true },
-        { "kind": "CD", "name": "OK Computer", "note": "", "price": "", "retailer": "", "url": "", "image": "", "affiliate": true }
+        {
+          "kind": "Doppio vinile LP",
+          "name": "OK Computer",
+          "note": "Le dodici tracce originali su quattro lati.",
+          "price": "",
+          "retailer": "",
+          "url": "",
+          "image": "",
+          "affiliate": true
+        },
+        {
+          "kind": "Triplo vinile LP",
+          "name": "OK Computer OKNOTOK 1997 2017",
+          "note": "L'album rimasterizzato, con i lati B e tre brani inediti dell'epoca.",
+          "price": "",
+          "retailer": "",
+          "url": "",
+          "image": "",
+          "affiliate": true
+        },
+        {
+          "kind": "CD",
+          "name": "OK Computer",
+          "note": "",
+          "price": "",
+          "retailer": "",
+          "url": "",
+          "image": "",
+          "affiliate": true
+        }
       ]
     },
     {
       "title": "Per approfondire",
       "subtitle": "Per quando finisce l'ultima traccia.",
       "items": [
-        { "kind": "Libro", "name": "Radiohead's OK Computer (serie 33⅓)", "note": "Il breve studio di Dai Griffiths, traccia per traccia.", "price": "", "retailer": "", "url": "", "image": "", "affiliate": true },
-        { "kind": "Libro", "name": "Dead Children Playing", "note": "La raccolta di Stanley Donwood e Thom Yorke delle opere grafiche dietro i dischi dei Radiohead.", "price": "", "retailer": "", "url": "", "image": "", "affiliate": true },
-        { "kind": "Film", "name": "Meeting People Is Easy", "note": "Il documentario di Grant Gee che segue la band nell'estenuante tour di OK Computer.", "price": "", "retailer": "", "url": "", "image": "", "affiliate": true }
+        {
+          "kind": "Libro",
+          "name": "Radiohead's OK Computer (serie 33⅓)",
+          "note": "Il breve studio di Dai Griffiths, traccia per traccia.",
+          "price": "",
+          "retailer": "",
+          "url": "",
+          "image": "",
+          "affiliate": true
+        },
+        {
+          "kind": "Libro",
+          "name": "Dead Children Playing",
+          "note": "La raccolta di Stanley Donwood e Thom Yorke delle opere grafiche dietro i dischi dei Radiohead.",
+          "price": "",
+          "retailer": "",
+          "url": "",
+          "image": "",
+          "affiliate": true
+        },
+        {
+          "kind": "Film",
+          "name": "Meeting People Is Easy",
+          "note": "Il documentario di Grant Gee che segue la band nell'estenuante tour di OK Computer.",
+          "price": "",
+          "retailer": "",
+          "url": "",
+          "image": "",
+          "affiliate": true
+        }
       ]
     }
   ]

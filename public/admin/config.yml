@@ -3,7 +3,7 @@
 
 backend:
   name: github
-  repo: YOUR-GITHUB-USERNAME/YOUR-REPO
+  repo: vincenzoasaro/album-of-the-week
   branch: main
 
 media_folder: public/images

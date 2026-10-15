@@ -1,0 +1,126 @@
+{
+  "slug": "ok-computer",
+  "title": "OK Computer",
+  "artist": "Radiohead",
+  "year": 1997,
+  "label": "Parlophone",
+  "genre": "Alternative rock",
+  "length": "53:21",
+  "publishDate": "2026-10-19T00:00:00+02:00",
+  "accent": "#A9C7D9",
+  "tagline": "Twelve songs about cars, computers, politicians and the low hum of modern anxiety, recorded in a rehearsal shed and an old manor house near Bath. The record where Radiohead stopped being 'the band that did Creep'.",
+  "cover": "",
+  "introAudio": "",
+  "introLength": "",
+  "spotifyAlbumId": "6dVIqQ8qmQ5GBnJ9shOYGE",
+  "youtubePlaylistId": "",
+  "youtubeVideoId": "",
+  "appleMusicUrl": "",
+  "amazonMusicEmbed": "",
+  "sessionsHeadline": "A shed.\nA mansion.",
+  "sessionsText": "After the success of The Bends, Radiohead decided to record without a studio deadline. They started in Canned Applause, their rehearsal space near Didcot, with Nigel Godrich producing, then moved into St Catherine's Court, a historic house outside Bath, where the rooms themselves became part of the sound.",
+  "sessions": [
+    { "date": "Sep 95", "label": "London · The Help Album", "tracks": "Lucky, recorded in a single day for a War Child charity record" },
+    { "date": "1996", "label": "Canned Applause, Didcot", "tracks": "Early sessions in the band's rehearsal space" },
+    { "date": "Autumn 96", "label": "St Catherine's Court, Bath", "tracks": "Most of the album, including Exit Music and Let Down" }
+  ],
+  "lineupHeadline": "Five players.\nOne voice from a Mac.",
+  "musicians": [
+    { "name": "Thom Yorke", "instrument": "Vocals, guitar, piano", "plays": "All tracks except Fitter Happier" },
+    { "name": "Jonny Greenwood", "instrument": "Guitar, keyboards, string arrangements", "plays": "All twelve tracks" },
+    { "name": "Ed O'Brien", "instrument": "Guitar, backing vocals", "plays": "All twelve tracks" },
+    { "name": "Colin Greenwood", "instrument": "Bass", "plays": "All twelve tracks" },
+    { "name": "Phil Selway", "instrument": "Drums, percussion", "plays": "All twelve tracks" },
+    { "name": "Nigel Godrich", "instrument": "Producer, engineer", "plays": "Behind the desk throughout" }
+  ],
+  "tracks": [
+    { "side": "A", "title": "Airbag", "time": "4:44", "recorded": "", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "A song about surviving a car crash. Phil Selway's drums were cut up and rearranged on a computer, inspired by the sampled beats of DJ Shadow." },
+    { "side": "A", "title": "Paranoid Android", "time": "6:23", "recorded": "", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "Several song fragments stitched together, in the spirit of the Beatles' Happiness Is a Warm Gun. The title borrows Marvin, the gloomy robot from The Hitchhiker's Guide to the Galaxy." },
+    { "side": "A", "title": "Subterranean Homesick Alien", "time": "4:27", "recorded": "", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "The title nods to Bob Dylan's Subterranean Homesick Blues. The narrator dreams of being taken away by aliens, then imagines nobody believing him." },
+    { "side": "B", "title": "Exit Music (For a Film)", "time": "4:24", "recorded": "", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "Written for Baz Luhrmann's Romeo + Juliet and played over its end credits. It starts with just voice and acoustic guitar and swells into distorted bass and drums." },
+    { "side": "B", "title": "Let Down", "time": "4:59", "recorded": "", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "Recorded in the early hours in the ballroom at St Catherine's Court. Jonny Greenwood's chiming guitar pattern runs in a different meter from the rest of the band." },
+    { "side": "B", "title": "Karma Police", "time": "4:21", "recorded": "", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "The name began as a band in-joke on tour. A piano-led song that collapses at the end into a wash of guitar feedback." },
+    { "side": "C", "title": "Fitter Happier", "time": "1:57", "recorded": "", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "No singing at all: a list of self-improvement slogans read by 'Fred', a synthetic voice built into Apple Macintosh computers, over piano and samples." },
+    { "side": "C", "title": "Electioneering", "time": "3:50", "recorded": "", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "The loudest, most straightforward rock song on the record, about politics and selling out. Listen for the cowbell." },
+    { "side": "C", "title": "Climbing Up the Walls", "time": "4:45", "recorded": "", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "The album's darkest moment. Jonny Greenwood wrote the strings to slide between notes a quarter-tone apart, taking his cue from the Polish composer Krzysztof Penderecki." },
+    { "side": "D", "title": "No Surprises", "time": "3:48", "recorded": "", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "A lullaby led by glockenspiel. The gentle sound sits against a lyric about a quiet, deadening routine." },
+    { "side": "D", "title": "Lucky", "time": "4:19", "recorded": "4 Sep 1995", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "The first OK Computer song to be finished, recorded in a single day for The Help Album, a War Child charity record raising money for victims of the war in Bosnia." },
+    { "side": "D", "title": "The Tourist", "time": "5:24", "recorded": "", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "Written by Jonny Greenwood after watching tourists rush through a French town to see everything at once. A plea to slow down, ending on a single ding of a bell." }
+  ],
+  "worldHeadline": "Meanwhile…",
+  "world": [
+    { "when": "1 May", "what": "Labour wins a landslide in the UK general election and Tony Blair becomes prime minister." },
+    { "when": "11 May", "what": "IBM's Deep Blue computer beats world chess champion Garry Kasparov in a full match for the first time." },
+    { "when": "1 July", "what": "Hong Kong returns to Chinese sovereignty, on the same day OK Computer comes out in the US." },
+    { "when": "31 August", "what": "Diana, Princess of Wales, dies in a car crash in Paris." }
+  ],
+  "alsoThisYear": [
+    { "title": "Homogenic", "artist": "Björk" },
+    { "title": "Ladies and Gentlemen We Are Floating in Space", "artist": "Spiritualized" },
+    { "title": "Urban Hymns", "artist": "The Verve" },
+    { "title": "Homework", "artist": "Daft Punk" }
+  ],
+  "release": [
+    { "label": "Released", "value": "21 May 1997 (Japan) · 16 June 1997 (UK) · 1 July 1997 (US)" },
+    { "label": "Label", "value": "Parlophone (UK) · Capitol (US)" },
+    { "label": "Producers", "value": "Nigel Godrich, Radiohead" },
+    { "label": "Studios", "value": "Canned Applause, Didcot · St Catherine's Court, Bath" },
+    { "label": "Artwork", "value": "Stanley Donwood and Thom Yorke" },
+    { "label": "Singles", "value": "Paranoid Android · Karma Police · No Surprises" },
+    { "label": "Charts", "value": "No. 1 in the UK · No. 21 in the US" },
+    { "label": "Awards", "value": "Grammy for Best Alternative Music Album (1998)" }
+  ],
+  "trivia": [
+    "The title comes from a line in the radio version of The Hitchhiker's Guide to the Galaxy, which the band listened to on the tour bus.",
+    "Radiohead's headline set at Glastonbury in June 1997 was plagued by technical problems, and Yorke nearly walked off. It is now often ranked among the festival's greatest performances.",
+    "In 2015 the US Library of Congress added OK Computer to its National Recording Registry of culturally significant recordings.",
+    "For the 20th anniversary in 2017, the band released OKNOTOK, adding three songs from the era that had never been officially released: I Promise, Man of War and Lift."
+  ],
+  "quiz": [
+    {
+      "question": "Where did Radiohead record most of OK Computer?",
+      "options": ["Abbey Road, London", "St Catherine's Court, near Bath", "Rockfield Studios, Wales", "The Manor, Oxfordshire"],
+      "answer": 2,
+      "explanation": "St Catherine's Court, a historic house outside Bath, after early sessions in their rehearsal shed near Didcot."
+    },
+    {
+      "question": "Exit Music (For a Film) was written for which movie?",
+      "options": ["Trainspotting", "Romeo + Juliet", "Fight Club", "The Truman Show"],
+      "answer": 2,
+      "explanation": "Baz Luhrmann's Romeo + Juliet, where it plays over the end credits."
+    },
+    {
+      "question": "Who 'reads' Fitter Happier?",
+      "options": ["Thom Yorke, slowed down", "A BBC newsreader", "A synthetic voice from a Macintosh", "Jonny Greenwood"],
+      "answer": 3,
+      "explanation": "'Fred', one of the text-to-speech voices built into Apple's Macintosh computers."
+    },
+    {
+      "question": "Where does the album's title come from?",
+      "options": ["A computer error message", "The Hitchhiker's Guide to the Galaxy", "A line in a Kraftwerk song", "A newspaper headline"],
+      "answer": 2,
+      "explanation": "A line from the radio series of The Hitchhiker's Guide to the Galaxy, which also gave Paranoid Android its name."
+    }
+  ],
+  "shopIntro": "Picked for this album.",
+  "shop": [
+    {
+      "title": "Own the record",
+      "subtitle": "The album itself, in the format you play.",
+      "items": [
+        { "kind": "Double vinyl LP", "name": "OK Computer", "note": "The original twelve tracks across four sides.", "price": "", "retailer": "", "url": "", "image": "", "affiliate": true },
+        { "kind": "Triple vinyl LP", "name": "OK Computer OKNOTOK 1997 2017", "note": "The remastered album plus B-sides and three unreleased songs from the era.", "price": "", "retailer": "", "url": "", "image": "", "affiliate": true },
+        { "kind": "CD", "name": "OK Computer", "note": "", "price": "", "retailer": "", "url": "", "image": "", "affiliate": true }
+      ]
+    },
+    {
+      "title": "Go deeper",
+      "subtitle": "For after the last track.",
+      "items": [
+        { "kind": "Book", "name": "Radiohead's OK Computer (33⅓ series)", "note": "Dai Griffiths' short, track-by-track study of the album.", "price": "", "retailer": "", "url": "", "image": "", "affiliate": true },
+        { "kind": "Book", "name": "Dead Children Playing", "note": "Stanley Donwood and Thom Yorke's collection of the artwork behind Radiohead's records.", "price": "", "retailer": "", "url": "", "image": "", "affiliate": true },
+        { "kind": "Film", "name": "Meeting People Is Easy", "note": "Grant Gee's documentary following the band through the exhausting OK Computer tour.", "price": "", "retailer": "", "url": "", "image": "", "affiliate": true }
+      ]
+    }
+  ]
+}

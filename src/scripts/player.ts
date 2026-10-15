@@ -38,6 +38,7 @@ let source: Source = 'youtube';
 let playing = false;
 let trackIndex = 0;
 let yt: any = null;
+let ytReady = false; // true once YouTube's API is connected to the player
 let sp: any = null;
 let ytPoll: number | undefined;
 const loading: Partial<Record<Source, Promise<void>>> = {};
@@ -99,25 +100,32 @@ function trackFromTime(seconds: number) {
 async function loadYouTube(autoplay: boolean) {
   const el = slot('youtube');
   if (!el) return;
-  const YT = await youtubeApi();
-  el.innerHTML = '<div id="yt-player"></div>';
   const usePlaylist = Boolean(config.youtubePlaylistId);
 
+  // We build the player's iframe ourselves with YouTube's standard embed address,
+  // which works reliably for album playlists, then let YouTube's API take control of it.
+  // If the API never connects, the visitor still gets a working player.
+  const params = new URLSearchParams({ enablejsapi: '1', origin: window.location.origin, playsinline: '1', rel: '0' });
+  if (usePlaylist) params.set('list', config.youtubePlaylistId!);
+  if (autoplay) params.set('autoplay', '1');
+  const frame = document.createElement('iframe');
+  frame.id = 'yt-player';
+  frame.src = `https://www.youtube.com/embed/${usePlaylist ? 'videoseries' : encodeURIComponent(config.youtubeVideoId!)}?${params}`;
+  frame.title = 'YouTube';
+  frame.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+  frame.referrerPolicy = 'strict-origin-when-cross-origin';
+  frame.allowFullscreen = true;
+  el.replaceChildren(frame);
+  el.classList.add('is-loaded');
+
+  const YT = await youtubeApi();
   await new Promise<void>((resolve) => {
-    yt = new YT.Player('yt-player', {
-      host: 'https://www.youtube-nocookie.com',
-      width: '100%',
-      height: '100%',
-      videoId: usePlaylist ? undefined : config.youtubeVideoId,
-      playerVars: {
-        ...(usePlaylist ? { listType: 'playlist', list: config.youtubePlaylistId } : {}),
-        playsinline: 1,
-        rel: 0,
-        origin: window.location.origin,
-      },
+    const giveUp = window.setTimeout(resolve, 10000);
+    yt = new YT.Player(frame, {
       events: {
         onReady: () => {
-          el.classList.add('is-loaded');
+          window.clearTimeout(giveUp);
+          ytReady = true;
           if (autoplay) yt.playVideo();
           resolve();
         },
@@ -144,6 +152,7 @@ async function loadYouTube(autoplay: boolean) {
           el.replaceChildren(box);
           el.classList.remove('is-loaded');
           setPlaying(false);
+          window.clearTimeout(giveUp);
           resolve();
         },
         onStateChange: (e: { data: number }) => {
@@ -226,7 +235,7 @@ function loadEmbed(which: 'apple' | 'amazon') {
 /* ---------- Public API ---------- */
 
 function isLoaded(which: Source) {
-  if (which === 'youtube') return Boolean(yt);
+  if (which === 'youtube') return ytReady;
   if (which === 'spotify') return Boolean(sp);
   return embedsLoaded.has(which);
 }
@@ -260,7 +269,7 @@ export const player = {
   },
 
   pause() {
-    if (source === 'youtube' && yt) yt.pauseVideo();
+    if (source === 'youtube' && ytReady) yt.pauseVideo();
     if (source === 'spotify' && sp) sp.pause();
   },
 
@@ -273,7 +282,7 @@ export const player = {
 
   /** Jump to a track. Returns false when the provider can't do it (the page then just shows the note). */
   playTrack(index: number): boolean {
-    if (source === 'youtube' && yt) {
+    if (source === 'youtube' && ytReady) {
       if (config.youtubePlaylistId) {
         yt.playVideoAt(index);
         return true;
@@ -291,12 +300,12 @@ export const player = {
   },
 
   next(total: number) {
-    if (source === 'youtube' && yt && config.youtubePlaylistId) return yt.nextVideo();
+    if (source === 'youtube' && ytReady && config.youtubePlaylistId) return yt.nextVideo();
     this.playTrack((trackIndex + 1) % total);
   },
 
   prev(total: number) {
-    if (source === 'youtube' && yt && config.youtubePlaylistId) return yt.previousVideo();
+    if (source === 'youtube' && ytReady && config.youtubePlaylistId) return yt.previousVideo();
     this.playTrack((trackIndex - 1 + total) % total);
   },
 };

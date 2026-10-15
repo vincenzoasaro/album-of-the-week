@@ -1,0 +1,40 @@
+---
+import { useTranslations, type Lang } from '../i18n/ui';
+import { albumUrl, decadeOf, url, type Album } from '../lib/albums';
+interface Props { lang: Lang; albums: Album[] }
+const { lang, albums } = Astro.props;
+const t = useTranslations(lang);
+const decades = [...new Set(albums.map((a) => decadeOf(a.year)))].sort();
+const genres = [...new Set(albums.map((a) => a.genre).filter(Boolean))].sort();
+const slugify = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+---
+{albums.length > 0 && (
+<section id="archive" class="wrap" style="padding-top:96px" aria-labelledby="archive-title" data-archive>
+  <div style="display:flex;flex-direction:column;gap:28px">
+    <div class="archive-head">
+      <h2 class="section-title" id="archive-title">{t('archive.title')}</h2>
+      {(decades.length > 1 || genres.length > 1) && (
+        <div class="filters" role="group" aria-label="Filter">
+          <button class="pill" type="button" data-filter="" aria-pressed="true">{t('archive.all')}</button>
+          {decades.length > 1 && decades.map((d) => <button class="pill" type="button" data-filter={`decade:${d}`} aria-pressed="false">{d}</button>)}
+          {genres.length > 1 && genres.map((g) => <button class="pill" type="button" data-filter={`genre:${slugify(g)}`} aria-pressed="false">{g}</button>)}
+        </div>
+      )}
+    </div>
+    <div class="archive-grid">
+      {albums.map((a) => (
+        <a class="archive-tile" href={albumUrl(lang, a.slug)} data-tile data-decade={decadeOf(a.year)} data-genre={slugify(a.genre)} style={`--tile-accent:${a.accent}`}>
+          <div class="archive-art">
+            <div class="archive-disc" aria-hidden="true"></div>
+            {a.cover && <img src={url(a.cover)} alt="" loading="lazy" />}
+          </div>
+          <p class="mono muted">Nº {a.issue}</p>
+          <p class="t">{a.title}</p>
+          <p class="muted">{a.artist} · {a.year}</p>
+        </a>
+      ))}
+    </div>
+    <p class="muted" data-archive-empty hidden>{t('archive.empty')}</p>
+  </div>
+</section>
+)}

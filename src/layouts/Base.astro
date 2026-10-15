@@ -1,0 +1,45 @@
+---
+import '@fontsource-variable/bricolage-grotesque';
+import '@fontsource-variable/newsreader';
+import '@fontsource-variable/newsreader/wght-italic.css';
+import '@fontsource/ibm-plex-mono/400.css';
+import '@fontsource/ibm-plex-mono/500.css';
+import '../styles/global.css';
+import site from '../data/site.json';
+import type { Lang } from '../i18n/ui';
+import { inkOn, url } from '../lib/albums';
+
+interface Props {
+  lang: Lang;
+  title: string;
+  description?: string;
+  accent?: string;
+  alternateUrl?: string; // the same page in the other language
+  ogImage?: string;
+}
+
+const { lang, title, description = lang === 'it' ? site.description_it : site.description_en, accent = '#7FB2E5', alternateUrl, ogImage } = Astro.props;
+const otherLang = lang === 'en' ? 'it' : 'en';
+const canonical = new URL(Astro.url.pathname, Astro.site);
+---
+<!doctype html>
+<html lang={lang} style={`--accent:${accent};--on-accent:${inkOn(accent)}`}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#0E1116" />
+    <link rel="icon" type="image/svg+xml" href={url('favicon.svg')} />
+    <link rel="canonical" href={canonical} />
+    {alternateUrl && <link rel="alternate" hreflang={otherLang} href={new URL(alternateUrl, Astro.site)} />}
+    <link rel="alternate" hreflang={lang} href={canonical} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    {ogImage && <meta property="og:image" content={new URL(ogImage, Astro.site)} />}
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

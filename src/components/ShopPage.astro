@@ -1,0 +1,60 @@
+---
+import Base from '../layouts/Base.astro';
+import Header from './Header.astro';
+import Footer from './Footer.astro';
+import site from '../data/site.json';
+import { useTranslations } from '../i18n/ui';
+import { albumUrl, homeUrl, url, type Album } from '../lib/albums';
+
+interface Props { album: Album; isCurrent: boolean; alternateUrl: string }
+const { album, isCurrent, alternateUrl } = Astro.props;
+const lang = album.lang;
+const t = useTranslations(lang);
+const back = isCurrent ? homeUrl(lang) : albumUrl(lang, album.slug);
+---
+<Base lang={lang} title={`${t('shop.title')}: ${album.title} | ${site.siteName}`} accent={album.accent} alternateUrl={alternateUrl}>
+  <Header lang={lang} alternateUrl={alternateUrl} showNav={false} />
+  <main class="wrap" style="padding-bottom:80px">
+    <p style="margin:28px 0 0"><a class="pill" style="display:inline-flex;align-items:center;text-decoration:none" href={back}>← {t('shop.back')}</a></p>
+    <div class="shop-hero">
+      <div>
+        <p class="chapter-mark" style="margin-bottom:14px">Nº {album.issue} · {album.artist}</p>
+        <h1 class="hero-title">{album.title}</h1>
+      </div>
+      <p>{album.shopIntro && <>{album.shopIntro} </>}{t('shop.disclosure')}</p>
+    </div>
+
+    {album.shop.filter((g) => g.items.length).map((group) => (
+      <section class="shop-group">
+        <div class="shop-group-head">
+          <h2>{group.title}</h2>
+          {group.subtitle && <p>{group.subtitle}</p>}
+        </div>
+        <div class="grid-auto" style="grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr));gap:16px">
+          {group.items.map((item) => (
+            <article class="product">
+              <div class="product-img">
+                {item.image ? <img src={url(item.image)} alt="" loading="lazy" /> : <div class="archive-disc" style="position:static;width:46%" aria-hidden="true"></div>}
+              </div>
+              <div style="display:flex;flex-direction:column;gap:4px">
+                {item.kind && <p class="mono accent">{item.kind}</p>}
+                <h3>{item.name}</h3>
+                {item.note && <p class="muted" style="margin-top:4px">{item.note}</p>}
+              </div>
+              <div class="product-foot">
+                <span class="mono" style="font-size:15px">{item.price}</span>
+                {item.url && (
+                  <a class="btn btn--primary" style="min-height:44px;font-size:15px" href={item.url} target="_blank" rel={item.affiliate ? 'sponsored noopener' : 'noopener'}>
+                    {item.retailer ? `${t('shop.buyAt')} ${item.retailer}` : t('shop.view')}{item.affiliate && ' ↗'}
+                  </a>
+                )}
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+    ))}
+    <p class="mono muted" style="margin:48px 0 0;padding-top:24px;border-top:1px solid var(--line)">{t('shop.prices')}</p>
+  </main>
+  <Footer lang={lang} />
+</Base>

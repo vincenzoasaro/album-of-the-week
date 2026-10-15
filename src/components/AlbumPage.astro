@@ -1,0 +1,72 @@
+---
+import Base from '../layouts/Base.astro';
+import Header from './Header.astro';
+import Hero from './Hero.astro';
+import Story from './Story.astro';
+import Quiz from './Quiz.astro';
+import Archive from './Archive.astro';
+import Newsletter from './Newsletter.astro';
+import Footer from './Footer.astro';
+import ListeningMode from './ListeningMode.astro';
+import site from '../data/site.json';
+import { useTranslations } from '../i18n/ui';
+import { amazonEmbedUrl, appleEmbedUrl, toSeconds, url, type Album } from '../lib/albums';
+import { controllable, type Source } from '../scripts/player';
+
+interface Props {
+  album: Album;
+  archive: Album[];
+  isCurrent: boolean;
+  alternateUrl: string;
+}
+const { album, archive, isCurrent, alternateUrl } = Astro.props;
+const lang = album.lang;
+const t = useTranslations(lang);
+
+const sources: Source[] = [];
+if (album.youtubePlaylistId || album.youtubeVideoId) sources.push('youtube');
+if (album.spotifyAlbumId) sources.push('spotify');
+// A service is only shown when the album has a valid link for it.
+const apple = appleEmbedUrl(album.appleMusicUrl);
+const amazon = amazonEmbedUrl(album.amazonMusicEmbed);
+if (apple) sources.push('apple');
+if (amazon) sources.push('amazon');
+if (album.appleMusicUrl && !apple) console.warn(`[${album.slug}] The Apple Music link isn't a music.apple.com link, so Apple Music is hidden.`);
+if (album.amazonMusicEmbed && !amazon) console.warn(`[${album.slug}] The Amazon Music field needs the embed code from Share > Embed, so Amazon Music is hidden.`);
+const canControl = sources.some(controllable);
+
+const pageData = {
+  player: {
+    youtubePlaylistId: album.youtubePlaylistId,
+    youtubeVideoId: album.youtubeVideoId,
+    spotifyAlbumId: album.spotifyAlbumId,
+    appleEmbedUrl: apple,
+    amazonEmbedUrl: amazon,
+    trackStarts: album.tracks.map((tr) => toSeconds(tr.ytStart)),
+  },
+  sources,
+  tracks: album.tracks.map((tr) => ({ side: tr.side || 'A', title: tr.title, time: tr.time, note: tr.note })),
+  labels: { play: t('hero.play'), pause: t('hero.pause'), side: t('tracks.side') },
+};
+const title = isCurrent
+  ? `${album.title} · ${album.artist} | ${site.siteName}`
+  : `${album.title} · ${album.artist} (Nº ${album.issue}) | ${site.siteName}`;
+---
+<Base lang={lang} title={title} description={album.tagline || undefined} accent={album.accent} alternateUrl={alternateUrl} ogImage={album.cover ? url(album.cover) : undefined}>
+  <Header lang={lang} alternateUrl={alternateUrl} />
+  <main id="top">
+    <Hero album={album} isCurrent={isCurrent} sources={sources} />
+    <Story album={album} canPlay={canControl} />
+    <Quiz album={album} />
+    <Archive lang={lang} albums={archive} />
+    <Newsletter lang={lang} />
+  </main>
+  <Footer lang={lang} />
+  <ListeningMode album={album} canPlay={canControl} />
+  <script id="page-data" type="application/json" set:html={JSON.stringify(pageData).replace(/</g, '\\u003c')}></script>
+</Base>
+
+<script>
+  import '../scripts/album-page';
+  import '../scripts/reveal';
+</script>

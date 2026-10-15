@@ -1,0 +1,37 @@
+---
+import { useTranslations } from '../i18n/ui';
+import type { Album } from '../lib/albums';
+interface Props { album: Album }
+const { album } = Astro.props;
+const t = useTranslations(album.lang);
+const total = album.quiz.length;
+---
+{total > 0 && (
+<section id="quiz" class="wrap" style="padding-top:80px" aria-labelledby="quiz-title">
+  <div class="quiz" data-quiz={album.slug}>
+    <h2 id="quiz-title" class="chapter-mark" style="font-weight:500">{t('quiz.title')}</h2>
+    {album.quiz.map((q, i) => (
+      <div class="quiz-q" data-q hidden={i !== 0}>
+        <p class="mono muted" style="margin:0">{t('quiz.question')} {i + 1} {t('quiz.of')} {total}</p>
+        <h3 class="quiz-question">{q.question}</h3>
+        <div class="quiz-options">
+          {q.options.map((opt, n) => (
+            <button class="quiz-opt" type="button" data-opt data-correct={String(n + 1 === q.answer)}>{opt}</button>
+          ))}
+        </div>
+        <div class="quiz-feedback" data-feedback data-right={t('quiz.right')} data-wrong={t('quiz.wrong')} hidden aria-live="polite">
+          <p><strong data-verdict></strong> {q.explanation}</p>
+          <button class="btn btn--primary" type="button" data-next>{i + 1 < total ? t('quiz.next') : t('quiz.finish')}</button>
+        </div>
+      </div>
+    ))}
+    <div class="quiz-result" data-quiz-result hidden aria-live="polite">
+      <div>
+        <p class="mono muted" style="margin:0 0 8px">{t('quiz.score')}</p>
+        <p class="quiz-score" data-score></p>
+      </div>
+      <button class="btn" type="button" data-retry>{t('quiz.retry')}</button>
+    </div>
+  </div>
+</section>
+)}

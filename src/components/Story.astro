@@ -1,0 +1,161 @@
+---
+import Headline from './Headline.astro';
+import Icon from './Icon.astro';
+import { useTranslations } from '../i18n/ui';
+import { sidesOf, type Album } from '../lib/albums';
+
+interface Props { album: Album; canPlay: boolean }
+const { album, canPlay } = Astro.props;
+const t = useTranslations(album.lang);
+
+// Chapters only appear when they have content, and are numbered in order.
+const has = {
+  sessions: album.sessions.length > 0 || Boolean(album.sessionsText),
+  lineup: album.musicians.length > 0,
+  tracks: album.tracks.length > 0,
+  world: album.world.length > 0 || album.alsoThisYear.length > 0,
+  release: album.release.length > 0,
+  trivia: album.trivia.length > 0,
+};
+const order = (Object.keys(has) as (keyof typeof has)[]).filter((k) => has[k]);
+const num = (k: keyof typeof has) => String(order.indexOf(k) + 1).padStart(2, '0');
+const sides = sidesOf(album);
+const multiSide = sides.length > 1;
+const tracksWithIndex = album.tracks.map((tr, index) => ({ ...tr, index, side: tr.side || 'A' }));
+---
+{order.length > 0 && (
+<section id="story" class="story wrap" aria-label={t('nav.story')}>
+  <div class="story-head">
+    <h2>{t('nav.story')}</h2>
+    <p class="mono muted" style="margin:0" aria-hidden="true">↓</p>
+  </div>
+
+  {has.sessions && (
+    <article class="chapter" data-chapter>
+      <p class="chapter-mark">{num('sessions')} / {t('ch.sessions')}</p>
+      {album.sessionsHeadline && <Headline text={album.sessionsHeadline} />}
+      {album.sessionsText && <p class="chapter-lede" data-reveal>{album.sessionsText}</p>}
+      {album.sessions.length > 0 && (
+        <div class="grid-auto">
+          {album.sessions.map((s) => (
+            <div class="card" data-reveal>
+              <p class="date-big">{s.date}</p>
+              {s.label && <p class="mono muted">{s.label}</p>}
+              {s.tracks && <p style="margin-top:8px">{s.tracks}</p>}
+            </div>
+          ))}
+        </div>
+      )}
+    </article>
+  )}
+
+  {has.lineup && (
+    <article class="chapter" data-chapter>
+      <p class="chapter-mark">{num('lineup')} / {t('ch.lineup')}</p>
+      <Headline text={album.lineupHeadline || t('ch.lineupDefault')} />
+      <ul class="grid-auto" style="list-style:none;margin:0;padding:0">
+        {album.musicians.map((m) => (
+          <li class="card" data-reveal>
+            <p class="person">{m.name}</p>
+            {m.instrument && <p class="mono accent">{m.instrument}</p>}
+            {m.plays && <p class="muted" style="margin-top:6px">{m.plays}</p>}
+          </li>
+        ))}
+      </ul>
+    </article>
+  )}
+
+  {has.tracks && (
+    <article id="tracks" class="chapter" data-chapter data-sides>
+      <p class="chapter-mark">{num('tracks')} / {t('ch.tracks')}</p>
+      <div class="sides-head">
+        <h3 class="chapter-title" data-side-heading>{multiSide ? `${t('tracks.side')} ${sides[0]}` : album.title}</h3>
+        {multiSide && (
+          <div class="player-tabs" role="group" aria-label={t('tracks.side')}>
+            {sides.map((s, i) => (
+              <button class="pill" type="button" data-side-tab={s} aria-pressed={i === 0 ? 'true' : 'false'}>{t('tracks.side')} {s}</button>
+            ))}
+          </div>
+        )}
+      </div>
+      {sides.map((side) => (
+        <ol class="track-list" data-side-panel={side}>
+          {tracksWithIndex.filter((tr) => tr.side === side).map((tr, i) => (
+            <li class="track" data-track-index={tr.index}>
+              <span class="track-n">{multiSide ? `${side}${i + 1}` : tr.index + 1}</span>
+              <div class="track-body">
+                <p class="track-title">{tr.title}</p>
+                {tr.note && <p class="track-note">{tr.note}</p>}
+                <div class="track-chips">
+                  {tr.recorded && <span class="chip">{t('tracks.recorded')} {tr.recorded}</span>}
+                  {tr.instrumental && <span class="chip">{t('tracks.instrumental')}</span>}
+                  {!tr.instrumental && tr.lyricsUrl && (
+                    <a class="chip" href={tr.lyricsUrl} target="_blank" rel="noopener">{t('tracks.lyrics')} ↗</a>
+                  )}
+                </div>
+              </div>
+              {canPlay && (
+                <button class="track-play" type="button" data-play-track={tr.index} aria-label={`${t('tracks.playTrack')}: ${tr.title}`}>
+                  <Icon name="play" size={12} />{tr.time}
+                </button>
+              )}
+              {tr.time && <span class="track-time" data-time-only hidden={canPlay}>{tr.time}</span>}
+            </li>
+          ))}
+        </ol>
+      ))}
+      {multiSide && (
+        <button class="btn" type="button" data-action="flip" style="align-self:flex-start;border-color:var(--accent)">
+          {t('tracks.flip')} · {t('tracks.side')} <span data-flip-to>{sides[1]}</span>
+        </button>
+      )}
+    </article>
+  )}
+
+  {has.world && (
+    <article class="chapter" data-chapter>
+      <p class="chapter-mark">{num('world')} / {t('ch.world')} {album.year}</p>
+      <Headline text={album.worldHeadline || t('ch.worldDefault')} />
+      {album.world.length > 0 && (
+        <div class="grid-auto">
+          {album.world.map((w) => (
+            <div class="timeline-item" data-reveal>
+              <p class="mono muted">{w.when}</p>
+              <p style="font-size:19px;line-height:1.45">{w.what}</p>
+            </div>
+          ))}
+        </div>
+      )}
+      {album.alsoThisYear.length > 0 && (
+        <div style="display:flex;flex-direction:column;gap:14px" data-reveal>
+          <p class="mono muted" style="margin:0">{t('world.also')} {album.year}</p>
+          <div class="also">
+            {album.alsoThisYear.map((a) => <span><i>{a.title}</i>{a.artist && ` · ${a.artist}`}</span>)}
+          </div>
+        </div>
+      )}
+    </article>
+  )}
+
+  {(has.release || has.trivia) && (
+    <div class="chapter-pair">
+      {has.release && (
+        <article class="chapter" data-chapter>
+          <p class="chapter-mark">{num('release')} / {t('ch.release')}</p>
+          <dl class="facts" data-reveal>
+            {album.release.map((r) => <><dt>{r.label}</dt><dd>{r.value}</dd></>)}
+          </dl>
+        </article>
+      )}
+      {has.trivia && (
+        <article class="chapter" data-chapter>
+          <p class="chapter-mark">{num('trivia')} / {t('ch.trivia')}</p>
+          <ol class="trivia">
+            {album.trivia.map((item) => <li data-reveal>{item}</li>)}
+          </ol>
+        </article>
+      )}
+    </div>
+  )}
+</section>
+)}

@@ -1,0 +1,10 @@
+---
+import AlbumPage from '../../components/AlbumPage.astro';
+import EmptyState from '../../components/EmptyState.astro';
+import { getCurrentAndArchive, homeUrl } from '../../lib/albums';
+
+const { current, archive } = await getCurrentAndArchive('it');
+---
+{current
+  ? <AlbumPage album={current} archive={archive} isCurrent alternateUrl={homeUrl('en')} />
+  : <EmptyState lang="it" />}

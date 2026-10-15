@@ -1,0 +1,12 @@
+---
+import site from '../data/site.json';
+import { useTranslations, type Lang } from '../i18n/ui';
+interface Props { lang: Lang }
+const t = useTranslations(Astro.props.lang);
+---
+<footer class="site-footer">
+  <div class="wrap">
+    <p>{t('footer.note')}</p>
+    {site.contactEmail && <a href={`mailto:${site.contactEmail}`}>{t('footer.contact')}</a>}
+  </div>
+</footer>

@@ -1,0 +1,28 @@
+---
+import site from '../data/site.json';
+import { useTranslations, type Lang } from '../i18n/ui';
+interface Props { lang: Lang }
+const t = useTranslations(Astro.props.lang);
+// Paste your newsletter provider's form URL (e.g. Buttondown, MailerLite) into
+// the site settings in the CMS. Until then the form shows a "coming soon" note.
+const action = site.newsletterAction;
+---
+<section id="newsletter" class="wrap" style="padding-block:96px" aria-labelledby="news-title">
+  <div class="newsletter">
+    <div>
+      <h2 id="news-title">{t('news.title')}</h2>
+      <p>{t('news.text')}</p>
+    </div>
+    {action ? (
+      <form action={action} method="post" target="_blank">
+        <label for="nl-email">{t('news.label')}</label>
+        <div class="row">
+          <input id="nl-email" name="email" type="email" required autocomplete="email" />
+          <button type="submit">{t('news.button')}</button>
+        </div>
+      </form>
+    ) : (
+      <p class="mono" style="margin:0">{t('news.soon')}</p>
+    )}
+  </div>
+</section>

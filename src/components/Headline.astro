@@ -1,0 +1,11 @@
+---
+// Big chapter headline. Each line (split on line breaks typed in the CMS)
+// gets its own mask so it can rise into view on scroll.
+interface Props { text: string; level?: 'h2' | 'h3' }
+const { text, level = 'h3' } = Astro.props;
+const lines = text.split(/\n+/).map((l) => l.trim()).filter(Boolean);
+const Tag = level;
+---
+<Tag class="chapter-title">
+  {lines.map((line) => <span class="line"><span>{line}</span></span>)}
+</Tag>

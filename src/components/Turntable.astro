@@ -1,0 +1,25 @@
+---
+import { url } from '../lib/albums';
+interface Props { title: string; artist: string; cover?: string; side?: string; sideWord?: string; variant?: 'hero' | 'focus' }
+const { title, artist, cover, side = 'A', sideWord = 'Side', variant = 'hero' } = Astro.props;
+---
+<div class:list={['tt', variant === 'focus' && 'tt--focus']} data-turntable={variant} aria-hidden="true">
+  {variant === 'hero' && (
+    <div class="tt-sleeve">
+      {cover ? <img src={url(cover)} alt="" /> : (
+        <div class="tt-sleeve-type"><span>{artist}</span><span>{title}</span></div>
+      )}
+    </div>
+  )}
+  <div class="tt-record">
+    <div class="tt-disc">
+      <div class="tt-label">
+        <b>{artist}</b>
+        <small>{title}</small>
+        <small>{sideWord.toUpperCase()} <span data-side-label>{side}</span> · 33⅓</small>
+      </div>
+    </div>
+    <div class="tt-sheen"></div>
+  </div>
+  {variant === 'hero' && <><div class="tt-pivot"></div><div class="tt-arm"></div></>}
+</div>

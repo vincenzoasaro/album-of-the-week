@@ -1,0 +1,28 @@
+{
+  "slug": "a-love-supreme",
+  "title": "A Love Supreme",
+  "artist": "John Coltrane",
+  "year": 1965,
+  "label": "Impulse!",
+  "genre": "Spiritual jazz",
+  "publishDate": "2026-10-05T00:00:00+02:00",
+  "accent": "#E8B04A",
+  "tagline": "A suite in four parts, recorded by Coltrane's classic quartet in a single December session.",
+  "musicians": [
+    { "name": "John Coltrane", "instrument": "Tenor saxophone, vocals", "plays": "All four parts" },
+    { "name": "McCoy Tyner", "instrument": "Piano", "plays": "All four parts" },
+    { "name": "Jimmy Garrison", "instrument": "Double bass", "plays": "All four parts" },
+    { "name": "Elvin Jones", "instrument": "Drums", "plays": "All four parts" }
+  ],
+  "tracks": [
+    { "side": "A", "title": "Part 1: Acknowledgement", "time": "7:47", "recorded": "9 Dec 1964" },
+    { "side": "A", "title": "Part 2: Resolution", "time": "7:22", "recorded": "9 Dec 1964", "instrumental": true },
+    { "side": "B", "title": "Part 3: Pursuance", "time": "10:42", "recorded": "9 Dec 1964", "instrumental": true },
+    { "side": "B", "title": "Part 4: Psalm", "time": "7:05", "recorded": "9 Dec 1964", "instrumental": true }
+  ],
+  "release": [
+    { "label": "Label", "value": "Impulse!" },
+    { "label": "Producer", "value": "Bob Thiele" },
+    { "label": "Studio", "value": "Van Gelder Studio, Englewood Cliffs, New Jersey" }
+  ]
+}

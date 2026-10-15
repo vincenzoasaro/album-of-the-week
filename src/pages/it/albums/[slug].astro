@@ -1,0 +1,19 @@
+---
+import AlbumPage from '../../../components/AlbumPage.astro';
+import { albumUrl, getCurrentAndArchive } from '../../../lib/albums';
+
+export async function getStaticPaths() {
+  const { all, current } = await getCurrentAndArchive('it');
+  return all.map((album) => ({
+    params: { slug: album.slug },
+    props: {
+      album,
+      isCurrent: album.slug === current?.slug,
+      archive: all.filter((a) => a.slug !== album.slug).reverse(),
+    },
+  }));
+}
+
+const { album, isCurrent, archive } = Astro.props;
+---
+<AlbumPage album={album} archive={archive} isCurrent={isCurrent} alternateUrl={albumUrl('en', album.slug)} />

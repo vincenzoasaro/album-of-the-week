@@ -1,0 +1,13 @@
+---
+import Base from '../layouts/Base.astro';
+import Header from './Header.astro';
+import type { Lang } from '../i18n/ui';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+---
+<Base lang={lang} title="Coming soon">
+  <Header lang={lang} showNav={false} />
+  <main class="wrap" style="padding-block:120px">
+    <h1 class="section-title">{lang === 'it' ? 'Il primo album arriva presto.' : 'The first album is on its way.'}</h1>
+  </main>
+</Base>

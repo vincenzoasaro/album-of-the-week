@@ -1,0 +1,14 @@
+---
+import ShopPage from '../../components/ShopPage.astro';
+import { getCurrentAndArchive, shopUrl } from '../../lib/albums';
+
+export async function getStaticPaths() {
+  const { all, current } = await getCurrentAndArchive('en');
+  return all
+    .filter((album) => album.shop.some((g) => g.items.length))
+    .map((album) => ({ params: { slug: album.slug }, props: { album, isCurrent: album.slug === current?.slug } }));
+}
+
+const { album, isCurrent } = Astro.props;
+---
+<ShopPage album={album} isCurrent={isCurrent} alternateUrl={shopUrl('it', album.slug)} />

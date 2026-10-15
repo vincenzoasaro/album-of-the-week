@@ -1,0 +1,32 @@
+---
+import site from '../data/site.json';
+import { useTranslations, type Lang } from '../i18n/ui';
+import { homeUrl } from '../lib/albums';
+
+interface Props { lang: Lang; alternateUrl?: string; showNav?: boolean }
+const { lang, alternateUrl, showNav = true } = Astro.props;
+const t = useTranslations(lang);
+---
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href={homeUrl(lang)}>
+      <svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="none" stroke="currentColor" stroke-width="1.5"></circle><circle cx="16" cy="16" r="10" fill="none" stroke="currentColor" stroke-width="0.75" opacity="0.5"></circle><circle cx="16" cy="16" r="5" fill="var(--accent)"></circle></svg>
+      <span>{site.siteName}</span>
+    </a>
+    {showNav && (
+      <nav class="site-nav" aria-label="Main">
+        <a href="#story">{t('nav.story')}</a>
+        <a href="#tracks">{t('nav.tracks')}</a>
+        <a href="#quiz">{t('nav.quiz')}</a>
+        <a href="#archive">{t('nav.archive')}</a>
+        <a href="#newsletter">{t('nav.newsletter')}</a>
+      </nav>
+    )}
+    {alternateUrl && (
+      <a class="lang-switch" href={alternateUrl} hreflang={lang === 'en' ? 'it' : 'en'} lang={lang === 'en' ? 'it' : 'en'}>
+        <span aria-hidden="true">{lang === 'en' ? 'EN · ' : ''}<b>{lang === 'en' ? 'IT' : 'EN'}</b>{lang === 'it' ? ' · IT' : ''}</span>
+        <span class="visually-hidden">{t('lang.switch')}</span>
+      </a>
+    )}
+  </div>
+</header>

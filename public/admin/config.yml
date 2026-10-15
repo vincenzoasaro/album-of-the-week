@@ -1,0 +1,181 @@
+# Sveltia CMS configuration: this file defines the forms you fill in at /admin/.
+# Before first use, replace YOUR-GITHUB-USERNAME/YOUR-REPO below.
+
+backend:
+  name: github
+  repo: YOUR-GITHUB-USERNAME/YOUR-REPO
+  branch: main
+
+media_folder: public/images
+public_folder: /images
+
+i18n:
+  structure: multiple_folders   # src/content/albums/en/... and src/content/albums/it/...
+  locales: [en, it]
+  default_locale: en
+
+collections:
+  - name: albums
+    label: Albums
+    label_singular: Album
+    folder: src/content/albums
+    format: json
+    create: true
+    i18n: true
+    slug: "{{fields.slug}}"
+    identifier_field: title
+    summary: "{{publishDate | date('YYYY-MM-DD')}} · {{artist}}: {{title}}"
+    sortable_fields: [publishDate, title, artist]
+    fields:
+      # ---------- Basics ----------
+      - { name: slug, label: URL name, widget: string, i18n: duplicate, hint: "Lowercase with dashes, e.g. kind-of-blue. Don't change it after publishing." }
+      - { name: title, label: Album title, widget: string, i18n: duplicate }
+      - { name: artist, label: Artist, widget: string, i18n: duplicate }
+      - { name: year, label: Year, widget: number, value_type: int, i18n: duplicate }
+      - { name: label, label: Record label, widget: string, required: false, i18n: duplicate }
+      - { name: genre, label: Genre, widget: string, required: false, i18n: true }
+      - { name: length, label: Total length, widget: string, required: false, i18n: duplicate, hint: "e.g. 45:44" }
+      - { name: publishDate, label: Publish date, widget: datetime, i18n: duplicate, hint: "The album goes live automatically on this date (around midnight, Italian time)." }
+      - { name: accent, label: Accent colour, widget: color, default: "#7FB2E5", i18n: duplicate, hint: "Used for the record label, buttons and highlights this week." }
+      - { name: tagline, label: Introduction, widget: text, required: false, i18n: true }
+      - { name: cover, label: Cover image, widget: image, required: false, i18n: duplicate }
+      - { name: introAudio, label: Spoken intro (audio file), widget: file, required: false, i18n: true }
+      - { name: introLength, label: Spoken intro length, widget: string, required: false, i18n: true, hint: "e.g. 2 min" }
+
+      # ---------- Listening ----------
+      - { name: spotifyAlbumId, label: Spotify album ID, widget: string, required: false, i18n: duplicate, hint: "The part after /album/ in the Spotify link." }
+      - { name: youtubePlaylistId, label: YouTube playlist ID, widget: string, required: false, i18n: duplicate, hint: "Preferred. The part after list= in the playlist link." }
+      - { name: youtubeVideoId, label: YouTube video ID (full album), widget: string, required: false, i18n: duplicate, hint: "Only if there's no playlist. The part after v= in the link. Then fill in each track's start time." }
+      - { name: appleMusicUrl, label: Apple Music link, widget: string, required: false, i18n: duplicate, hint: "In Apple Music: ••• › Share › Copy Link, and paste it here. Leave empty if the album isn't on Apple Music." }
+      - { name: amazonMusicEmbed, label: Amazon Music embed code, widget: text, required: false, i18n: duplicate, hint: "On music.amazon: Share › Embed, copy the code and paste it here. Leave empty if the album isn't on Amazon Music." }
+
+      # ---------- Chapters ----------
+      - { name: sessionsHeadline, label: "Sessions: headline", widget: text, required: false, i18n: true, hint: "Each new line becomes its own animated line." }
+      - { name: sessionsText, label: "Sessions: text", widget: text, required: false, i18n: true }
+      - name: sessions
+        label: "Sessions: dates"
+        widget: list
+        required: false
+        i18n: true
+        fields:
+          - { name: date, label: Big date, widget: string, hint: "e.g. 2 Mar" }
+          - { name: label, label: Small label, widget: string, required: false }
+          - { name: tracks, label: Tracks recorded, widget: string, required: false }
+
+      - { name: lineupHeadline, label: "Lineup: headline", widget: text, required: false, i18n: true }
+      - name: musicians
+        label: Musicians
+        widget: list
+        required: false
+        i18n: true
+        summary: "{{name}} ({{instrument}})"
+        fields:
+          - { name: name, label: Name, widget: string }
+          - { name: instrument, label: Instrument, widget: string, required: false }
+          - { name: plays, label: Plays on, widget: string, required: false }
+
+      - name: tracks
+        label: Tracks
+        widget: list
+        required: false
+        i18n: true
+        summary: "{{side}} · {{title}} ({{time}})"
+        fields:
+          - { name: side, label: Side, widget: string, default: A, hint: "A, B, C… Leave A for every track if the album has no sides." }
+          - { name: title, label: Title, widget: string }
+          - { name: time, label: Length, widget: string, required: false }
+          - { name: recorded, label: Recorded on, widget: string, required: false }
+          - { name: note, label: Listening note, widget: text, required: false, hint: "Shown in the track list and in listening mode." }
+          - { name: instrumental, label: Instrumental, widget: boolean, default: false, required: false }
+          - { name: lyricsUrl, label: Link to licensed lyrics, widget: string, required: false, hint: "e.g. the song's page on Genius or Musixmatch." }
+          - { name: ytStart, label: Start time in the YouTube video, widget: string, required: false, hint: "Only for a single full-album video, e.g. 9:22" }
+
+      - { name: worldHeadline, label: "World: headline", widget: text, required: false, i18n: true }
+      - name: world
+        label: "World: events that year"
+        widget: list
+        required: false
+        i18n: true
+        fields:
+          - { name: when, label: When, widget: string }
+          - { name: what, label: What happened, widget: text }
+      - name: alsoThisYear
+        label: "World: other albums that year"
+        widget: list
+        required: false
+        i18n: true
+        fields:
+          - { name: title, label: Album, widget: string }
+          - { name: artist, label: Artist, widget: string, required: false }
+
+      - name: release
+        label: Release facts
+        widget: list
+        required: false
+        i18n: true
+        summary: "{{label}}: {{value}}"
+        fields:
+          - { name: label, label: Label, widget: string, hint: "e.g. Released, Producer" }
+          - { name: value, label: Value, widget: string }
+
+      - name: trivia
+        label: Trivia
+        widget: list
+        required: false
+        i18n: true
+        field: { name: fact, label: Fact, widget: text }
+
+      # ---------- Quiz ----------
+      - name: quiz
+        label: Quiz
+        widget: list
+        required: false
+        i18n: true
+        summary: "{{question}}"
+        fields:
+          - { name: question, label: Question, widget: text }
+          - name: options
+            label: Answers
+            widget: list
+            field: { name: option, label: Answer, widget: string }
+          - { name: answer, label: Number of the correct answer, widget: number, value_type: int, min: 1, hint: "1 = first answer in the list" }
+          - { name: explanation, label: Explanation, widget: text, required: false }
+
+      # ---------- Shop ----------
+      - { name: shopIntro, label: "Shop: intro", widget: text, required: false, i18n: true }
+      - name: shop
+        label: "Shop: product groups"
+        widget: list
+        required: false
+        i18n: true
+        summary: "{{title}}"
+        fields:
+          - { name: title, label: Group title, widget: string }
+          - { name: subtitle, label: Group subtitle, widget: string, required: false }
+          - name: items
+            label: Products
+            widget: list
+            summary: "{{kind}}: {{name}}"
+            fields:
+              - { name: kind, label: Type, widget: string, required: false, hint: "e.g. Vinyl LP, Book" }
+              - { name: name, label: Product name, widget: string }
+              - { name: note, label: Why it's here, widget: text, required: false }
+              - { name: price, label: Price, widget: string, required: false }
+              - { name: retailer, label: Shop name, widget: string, required: false }
+              - { name: url, label: Link, widget: string, required: false }
+              - { name: image, label: Image, widget: image, required: false }
+              - { name: affiliate, label: Affiliate link, widget: boolean, default: true }
+
+  - name: settings
+    label: Settings
+    files:
+      - name: site
+        label: Site settings
+        file: src/data/site.json
+        format: json
+        fields:
+          - { name: siteName, label: Site name, widget: string }
+          - { name: description_en, label: Description (English), widget: text }
+          - { name: description_it, label: Description (Italian), widget: text }
+          - { name: newsletterAction, label: Newsletter form URL, widget: string, required: false, hint: "From your newsletter provider. Leave empty to show 'coming soon'." }
+          - { name: contactEmail, label: Contact email, widget: string, required: false }

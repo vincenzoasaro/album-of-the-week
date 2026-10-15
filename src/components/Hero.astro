@@ -1,0 +1,91 @@
+---
+import Turntable from './Turntable.astro';
+import Icon from './Icon.astro';
+import { useTranslations } from '../i18n/ui';
+import { formatWeek, homeUrl, shopUrl, url, type Album } from '../lib/albums';
+import { controllable, type Source } from '../scripts/player';
+
+interface Props { album: Album; isCurrent: boolean; sources: Source[] }
+const { album, isCurrent, sources } = Astro.props;
+const lang = album.lang;
+const t = useTranslations(lang);
+const firstSide = album.tracks[0]?.side || 'A';
+const meta = [album.year, album.label, album.genre, album.tracks.length ? `${album.tracks.length} ${t('hero.tracks')}` : '', album.length].filter(Boolean).join(' · ');
+const hasShop = album.shop.some((g) => g.items.length);
+const sourceNames: Record<Source, string> = { youtube: 'YouTube', spotify: 'Spotify', apple: 'Apple Music', amazon: 'Amazon Music' };
+const consentKey = { youtube: 'player.consent.youtube', spotify: 'player.consent.spotify', apple: 'player.consent.apple', amazon: 'player.consent.amazon' } as const;
+const canControl = sources.some(controllable);
+const firstControllable = sources.length > 0 && controllable(sources[0]);
+---
+<section class="hero wrap" aria-labelledby="album-title">
+  <div>
+    <Turntable sideWord={t('tracks.side')} title={album.title} artist={album.artist} cover={album.cover} side={firstSide} />
+  </div>
+
+  <div class="hero-info">
+    <p class="hero-kicker">
+      {isCurrent ? t('hero.issue') : t('hero.past')} · Nº {album.issue} · {formatWeek(album.publishDate, lang)}
+    </p>
+    <div>
+      <h1 class="hero-title" id="album-title">{album.title}</h1>
+      <p class="hero-artist">{album.artist}</p>
+    </div>
+    {meta && <p class="hero-meta">{meta}</p>}
+    {album.tagline && <p class="hero-tagline">{album.tagline}</p>}
+
+    <div class="hero-actions">
+      {canControl && (
+        <button class="btn btn--primary" type="button" data-action="toggle-play" aria-pressed="false" hidden={!firstControllable}>
+          <Icon name="play" /><Icon name="pause" hidden />
+          <span data-play-label>{t('hero.play')}</span>
+        </button>
+      )}
+      <button class="btn btn--outline" type="button" data-action="open-listening">
+        <Icon name="disc" />{t('hero.listening')}
+      </button>
+      {hasShop && (
+        <a class="btn" href={shopUrl(lang, album.slug)}><Icon name="bag" />{t('hero.shop')}</a>
+      )}
+    </div>
+
+    {sources.length > 0 && (
+      <div class="player">
+        {sources.length > 1 && (
+          <>
+            <p class="mono muted" id="listen-with" style="margin:0">{t('hero.listenWith')}</p>
+            <div class="player-tabs" role="group" aria-labelledby="listen-with">
+              {sources.map((s, i) => (
+                <button class="pill" type="button" data-source-tab={s} aria-pressed={i === 0 ? 'true' : 'false'}>{sourceNames[s]}</button>
+              ))}
+            </div>
+          </>
+        )}
+        {sources.map((s, i) => (
+          <div class="player-frame" data-for={s} hidden={i !== 0}>
+            <div class:list={['player-slot', i === 0 && 'is-active']} data-slot={s}>
+              <div class="player-consent">
+                <p>{t(consentKey[s])}</p>
+                <button class="pill" type="button" data-action="load-player" data-source={s}>{t('player.load')}</button>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    )}
+
+    {album.introAudio && (
+      <div class="intro-card">
+        <button type="button" data-intro aria-pressed="false" aria-label={t('intro.play')}>
+          <Icon name="play" size={16} fill="var(--accent)" /><Icon name="pause" size={16} fill="var(--accent)" hidden />
+        </button>
+        <div>
+          <p class="t">{t('intro.title')}</p>
+          {album.introLength && <p class="mono muted">{album.introLength}</p>}
+        </div>
+        <audio data-intro-audio preload="none" src={url(album.introAudio)}></audio>
+      </div>
+    )}
+
+    {!isCurrent && <a class="hero-back" href={homeUrl(lang)}>{t('hero.back')}</a>}
+  </div>
+</section>

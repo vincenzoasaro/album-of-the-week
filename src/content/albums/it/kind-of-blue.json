@@ -1,0 +1,106 @@
+{
+  "slug": "kind-of-blue",
+  "title": "Kind of Blue",
+  "artist": "Miles Davis",
+  "year": 1959,
+  "label": "Columbia",
+  "genre": "Jazz modale",
+  "length": "45:44",
+  "publishDate": "2026-10-12T00:00:00+02:00",
+  "accent": "#7FB2E5",
+  "tagline": "Cinque brani, due sessioni, quasi nessuna prova. Davis consegnò al suo sestetto qualche scala e qualche appunto e lasciò che la musica nascesse in tempo reale. Ne uscì il disco jazz che possiede anche chi \"non ascolta jazz\".",
+  "cover": "",
+  "introAudio": "",
+  "introLength": "",
+  "spotifyAlbumId": "4sb0eMpDn3upAFfyi4q2rw",
+  "youtubePlaylistId": "",
+  "youtubeVideoId": "",
+  "sessionsHeadline": "Due giorni.\nUna stanza.",
+  "sessionsText": "Il 30th Street Studio della Columbia, a New York: una chiesa sconsacrata famosa per il suo riverbero naturale. Davis arrivò con degli schizzi invece che con arrangiamenti completi, e la band scoprì gran parte del materiale direttamente in studio.",
+  "sessions": [
+    { "date": "2 mar", "label": "1959 · Prima sessione", "tracks": "So What · Freddie Freeloader · Blue in Green" },
+    { "date": "22 apr", "label": "1959 · Seconda sessione", "tracks": "All Blues · Flamenco Sketches" }
+  ],
+  "lineupHeadline": "Sette musicisti.\nUn sestetto.",
+  "musicians": [
+    { "name": "Miles Davis", "instrument": "Tromba, leader", "plays": "Tutte e cinque le tracce" },
+    { "name": "John Coltrane", "instrument": "Sax tenore", "plays": "Tutte e cinque le tracce" },
+    { "name": "Cannonball Adderley", "instrument": "Sax contralto", "plays": "Tutte tranne Blue in Green" },
+    { "name": "Bill Evans", "instrument": "Pianoforte", "plays": "Tutte tranne Freddie Freeloader" },
+    { "name": "Wynton Kelly", "instrument": "Pianoforte", "plays": "Freddie Freeloader" },
+    { "name": "Paul Chambers", "instrument": "Contrabbasso", "plays": "Tutte e cinque le tracce" },
+    { "name": "Jimmy Cobb", "instrument": "Batteria", "plays": "Tutte e cinque le tracce" }
+  ],
+  "tracks": [
+    { "side": "A", "title": "So What", "time": "9:22", "recorded": "2 mar 1959", "instrumental": true, "note": "Si apre con un dialogo sommesso tra piano e contrabbasso, a cui i fiati rispondono con due note. L'intero brano si muove tra due sole scale." },
+    { "side": "A", "title": "Freddie Freeloader", "time": "9:46", "recorded": "2 mar 1959", "instrumental": true, "note": "L'unico blues tradizionale del disco, e l'unica traccia con Wynton Kelly al piano al posto di Bill Evans." },
+    { "side": "A", "title": "Blue in Green", "time": "5:37", "recorded": "2 mar 1959", "instrumental": true, "note": "Cannonball Adderley resta fuori. Il brano è accreditato a Davis, ma Evans ha sempre sostenuto di averlo scritto lui." },
+    { "side": "B", "title": "All Blues", "time": "11:33", "recorded": "22 apr 1959", "instrumental": true, "note": "Un blues in un ondeggiante 6/8, costruito su una figura di basso che si ripete." },
+    { "side": "B", "title": "Flamenco Sketches", "time": "9:26", "recorded": "22 apr 1959", "instrumental": true, "note": "Cinque scale, suonate in sequenza. Ogni solista decide quanto restare su ciascuna prima di passare alla successiva." }
+  ],
+  "worldHeadline": "Nel frattempo…",
+  "world": [
+    { "when": "Gennaio", "what": "Batista fugge da Cuba e i rivoluzionari di Fidel Castro prendono il potere." },
+    { "when": "3 febbraio", "what": "Buddy Holly, Ritchie Valens e The Big Bopper muoiono in un incidente aereo in Iowa." },
+    { "when": "9 marzo", "what": "Barbie debutta all'American Toy Fair di New York." },
+    { "when": "21 agosto", "what": "Le Hawaii diventano il 50º stato degli USA, quattro giorni dopo l'uscita di questo album." }
+  ],
+  "alsoThisYear": [
+    { "title": "Giant Steps", "artist": "John Coltrane" },
+    { "title": "Time Out", "artist": "Dave Brubeck Quartet" },
+    { "title": "Mingus Ah Um", "artist": "Charles Mingus" },
+    { "title": "The Shape of Jazz to Come", "artist": "Ornette Coleman" }
+  ],
+  "release": [
+    { "label": "Uscita", "value": "17 agosto 1959" },
+    { "label": "Etichetta", "value": "Columbia" },
+    { "label": "Catalogo", "value": "CL 1355 (mono) · CS 8163 (stereo)" },
+    { "label": "Produttori", "value": "Teo Macero, Irving Townsend" },
+    { "label": "Tecnico del suono", "value": "Fred Plaut" },
+    { "label": "Note di copertina", "value": "Bill Evans" }
+  ],
+  "trivia": [
+    "Per decenni il lato A ha suonato leggermente crescente: durante la prima sessione un registratore girava un po' più lento del dovuto. Le ristampe successive hanno corretto l'intonazione.",
+    "Nelle note di copertina, Bill Evans paragona questa musica a un'arte giapponese in cui il pittore deve lavorare con un unico gesto spontaneo, senza possibilità di correggere.",
+    "Viene spesso indicato come l'album jazz più venduto di sempre."
+  ],
+  "quiz": [
+    {
+      "question": "In quante delle cinque tracce Wynton Kelly sostituisce Bill Evans al piano?",
+      "options": ["Nessuna", "Una", "Due", "Tutte e cinque"],
+      "answer": 2,
+      "explanation": "Solo Freddie Freeloader, l'unico blues tradizionale dell'album."
+    },
+    {
+      "question": "Dove è stato registrato Kind of Blue?",
+      "options": ["Van Gelder Studio, New Jersey", "Columbia 30th Street Studio, New York", "Capitol Studios, Los Angeles", "Abbey Road, Londra"],
+      "answer": 2,
+      "explanation": "Al 30th Street Studio della Columbia, un'ex chiesa a Manhattan."
+    },
+    {
+      "question": "Chi ha scritto le note di copertina originali?",
+      "options": ["Miles Davis", "John Coltrane", "Bill Evans", "Teo Macero"],
+      "answer": 3,
+      "explanation": "Bill Evans, che suona anche il piano in quattro tracce su cinque."
+    }
+  ],
+  "shopIntro": "Scelti per questo album.",
+  "shop": [
+    {
+      "title": "Il disco",
+      "subtitle": "L'album, nel formato che preferisci.",
+      "items": [
+        { "kind": "Vinile LP", "name": "Kind of Blue", "note": "", "price": "", "retailer": "", "url": "", "image": "", "affiliate": true },
+        { "kind": "CD", "name": "Kind of Blue", "note": "", "price": "", "retailer": "", "url": "", "image": "", "affiliate": true }
+      ]
+    },
+    {
+      "title": "Per approfondire",
+      "subtitle": "Libri per quando finisce l'ultima traccia.",
+      "items": [
+        { "kind": "Libro", "name": "Kind of Blue: The Making of the Miles Davis Masterpiece", "note": "Il racconto di Ashley Kahn, sessione per sessione, di come è nato l'album.", "price": "", "retailer": "", "url": "", "image": "", "affiliate": true },
+        { "kind": "Libro", "name": "Miles: The Autobiography", "note": "Davis racconta la sua storia, scritta insieme a Quincy Troupe.", "price": "", "retailer": "", "url": "", "image": "", "affiliate": true }
+      ]
+    }
+  ]
+}

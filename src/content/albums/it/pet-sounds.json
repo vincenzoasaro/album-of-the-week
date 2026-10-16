@@ -9,7 +9,7 @@
   "publishDate": "2026-11-09T00:00:00+01:00",
   "accent": "#4C9A5B",
   "tagline": "Un ventitreenne che ha smesso di andare in tour resta a casa a Los Angeles e trasforma i suoi dubbi sul diventare grande in tredici canzoni. Mentre la band suonava in Giappone, Brian Wilson costruì il disco con i musicisti di studio, poi insegnò ai compagni a cantare quello che sentiva nella sua testa.",
-  "cover": "",
+  "cover": "/images/Pet_Sounds_Beach_Boys.jpg",
   "introAudio": "",
   "introLength": "",
   "spotifyAlbumId": "",
@@ -20,61 +20,283 @@
   "sessionsHeadline": "La band partì per il Giappone.\nBrian restò a casa.",
   "sessionsText": "Brian Wilson aveva smesso di andare in tour all'inizio del 1965 per dedicarsi alla scrittura e alla produzione. Dopo aver ascoltato Rubber Soul dei Beatles decise di fare un album intero senza riempitivi, scrivendo a casa sua con Tony Asher, un autore di jingle pubblicitari. Le basi furono suonate per lo più dai turnisti di Los Angeles poi chiamati Wrecking Crew, spesso con Brian che canticchiava le parti sul momento. Quando a febbraio i Beach Boys tornarono dal Giappone, la musica aspettava solo le loro voci.",
   "sessions": [
-    { "date": "12 lug", "label": "1965 · Western, Hollywood", "tracks": "La base di Sloop John B, messa da parte fino alle voci aggiunte a dicembre" },
-    { "date": "Nov", "label": "1965 · Western, Hollywood", "tracks": "You Still Believe in Me (1 nov) · Run James Run, poi diventata lo strumentale che dà il titolo all'album (17 nov)" },
-    { "date": "18 gen–16 feb", "label": "1966 · Western e Gold Star", "tracks": "Let's Go Away for Awhile · Wouldn't It Be Nice · Caroline, No · I Know There's an Answer · Don't Talk · I Just Wasn't Made for These Times · That's Not Me" },
-    { "date": "Mar–17 apr", "label": "1966 · Western, Sunset Sound, Columbia", "tracks": "I'm Waiting for the Day · God Only Knows · Here Today, poi le sovraincisioni vocali e un unico missaggio mono di nove ore" }
+    {
+      "date": "12 lug",
+      "label": "1965 · Western, Hollywood",
+      "tracks": "La base di Sloop John B, messa da parte fino alle voci aggiunte a dicembre"
+    },
+    {
+      "date": "Nov",
+      "label": "1965 · Western, Hollywood",
+      "tracks": "You Still Believe in Me (1 nov) · Run James Run, poi diventata lo strumentale che dà il titolo all'album (17 nov)"
+    },
+    {
+      "date": "18 gen–16 feb",
+      "label": "1966 · Western e Gold Star",
+      "tracks": "Let's Go Away for Awhile · Wouldn't It Be Nice · Caroline, No · I Know There's an Answer · Don't Talk · I Just Wasn't Made for These Times · That's Not Me"
+    },
+    {
+      "date": "Mar–17 apr",
+      "label": "1966 · Western, Sunset Sound, Columbia",
+      "tracks": "I'm Waiting for the Day · God Only Knows · Here Today, poi le sovraincisioni vocali e un unico missaggio mono di nove ore"
+    }
   ],
   "lineupHeadline": "Sei voci.\nUna Wrecking Crew.",
   "musicians": [
-    { "name": "Brian Wilson", "instrument": "Produttore, arrangiatore, voce, tastiere, basso", "plays": "Voce solista in gran parte dell'album; organo e basso in That's Not Me" },
-    { "name": "Carl Wilson", "instrument": "Voce, chitarra", "plays": "Voce solista in God Only Knows; chitarra in That's Not Me" },
-    { "name": "Mike Love", "instrument": "Voce", "plays": "Voce solista in Here Today e That's Not Me; il bridge di Wouldn't It Be Nice" },
-    { "name": "Dennis Wilson", "instrument": "Voce, batteria", "plays": "Armonie; batteria in That's Not Me" },
-    { "name": "Al Jardine", "instrument": "Voce", "plays": "Divide la voce solista in I Know There's an Answer; fu lui a proporre Sloop John B a Brian" },
-    { "name": "Bruce Johnston", "instrument": "Voce", "plays": "Armonie in tutto il disco, anche se in copertina non c'è" },
-    { "name": "Tony Asher", "instrument": "Paroliere", "plays": "Coautore dei testi di otto canzoni" },
-    { "name": "Hal Blaine", "instrument": "Batteria", "plays": "Gran parte delle basi" },
-    { "name": "Carol Kaye", "instrument": "Basso", "plays": "Gran parte delle basi" },
-    { "name": "Paul Tanner", "instrument": "Electro-Theremin", "plays": "I Just Wasn't Made for These Times, sullo strumento che aveva inventato lui" },
-    { "name": "Chuck Britz", "instrument": "Tecnico del suono", "plays": "Al mixer dei Western per quasi tutto l'album" }
+    {
+      "name": "Brian Wilson",
+      "instrument": "Produttore, arrangiatore, voce, tastiere, basso",
+      "plays": "Voce solista in gran parte dell'album; organo e basso in That's Not Me"
+    },
+    {
+      "name": "Carl Wilson",
+      "instrument": "Voce, chitarra",
+      "plays": "Voce solista in God Only Knows; chitarra in That's Not Me"
+    },
+    {
+      "name": "Mike Love",
+      "instrument": "Voce",
+      "plays": "Voce solista in Here Today e That's Not Me; il bridge di Wouldn't It Be Nice"
+    },
+    {
+      "name": "Dennis Wilson",
+      "instrument": "Voce, batteria",
+      "plays": "Armonie; batteria in That's Not Me"
+    },
+    {
+      "name": "Al Jardine",
+      "instrument": "Voce",
+      "plays": "Divide la voce solista in I Know There's an Answer; fu lui a proporre Sloop John B a Brian"
+    },
+    {
+      "name": "Bruce Johnston",
+      "instrument": "Voce",
+      "plays": "Armonie in tutto il disco, anche se in copertina non c'è"
+    },
+    {
+      "name": "Tony Asher",
+      "instrument": "Paroliere",
+      "plays": "Coautore dei testi di otto canzoni"
+    },
+    {
+      "name": "Hal Blaine",
+      "instrument": "Batteria",
+      "plays": "Gran parte delle basi"
+    },
+    {
+      "name": "Carol Kaye",
+      "instrument": "Basso",
+      "plays": "Gran parte delle basi"
+    },
+    {
+      "name": "Paul Tanner",
+      "instrument": "Electro-Theremin",
+      "plays": "I Just Wasn't Made for These Times, sullo strumento che aveva inventato lui"
+    },
+    {
+      "name": "Chuck Britz",
+      "instrument": "Tecnico del suono",
+      "plays": "Al mixer dei Western per quasi tutto l'album"
+    }
   ],
   "tracks": [
-    { "side": "A", "title": "Wouldn't It Be Nice", "time": "2:25", "recorded": "22 gen 1966", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "Due adolescenti sognano di essere abbastanza grandi per vivere insieme. Si apre con una chitarra che suona come un'arpa, e le voci richiesero più ore di studio di qualsiasi altro brano. Ascolta il taglio del nastro appena prima del bridge di Mike Love." },
-    { "side": "A", "title": "You Still Believe in Me", "time": "2:36", "recorded": "nov 1965 – gen 1966", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "Un uomo che sa di deludere continuamente chi lo ama. Le note iniziali nascono da Brian e Tony Asher che pizzicano le corde dentro un pianoforte con una forcina, e verso la fine spunta un clacson da bicicletta." },
-    { "side": "A", "title": "That's Not Me", "time": "2:28", "recorded": "16 feb 1966", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "La cosa più vicina a una canzone rock dell'album, e l'unica in cui la band suona quasi tutti gli strumenti: Dennis alla batteria, Carl alla chitarra. Un ragazzo se ne va di casa per mettersi alla prova e capisce che non vuole restare solo." },
-    { "side": "A", "title": "Don't Talk (Put Your Head on My Shoulder)", "time": "2:53", "recorded": "11 feb 1966", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "Brian da solo, che chiede silenzio. Una delle sue canzoni armonicamente più complesse, con un piccolo gruppo d'archi e nessun coro." },
-    { "side": "A", "title": "I'm Waiting for the Day", "time": "3:05", "recorded": "6 mar 1966", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "Una canzone del 1964, ricostruita con timpani, flauto e corno inglese. Strofe sommesse esplodono in ritornelli potenti, e il finale scivola in una musica che non c'entra nulla con il resto." },
-    { "side": "A", "title": "Let's Go Away for Awhile", "time": "2:18", "recorded": "18–19 gen 1966", "instrumental": true, "lyricsUrl": "", "ytStart": "", "note": "La prima sessione dell'anno nuovo e il primo strumentale: dodici violini, sassofoni, oboe, vibrafono e una chitarra suonata con una bottiglia di Coca-Cola come slide. Brian la considerava la migliore opera d'arte fatta fino ad allora." },
-    { "side": "A", "title": "Sloop John B", "time": "2:58", "recorded": "lug–dic 1965", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "Un canto popolare caraibico che Al Jardine conosceva dal Kingston Trio. La Capitol lo voleva come successo, e lo ottenne. Ascolta lo stacco a cappella e il glockenspiel e i flauti sopra la band." },
-    { "side": "B", "title": "God Only Knows", "time": "2:51", "recorded": "10 mar 1966", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "Una canzone d'amore che comincia ammettendo che l'amore potrebbe finire. Canta Carl, apre il corno francese, e non c'è mai una tonalità di casa precisa. Mettere Dio nel titolo di una canzone pop, nel 1966, era un rischio." },
-    { "side": "B", "title": "I Know There's an Answer", "time": "3:09", "recorded": "9 feb 1966", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "All'inizio si chiamava Hang On to Your Ego. Mike Love si oppose a un testo che sapeva di droga e la canzone fu riscritta. L'assolo è di Tommy Morgan, all'armonica basso." },
-    { "side": "B", "title": "Here Today", "time": "2:54", "recorded": "11 mar 1966", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "Un ex fidanzato avverte il nuovo che finirà anche stavolta. Il basso suona la melodia un'ottava sopra. Nello stacco strumentale si sentono persone che chiacchierano in studio, registrate per sbaglio." },
-    { "side": "B", "title": "I Just Wasn't Made for These Times", "time": "3:12", "recorded": "14 feb 1966", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "La canzone di Brian sul sentirsi fuori tempo rispetto a tutti. Il suono che ondeggia è un Electro-Theremin, mai sentito prima in un disco pop, suonato dal suo inventore Paul Tanner." },
-    { "side": "B", "title": "Pet Sounds", "time": "2:22", "recorded": "17 nov 1965", "instrumental": true, "lyricsUrl": "", "ytStart": "", "note": "Nata come Run James Run, un possibile tema per James Bond che non arrivò mai ai produttori dei film. Le percussioni secche sono il batterista Ritchie Frost che picchietta su due lattine vuote di Coca-Cola." },
-    { "side": "B", "title": "Caroline, No", "time": "2:52", "recorded": "31 gen 1966", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "L'innocenza perduta in meno di tre minuti, e la canzone che Brian considerava forse la sua migliore. Uscì prima come suo singolo solista. L'album sfuma sull'abbaiare dei suoi cani e su un treno che passa." }
+    {
+      "side": "A",
+      "title": "Wouldn't It Be Nice",
+      "time": "2:25",
+      "recorded": "22 gen 1966",
+      "note": "Due adolescenti sognano di essere abbastanza grandi per vivere insieme. Si apre con una chitarra che suona come un'arpa, e le voci richiesero più ore di studio di qualsiasi altro brano. Ascolta il taglio del nastro appena prima del bridge di Mike Love.",
+      "instrumental": false,
+      "lyricsUrl": "",
+      "ytStart": ""
+    },
+    {
+      "side": "A",
+      "title": "You Still Believe in Me",
+      "time": "2:36",
+      "recorded": "nov 1965 – gen 1966",
+      "note": "Un uomo che sa di deludere continuamente chi lo ama. Le note iniziali nascono da Brian e Tony Asher che pizzicano le corde dentro un pianoforte con una forcina, e verso la fine spunta un clacson da bicicletta.",
+      "instrumental": false,
+      "lyricsUrl": "",
+      "ytStart": ""
+    },
+    {
+      "side": "A",
+      "title": "That's Not Me",
+      "time": "2:28",
+      "recorded": "16 feb 1966",
+      "note": "La cosa più vicina a una canzone rock dell'album, e l'unica in cui la band suona quasi tutti gli strumenti: Dennis alla batteria, Carl alla chitarra. Un ragazzo se ne va di casa per mettersi alla prova e capisce che non vuole restare solo.",
+      "instrumental": false,
+      "lyricsUrl": "",
+      "ytStart": ""
+    },
+    {
+      "side": "A",
+      "title": "Don't Talk (Put Your Head on My Shoulder)",
+      "time": "2:53",
+      "recorded": "11 feb 1966",
+      "note": "Brian da solo, che chiede silenzio. Una delle sue canzoni armonicamente più complesse, con un piccolo gruppo d'archi e nessun coro.",
+      "instrumental": false,
+      "lyricsUrl": "",
+      "ytStart": ""
+    },
+    {
+      "side": "A",
+      "title": "I'm Waiting for the Day",
+      "time": "3:05",
+      "recorded": "6 mar 1966",
+      "note": "Una canzone del 1964, ricostruita con timpani, flauto e corno inglese. Strofe sommesse esplodono in ritornelli potenti, e il finale scivola in una musica che non c'entra nulla con il resto.",
+      "instrumental": false,
+      "lyricsUrl": "",
+      "ytStart": ""
+    },
+    {
+      "side": "A",
+      "title": "Let's Go Away for Awhile",
+      "time": "2:18",
+      "recorded": "18–19 gen 1966",
+      "note": "La prima sessione dell'anno nuovo e il primo strumentale: dodici violini, sassofoni, oboe, vibrafono e una chitarra suonata con una bottiglia di Coca-Cola come slide. Brian la considerava la migliore opera d'arte fatta fino ad allora.",
+      "instrumental": true,
+      "lyricsUrl": "",
+      "ytStart": ""
+    },
+    {
+      "side": "A",
+      "title": "Sloop John B",
+      "time": "2:58",
+      "recorded": "lug–dic 1965",
+      "note": "Un canto popolare caraibico che Al Jardine conosceva dal Kingston Trio. La Capitol lo voleva come successo, e lo ottenne. Ascolta lo stacco a cappella e il glockenspiel e i flauti sopra la band.",
+      "instrumental": false,
+      "lyricsUrl": "",
+      "ytStart": ""
+    },
+    {
+      "side": "B",
+      "title": "God Only Knows",
+      "time": "2:51",
+      "recorded": "10 mar 1966",
+      "note": "Una canzone d'amore che comincia ammettendo che l'amore potrebbe finire. Canta Carl, apre il corno francese, e non c'è mai una tonalità di casa precisa. Mettere Dio nel titolo di una canzone pop, nel 1966, era un rischio.",
+      "instrumental": false,
+      "lyricsUrl": "",
+      "ytStart": ""
+    },
+    {
+      "side": "B",
+      "title": "I Know There's an Answer",
+      "time": "3:09",
+      "recorded": "9 feb 1966",
+      "note": "All'inizio si chiamava Hang On to Your Ego. Mike Love si oppose a un testo che sapeva di droga e la canzone fu riscritta. L'assolo è di Tommy Morgan, all'armonica basso.",
+      "instrumental": false,
+      "lyricsUrl": "",
+      "ytStart": ""
+    },
+    {
+      "side": "B",
+      "title": "Here Today",
+      "time": "2:54",
+      "recorded": "11 mar 1966",
+      "note": "Un ex fidanzato avverte il nuovo che finirà anche stavolta. Il basso suona la melodia un'ottava sopra. Nello stacco strumentale si sentono persone che chiacchierano in studio, registrate per sbaglio.",
+      "instrumental": false,
+      "lyricsUrl": "",
+      "ytStart": ""
+    },
+    {
+      "side": "B",
+      "title": "I Just Wasn't Made for These Times",
+      "time": "3:12",
+      "recorded": "14 feb 1966",
+      "note": "La canzone di Brian sul sentirsi fuori tempo rispetto a tutti. Il suono che ondeggia è un Electro-Theremin, mai sentito prima in un disco pop, suonato dal suo inventore Paul Tanner.",
+      "instrumental": false,
+      "lyricsUrl": "",
+      "ytStart": ""
+    },
+    {
+      "side": "B",
+      "title": "Pet Sounds",
+      "time": "2:22",
+      "recorded": "17 nov 1965",
+      "note": "Nata come Run James Run, un possibile tema per James Bond che non arrivò mai ai produttori dei film. Le percussioni secche sono il batterista Ritchie Frost che picchietta su due lattine vuote di Coca-Cola.",
+      "instrumental": true,
+      "lyricsUrl": "",
+      "ytStart": ""
+    },
+    {
+      "side": "B",
+      "title": "Caroline, No",
+      "time": "2:52",
+      "recorded": "31 gen 1966",
+      "note": "L'innocenza perduta in meno di tre minuti, e la canzone che Brian considerava forse la sua migliore. Uscì prima come suo singolo solista. L'album sfuma sull'abbaiare dei suoi cani e su un treno che passa.",
+      "instrumental": false,
+      "lyricsUrl": "",
+      "ytStart": ""
+    }
   ],
   "worldHeadline": "Nel frattempo…",
   "world": [
-    { "when": "16 maggio", "what": "Il giorno in cui questo album esce in America, il partito di Mao Zedong diffonde la circolare che dà inizio alla Rivoluzione culturale in Cina." },
-    { "when": "30 luglio", "what": "A Wembley l'Inghilterra batte la Germania Ovest 4–2 ai supplementari e vince i Mondiali di calcio." },
-    { "when": "29 agosto", "what": "I Beatles suonano al Candlestick Park di San Francisco: è il loro ultimo concerto a pagamento, poi si chiudono per sempre in studio." },
-    { "when": "4 novembre", "what": "L'Arno esonda a Firenze, allaga il centro storico e danneggia migliaia di opere d'arte e di libri." }
+    {
+      "when": "16 maggio",
+      "what": "Il giorno in cui questo album esce in America, il partito di Mao Zedong diffonde la circolare che dà inizio alla Rivoluzione culturale in Cina."
+    },
+    {
+      "when": "30 luglio",
+      "what": "A Wembley l'Inghilterra batte la Germania Ovest 4–2 ai supplementari e vince i Mondiali di calcio."
+    },
+    {
+      "when": "29 agosto",
+      "what": "I Beatles suonano al Candlestick Park di San Francisco: è il loro ultimo concerto a pagamento, poi si chiudono per sempre in studio."
+    },
+    {
+      "when": "4 novembre",
+      "what": "L'Arno esonda a Firenze, allaga il centro storico e danneggia migliaia di opere d'arte e di libri."
+    }
   ],
   "alsoThisYear": [
-    { "title": "Revolver", "artist": "The Beatles" },
-    { "title": "Blonde on Blonde", "artist": "Bob Dylan" },
-    { "title": "Aftermath", "artist": "The Rolling Stones" },
-    { "title": "Freak Out!", "artist": "The Mothers of Invention" }
+    {
+      "title": "Revolver",
+      "artist": "The Beatles"
+    },
+    {
+      "title": "Blonde on Blonde",
+      "artist": "Bob Dylan"
+    },
+    {
+      "title": "Aftermath",
+      "artist": "The Rolling Stones"
+    },
+    {
+      "title": "Freak Out!",
+      "artist": "The Mothers of Invention"
+    }
   ],
   "release": [
-    { "label": "Uscita", "value": "16 maggio 1966 (USA) · 27 giugno 1966 (Regno Unito)" },
-    { "label": "Etichetta", "value": "Capitol" },
-    { "label": "Catalogo", "value": "T 2458 (mono) · DT 2458 (duophonic)" },
-    { "label": "Produttore", "value": "Brian Wilson" },
-    { "label": "Studi", "value": "Western, Gold Star, Columbia, Sunset Sound (Hollywood)" },
-    { "label": "Singoli", "value": "Caroline, No (7 marzo 1966) · Sloop John B (21 marzo 1966) · Wouldn't It Be Nice / God Only Knows (18 luglio 1966)" },
-    { "label": "Classifica", "value": "USA 10 · UK 2" }
+    {
+      "label": "Uscita",
+      "value": "16 maggio 1966 (USA) · 27 giugno 1966 (Regno Unito)"
+    },
+    {
+      "label": "Etichetta",
+      "value": "Capitol"
+    },
+    {
+      "label": "Catalogo",
+      "value": "T 2458 (mono) · DT 2458 (duophonic)"
+    },
+    {
+      "label": "Produttore",
+      "value": "Brian Wilson"
+    },
+    {
+      "label": "Studi",
+      "value": "Western, Gold Star, Columbia, Sunset Sound (Hollywood)"
+    },
+    {
+      "label": "Singoli",
+      "value": "Caroline, No (7 marzo 1966) · Sloop John B (21 marzo 1966) · Wouldn't It Be Nice / God Only Knows (18 luglio 1966)"
+    },
+    {
+      "label": "Classifica",
+      "value": "USA 10 · UK 2"
+    }
   ],
   "trivia": [
     "La copertina fu scattata il 10 febbraio 1966 allo zoo di San Diego, con la band che dà mele alle capre. Poi lo zoo li bandì per aver maltrattato gli animali, anche se il divieto fu revocato in seguito.",
@@ -86,49 +308,143 @@
   "quiz": [
     {
       "question": "Dove è stata scattata la foto di copertina?",
-      "options": ["Griffith Park", "Zoo di San Diego", "Molo di Santa Monica", "Il giardino di Brian"],
+      "options": [
+        "Griffith Park",
+        "Zoo di San Diego",
+        "Molo di Santa Monica",
+        "Il giardino di Brian"
+      ],
       "answer": 2,
       "explanation": "Allo zoo di San Diego, il 10 febbraio 1966, con la band che dà da mangiare alle capre."
     },
     {
       "question": "Chi canta la voce solista in God Only Knows?",
-      "options": ["Brian Wilson", "Mike Love", "Carl Wilson", "Al Jardine"],
+      "options": [
+        "Brian Wilson",
+        "Mike Love",
+        "Carl Wilson",
+        "Al Jardine"
+      ],
       "answer": 3,
       "explanation": "Brian affidò la voce solista al fratello minore Carl."
     },
     {
       "question": "Per cosa era stato scritto in origine lo strumentale che dà il titolo all'album?",
-      "options": ["Un film di James Bond", "Uno spot radiofonico della Capitol", "Un documentario sul surf", "L'Andy Williams Show"],
+      "options": [
+        "Un film di James Bond",
+        "Uno spot radiofonico della Capitol",
+        "Un documentario sul surf",
+        "L'Andy Williams Show"
+      ],
       "answer": 1,
       "explanation": "Si chiamava Run James Run ed era pensato come possibile tema per Bond."
     },
     {
       "question": "Quale strumento debuttò nella musica pop in I Just Wasn't Made for These Times?",
-      "options": ["Sintetizzatore Moog", "Mellotron", "Sitar", "Electro-Theremin"],
+      "options": [
+        "Sintetizzatore Moog",
+        "Mellotron",
+        "Sitar",
+        "Electro-Theremin"
+      ],
       "answer": 4,
       "explanation": "Paul Tanner suonò l'Electro-Theremin, lo strumento che aveva costruito lui stesso."
     }
   ],
+  "cardQuote": "",
+  "shareCards": [],
   "shopIntro": "Scelti per questo album.",
   "shop": [
     {
       "title": "Il disco",
       "subtitle": "L'album, nel formato che preferisci.",
       "items": [
-        { "kind": "Vinile LP", "name": "Pet Sounds (60th Anniversary Vinylphyle Edition, 180g)", "note": "La stampa del 2026 per l'anniversario, tagliata dai nastri analogici originali.", "price": "", "retailer": "", "url": "", "image": "", "affiliate": true },
-        { "kind": "Vinile LP", "name": "Pet Sounds (Mono, 180g)", "note": "Il missaggio che Brian Wilson fece davvero e approvò nel 1966.", "price": "", "retailer": "", "url": "", "image": "", "affiliate": true },
-        { "kind": "CD", "name": "Pet Sounds (50th Anniversary Deluxe Edition)", "note": "Missaggi mono e stereo insieme, con estratti dalle sessioni.", "price": "", "retailer": "", "url": "", "image": "", "affiliate": true },
-        { "kind": "Vinile 2LP", "name": "The Pet Sounds Sessions Highlights", "note": "Voci isolate e chiacchiere di studio dal cofanetto del 1997, su vinile per la prima volta nel 2026.", "price": "", "retailer": "", "url": "", "image": "", "affiliate": true }
+        {
+          "kind": "Vinile LP",
+          "name": "Pet Sounds (60th Anniversary Vinylphyle Edition, 180g)",
+          "note": "La stampa del 2026 per l'anniversario, tagliata dai nastri analogici originali.",
+          "price": "",
+          "retailer": "",
+          "url": "",
+          "image": "",
+          "affiliate": true
+        },
+        {
+          "kind": "Vinile LP",
+          "name": "Pet Sounds (Mono, 180g)",
+          "note": "Il missaggio che Brian Wilson fece davvero e approvò nel 1966.",
+          "price": "",
+          "retailer": "",
+          "url": "",
+          "image": "",
+          "affiliate": true
+        },
+        {
+          "kind": "CD",
+          "name": "Pet Sounds (50th Anniversary Deluxe Edition)",
+          "note": "Missaggi mono e stereo insieme, con estratti dalle sessioni.",
+          "price": "",
+          "retailer": "",
+          "url": "",
+          "image": "",
+          "affiliate": true
+        },
+        {
+          "kind": "Vinile 2LP",
+          "name": "The Pet Sounds Sessions Highlights",
+          "note": "Voci isolate e chiacchiere di studio dal cofanetto del 1997, su vinile per la prima volta nel 2026.",
+          "price": "",
+          "retailer": "",
+          "url": "",
+          "image": "",
+          "affiliate": true
+        }
       ]
     },
     {
       "title": "Per approfondire",
       "subtitle": "Per quando finisce l'ultima traccia.",
       "items": [
-        { "kind": "Libro", "name": "Wouldn't It Be Nice: Brian Wilson and the Making of the Beach Boys' Pet Sounds", "note": "Il racconto dettagliato di Charles L. Granata su come è stato costruito l'album.", "price": "", "retailer": "", "url": "", "image": "", "affiliate": true },
-        { "kind": "Libro", "name": "Pet Sounds (33⅓)", "note": "Il libro breve e personale di Jim Fusilli, poi tradotto in giapponese da Haruki Murakami.", "price": "", "retailer": "", "url": "", "image": "", "affiliate": true },
-        { "kind": "Libro", "name": "I Am Brian Wilson", "note": "L'autobiografia di Brian Wilson, uscita nel 2016.", "price": "", "retailer": "", "url": "", "image": "", "affiliate": true },
-        { "kind": "Film", "name": "Love & Mercy", "note": "Il film biografico del 2014, con lunghe scene che ricostruiscono le sessioni di Pet Sounds.", "price": "", "retailer": "", "url": "", "image": "", "affiliate": true }
+        {
+          "kind": "Libro",
+          "name": "Wouldn't It Be Nice: Brian Wilson and the Making of the Beach Boys' Pet Sounds",
+          "note": "Il racconto dettagliato di Charles L. Granata su come è stato costruito l'album.",
+          "price": "",
+          "retailer": "",
+          "url": "",
+          "image": "",
+          "affiliate": true
+        },
+        {
+          "kind": "Libro",
+          "name": "Pet Sounds (33⅓)",
+          "note": "Il libro breve e personale di Jim Fusilli, poi tradotto in giapponese da Haruki Murakami.",
+          "price": "",
+          "retailer": "",
+          "url": "",
+          "image": "",
+          "affiliate": true
+        },
+        {
+          "kind": "Libro",
+          "name": "I Am Brian Wilson",
+          "note": "L'autobiografia di Brian Wilson, uscita nel 2016.",
+          "price": "",
+          "retailer": "",
+          "url": "",
+          "image": "",
+          "affiliate": true
+        },
+        {
+          "kind": "Film",
+          "name": "Love & Mercy",
+          "note": "Il film biografico del 2014, con lunghe scene che ricostruiscono le sessioni di Pet Sounds.",
+          "price": "",
+          "retailer": "",
+          "url": "",
+          "image": "",
+          "affiliate": true
+        }
       ]
     }
   ]

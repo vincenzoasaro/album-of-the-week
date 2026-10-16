@@ -5,24 +5,107 @@
   "year": 1965,
   "label": "Impulse!",
   "genre": "Spiritual jazz",
+  "length": "",
   "publishDate": "2026-10-05T00:00:00+02:00",
   "accent": "#E8B04A",
   "tagline": "Una suite in quattro parti, registrata dal quartetto classico di Coltrane in un'unica sessione di dicembre.",
+  "cover": "/images/John_Coltrane_-_A_Love_Supreme.jpg",
+  "introAudio": "",
+  "introLength": "",
+  "spotifyAlbumId": "",
+  "youtubePlaylistId": "",
+  "youtubeVideoId": "",
+  "appleMusicUrl": "",
+  "amazonMusicEmbed": "",
+  "sessionsHeadline": "",
+  "sessionsText": "",
+  "sessions": [],
+  "lineupHeadline": "",
   "musicians": [
-    { "name": "John Coltrane", "instrument": "Sax tenore, voce", "plays": "Tutte e quattro le parti" },
-    { "name": "McCoy Tyner", "instrument": "Pianoforte", "plays": "Tutte e quattro le parti" },
-    { "name": "Jimmy Garrison", "instrument": "Contrabbasso", "plays": "Tutte e quattro le parti" },
-    { "name": "Elvin Jones", "instrument": "Batteria", "plays": "Tutte e quattro le parti" }
+    {
+      "name": "John Coltrane",
+      "instrument": "Sax tenore, voce",
+      "plays": "Tutte e quattro le parti"
+    },
+    {
+      "name": "McCoy Tyner",
+      "instrument": "Pianoforte",
+      "plays": "Tutte e quattro le parti"
+    },
+    {
+      "name": "Jimmy Garrison",
+      "instrument": "Contrabbasso",
+      "plays": "Tutte e quattro le parti"
+    },
+    {
+      "name": "Elvin Jones",
+      "instrument": "Batteria",
+      "plays": "Tutte e quattro le parti"
+    }
   ],
   "tracks": [
-    { "side": "A", "title": "Part 1: Acknowledgement", "time": "7:47", "recorded": "9 dic 1964" },
-    { "side": "A", "title": "Part 2: Resolution", "time": "7:22", "recorded": "9 dic 1964", "instrumental": true },
-    { "side": "B", "title": "Part 3: Pursuance", "time": "10:42", "recorded": "9 dic 1964", "instrumental": true },
-    { "side": "B", "title": "Part 4: Psalm", "time": "7:05", "recorded": "9 dic 1964", "instrumental": true }
+    {
+      "side": "A",
+      "title": "Part 1: Acknowledgement",
+      "time": "7:47",
+      "recorded": "9 dic 1964",
+      "note": "",
+      "instrumental": false,
+      "lyricsUrl": "",
+      "ytStart": ""
+    },
+    {
+      "side": "A",
+      "title": "Part 2: Resolution",
+      "time": "7:22",
+      "recorded": "9 dic 1964",
+      "note": "",
+      "instrumental": true,
+      "lyricsUrl": "",
+      "ytStart": ""
+    },
+    {
+      "side": "B",
+      "title": "Part 3: Pursuance",
+      "time": "10:42",
+      "recorded": "9 dic 1964",
+      "note": "",
+      "instrumental": true,
+      "lyricsUrl": "",
+      "ytStart": ""
+    },
+    {
+      "side": "B",
+      "title": "Part 4: Psalm",
+      "time": "7:05",
+      "recorded": "9 dic 1964",
+      "note": "",
+      "instrumental": true,
+      "lyricsUrl": "",
+      "ytStart": ""
+    }
   ],
+  "worldHeadline": "",
+  "world": [],
+  "alsoThisYear": [],
   "release": [
-    { "label": "Etichetta", "value": "Impulse!" },
-    { "label": "Produttore", "value": "Bob Thiele" },
-    { "label": "Studio", "value": "Van Gelder Studio, Englewood Cliffs, New Jersey" }
-  ]
+    {
+      "label": "Etichetta",
+      "value": "Impulse!"
+    },
+    {
+      "label": "Produttore",
+      "value": "Bob Thiele"
+    },
+    {
+      "label": "Studio",
+      "value": "Van Gelder Studio, Englewood Cliffs, New Jersey"
+    }
+  ],
+  "trivia": [],
+  "quiz": [],
+  "cardQuote": "",
+  "shareCards": [],
+  "shopIntro": "",
+  "shop": []
 }

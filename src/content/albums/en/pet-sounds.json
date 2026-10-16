@@ -1,0 +1,135 @@
+{
+  "slug": "pet-sounds",
+  "title": "Pet Sounds",
+  "artist": "The Beach Boys",
+  "year": 1966,
+  "label": "Capitol",
+  "genre": "Progressive pop",
+  "length": "35:57",
+  "publishDate": "2026-11-09T00:00:00+01:00",
+  "accent": "#4C9A5B",
+  "tagline": "A 23-year-old who has stopped touring stays home in Los Angeles and turns his doubts about growing up into thirteen songs. While the band played Japan, Brian Wilson built the record with session players, then taught his bandmates to sing what he heard in his head.",
+  "cover": "",
+  "introAudio": "",
+  "introLength": "",
+  "spotifyAlbumId": "",
+  "youtubePlaylistId": "",
+  "youtubeVideoId": "",
+  "appleMusicUrl": "",
+  "amazonMusicEmbed": "",
+  "sessionsHeadline": "The band went to Japan.\nBrian stayed home.",
+  "sessionsText": "Brian Wilson had quit touring in early 1965 to focus on writing and producing. After hearing the Beatles' Rubber Soul, he set out to make a whole album with no filler, writing with jingle lyricist Tony Asher at his home. The backing tracks were cut mostly by the Los Angeles session players later called the Wrecking Crew, often with Brian humming parts to them on the spot. When the Beach Boys came back from Japan in February, the music was waiting for their voices.",
+  "sessions": [
+    { "date": "12 Jul", "label": "1965 · Western, Hollywood", "tracks": "Sloop John B backing track, shelved until the vocals were added in December" },
+    { "date": "Nov", "label": "1965 · Western, Hollywood", "tracks": "You Still Believe in Me (1 Nov) · Run James Run, later the title instrumental (17 Nov)" },
+    { "date": "18 Jan–16 Feb", "label": "1966 · Western and Gold Star", "tracks": "Let's Go Away for Awhile · Wouldn't It Be Nice · Caroline, No · I Know There's an Answer · Don't Talk · I Just Wasn't Made for These Times · That's Not Me" },
+    { "date": "Mar–17 Apr", "label": "1966 · Western, Sunset Sound, Columbia", "tracks": "I'm Waiting for the Day · God Only Knows · Here Today, then vocal overdubs and a single nine-hour mono mix" }
+  ],
+  "lineupHeadline": "Six voices.\nOne Wrecking Crew.",
+  "musicians": [
+    { "name": "Brian Wilson", "instrument": "Producer, arranger, vocals, keyboards, bass", "plays": "Lead on most of the album; organ and bass on That's Not Me" },
+    { "name": "Carl Wilson", "instrument": "Vocals, guitar", "plays": "Lead on God Only Knows; guitar on That's Not Me" },
+    { "name": "Mike Love", "instrument": "Vocals", "plays": "Lead on Here Today and That's Not Me; the bridge of Wouldn't It Be Nice" },
+    { "name": "Dennis Wilson", "instrument": "Vocals, drums", "plays": "Harmonies; drums on That's Not Me" },
+    { "name": "Al Jardine", "instrument": "Vocals", "plays": "Shares the lead on I Know There's an Answer; brought Sloop John B to Brian" },
+    { "name": "Bruce Johnston", "instrument": "Vocals", "plays": "Harmonies throughout, though he is missing from the cover" },
+    { "name": "Tony Asher", "instrument": "Lyricist", "plays": "Co-wrote the words to eight of the songs" },
+    { "name": "Hal Blaine", "instrument": "Drums", "plays": "Most of the backing tracks" },
+    { "name": "Carol Kaye", "instrument": "Bass", "plays": "Most of the backing tracks" },
+    { "name": "Paul Tanner", "instrument": "Electro-Theremin", "plays": "I Just Wasn't Made for These Times, on the instrument he invented" },
+    { "name": "Chuck Britz", "instrument": "Engineer", "plays": "Behind the desk at Western for most of the album" }
+  ],
+  "tracks": [
+    { "side": "A", "title": "Wouldn't It Be Nice", "time": "2:25", "recorded": "22 Jan 1966", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "Two teenagers wish they were old enough to live together. It opens with a harp-like guitar figure, and the vocals took more studio time than any other song. Listen for the tape splice just before Mike Love's bridge." },
+    { "side": "A", "title": "You Still Believe in Me", "time": "2:36", "recorded": "Nov 1965 – Jan 1966", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "A man who knows he keeps letting his partner down. The opening notes come from Brian and Tony Asher plucking the strings inside a piano with a bobby pin, and a bicycle horn turns up near the end." },
+    { "side": "A", "title": "That's Not Me", "time": "2:28", "recorded": "16 Feb 1966", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "The closest thing to a rock song here, and the only track where the band play most of the instruments themselves, with Dennis on drums and Carl on guitar. A young man leaves home to prove himself and realises he would rather not be alone." },
+    { "side": "A", "title": "Don't Talk (Put Your Head on My Shoulder)", "time": "2:53", "recorded": "11 Feb 1966", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "Brian alone, asking for silence. One of his most harmonically complex songs, with a small string section and no backing vocals at all." },
+    { "side": "A", "title": "I'm Waiting for the Day", "time": "3:05", "recorded": "6 Mar 1966", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "An older song from 1964, rebuilt with timpani, flute and English horn. Quiet verses crash into loud refrains, and the end drifts off into music that has nothing to do with the rest." },
+    { "side": "A", "title": "Let's Go Away for Awhile", "time": "2:18", "recorded": "18–19 Jan 1966", "instrumental": true, "lyricsUrl": "", "ytStart": "", "note": "The first session of the new year and the first instrumental: twelve violins, saxophones, oboe, vibraphone and a guitar played with a Coke bottle as a slide. Brian called it the best piece of art he had made so far." },
+    { "side": "A", "title": "Sloop John B", "time": "2:58", "recorded": "Jul–Dec 1965", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "A Caribbean folk song Al Jardine knew from the Kingston Trio. Capitol wanted it as a hit, and got one. Listen for the a cappella break and the glockenspiel and flutes on top." },
+    { "side": "B", "title": "God Only Knows", "time": "2:51", "recorded": "10 Mar 1966", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "A love song that opens by admitting the love might end. Carl sings lead, the French horn starts it off, and there is no firm home key anywhere. Putting God in a pop title was a risk in 1966." },
+    { "side": "B", "title": "I Know There's an Answer", "time": "3:09", "recorded": "9 Feb 1966", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "First called Hang On to Your Ego. Mike Love objected to the drug-tinged lyric and it was rewritten. The solo is played on a bass harmonica by Tommy Morgan." },
+    { "side": "B", "title": "Here Today", "time": "2:54", "recorded": "11 Mar 1966", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "An ex-boyfriend warns the new one that this will end too. The bass plays the lead an octave up. In the instrumental break you can hear people chatting in the studio, captured by accident." },
+    { "side": "B", "title": "I Just Wasn't Made for These Times", "time": "3:12", "recorded": "14 Feb 1966", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "Brian's song about feeling out of step with everyone. The swooping sound is an Electro-Theremin, heard here for the first time on a pop record, played by its inventor Paul Tanner." },
+    { "side": "B", "title": "Pet Sounds", "time": "2:22", "recorded": "17 Nov 1965", "instrumental": true, "lyricsUrl": "", "ytStart": "", "note": "Written as Run James Run, a possible James Bond theme that never reached the Bond people. The clacking percussion is drummer Ritchie Frost tapping two empty Coca-Cola cans." },
+    { "side": "B", "title": "Caroline, No", "time": "2:52", "recorded": "31 Jan 1966", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "Lost innocence in under three minutes, and the song Brian thought might be his best. It came out first as his solo single. The album fades out on his dogs barking and a passing train." }
+  ],
+  "worldHeadline": "Meanwhile…",
+  "world": [
+    { "when": "16 May", "what": "The day this album comes out in America, Mao Zedong's party issues the circular that launches the Cultural Revolution in China." },
+    { "when": "30 July", "what": "England beat West Germany 4–2 after extra time at Wembley to win the football World Cup." },
+    { "when": "29 August", "what": "The Beatles play Candlestick Park in San Francisco, their last ticketed concert, and retreat to the studio for good." },
+    { "when": "4 November", "what": "The Arno bursts its banks in Florence, flooding the historic centre and damaging thousands of artworks and books." }
+  ],
+  "alsoThisYear": [
+    { "title": "Revolver", "artist": "The Beatles" },
+    { "title": "Blonde on Blonde", "artist": "Bob Dylan" },
+    { "title": "Aftermath", "artist": "The Rolling Stones" },
+    { "title": "Freak Out!", "artist": "The Mothers of Invention" }
+  ],
+  "release": [
+    { "label": "Released", "value": "16 May 1966 (US) · 27 June 1966 (UK)" },
+    { "label": "Label", "value": "Capitol" },
+    { "label": "Catalogue", "value": "T 2458 (mono) · DT 2458 (duophonic)" },
+    { "label": "Producer", "value": "Brian Wilson" },
+    { "label": "Studios", "value": "Western, Gold Star, Columbia, Sunset Sound (Hollywood)" },
+    { "label": "Singles", "value": "Caroline, No (7 March 1966) · Sloop John B (21 March 1966) · Wouldn't It Be Nice / God Only Knows (18 July 1966)" },
+    { "label": "Chart peak", "value": "US 10 · UK 2" }
+  ],
+  "trivia": [
+    "The cover was shot on 10 February 1966 at the San Diego Zoo, with the band feeding apples to goats. The zoo then banned them for mishandling the animals, though the ban was later lifted.",
+    "Bruce Johnston sings on the album but isn't on the cover: he was still under contract to Columbia Records.",
+    "There was no true stereo mix until 1996. Brian preferred mono, and he was almost completely deaf in his right ear.",
+    "The record cost more than $70,000 to make, an unheard-of sum for a pop album at the time.",
+    "Paul McCartney has called God Only Knows the greatest song ever written, and George Martin said Sgt. Pepper would not have happened without Pet Sounds."
+  ],
+  "quiz": [
+    {
+      "question": "Where was the cover photo taken?",
+      "options": ["Griffith Park", "San Diego Zoo", "Santa Monica Pier", "Brian's back garden"],
+      "answer": 2,
+      "explanation": "At the San Diego Zoo on 10 February 1966, with the band feeding goats."
+    },
+    {
+      "question": "Who sings lead on God Only Knows?",
+      "options": ["Brian Wilson", "Mike Love", "Carl Wilson", "Al Jardine"],
+      "answer": 3,
+      "explanation": "Brian gave the lead to his younger brother Carl."
+    },
+    {
+      "question": "What was the title instrumental originally written for?",
+      "options": ["A James Bond film", "A Capitol radio advert", "A surf documentary", "The Andy Williams Show"],
+      "answer": 1,
+      "explanation": "It was called Run James Run and meant as a possible Bond theme."
+    },
+    {
+      "question": "Which instrument made its pop debut on I Just Wasn't Made for These Times?",
+      "options": ["Moog synthesizer", "Mellotron", "Sitar", "Electro-Theremin"],
+      "answer": 4,
+      "explanation": "Paul Tanner played the Electro-Theremin, the instrument he had built himself."
+    }
+  ],
+  "shopIntro": "Picked for this album.",
+  "shop": [
+    {
+      "title": "Own the record",
+      "subtitle": "The album itself, in the format you play.",
+      "items": [
+        { "kind": "Vinyl LP", "name": "Pet Sounds (60th Anniversary Vinylphyle Edition, 180g)", "note": "The 2026 anniversary pressing, cut from the original analogue tapes.", "price": "", "retailer": "", "url": "", "image": "", "affiliate": true },
+        { "kind": "Vinyl LP", "name": "Pet Sounds (Mono, 180g)", "note": "The mix Brian Wilson actually made and approved in 1966.", "price": "", "retailer": "", "url": "", "image": "", "affiliate": true },
+        { "kind": "CD", "name": "Pet Sounds (50th Anniversary Deluxe Edition)", "note": "Mono and stereo mixes together, with session highlights.", "price": "", "retailer": "", "url": "", "image": "", "affiliate": true },
+        { "kind": "Vinyl 2LP", "name": "The Pet Sounds Sessions Highlights", "note": "Vocals-only takes and studio chatter from the 1997 box, on vinyl for the first time in 2026.", "price": "", "retailer": "", "url": "", "image": "", "affiliate": true }
+      ]
+    },
+    {
+      "title": "Go deeper",
+      "subtitle": "For after the last track.",
+      "items": [
+        { "kind": "Book", "name": "Wouldn't It Be Nice: Brian Wilson and the Making of the Beach Boys' Pet Sounds", "note": "Charles L. Granata's detailed account of how the album was built.", "price": "", "retailer": "", "url": "", "image": "", "affiliate": true },
+        { "kind": "Book", "name": "Pet Sounds (33⅓)", "note": "Jim Fusilli's short, personal book on the album, later translated into Japanese by Haruki Murakami.", "price": "", "retailer": "", "url": "", "image": "", "affiliate": true },
+        { "kind": "Book", "name": "I Am Brian Wilson", "note": "Brian Wilson's 2016 memoir.", "price": "", "retailer": "", "url": "", "image": "", "affiliate": true },
+        { "kind": "Film", "name": "Love & Mercy", "note": "The 2014 biopic, with long scenes recreating the Pet Sounds sessions.", "price": "", "retailer": "", "url": "", "image": "", "affiliate": true }
+      ]
+    }
+  ]
+}

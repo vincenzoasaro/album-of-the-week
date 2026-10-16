@@ -231,13 +231,13 @@
       "subtitle": "The album itself, in the format you play.",
       "items": [
         {
-          "kind": "Vinyl LP",
+          "kind": "Vinyl LP - Blue edition",
           "name": "Kind of Blue",
           "note": "",
           "price": "",
-          "retailer": "",
-          "url": "",
-          "image": "",
+          "retailer": "Amazon",
+          "url": "https://link.amazon/B0fRhztj7",
+          "image": "/images/Kind_of_Blue-Blue_Vynil.jpg",
           "affiliate": true
         },
         {
@@ -245,9 +245,9 @@
           "name": "Kind of Blue",
           "note": "",
           "price": "",
-          "retailer": "",
-          "url": "",
-          "image": "",
+          "retailer": "Amazon",
+          "url": "https://link.amazon/B0fRhztj7",
+          "image": "/images/Kind_of_Blue-CD.jpg",
           "affiliate": true
         }
       ]
@@ -261,9 +261,9 @@
           "name": "Kind of Blue: The Making of the Miles Davis Masterpiece",
           "note": "Ashley Kahn's session-by-session account of how the album was made.",
           "price": "",
-          "retailer": "",
-          "url": "",
-          "image": "",
+          "retailer": "Amazon",
+          "url": "Kind of Blue: The Making of the Miles Davis Masterpiece",
+          "image": "/images/Kind_of_Blue-Book.jpg",
           "affiliate": true
         },
         {
@@ -271,9 +271,9 @@
           "name": "Miles: The Autobiography",
           "note": "Davis telling his own story, written with Quincy Troupe.",
           "price": "",
-          "retailer": "",
-          "url": "",
-          "image": "",
+          "retailer": "Amazon",
+          "url": "https://link.amazon/B0fUhVRWX",
+          "image": "/images/Miles_Autobiography.jpg",
           "affiliate": true
         }
       ]

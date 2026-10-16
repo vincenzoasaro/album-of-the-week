@@ -9,7 +9,7 @@
   "publishDate": "2026-10-12T00:00:00+02:00",
   "accent": "#7FB2E5",
   "tagline": "Cinque brani, due sessioni, quasi nessuna prova. Davis consegnò al suo sestetto qualche scala e qualche appunto e lasciò che la musica nascesse in tempo reale. Ne uscì il disco jazz che possiede anche chi \"non ascolta jazz\".",
-  "cover": "",
+  "cover": "/images/Kind_of_Blue-CD.jpg",
   "introAudio": "",
   "introLength": "",
   "spotifyAlbumId": "4sb0eMpDn3upAFfyi4q2rw",
@@ -224,6 +224,8 @@
       "explanation": "Bill Evans, che suona anche il piano in quattro tracce su cinque."
     }
   ],
+  "cardQuote": "",
+  "shareCards": [],
   "shopIntro": "Scelti per questo album.",
   "shop": [
     {

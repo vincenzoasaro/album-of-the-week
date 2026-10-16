@@ -72,6 +72,10 @@ const albums = defineCollection({
       }),
     ),
 
+    // Share cards: a line for the "liner notes" card, and ready-made card images.
+    cardQuote: text,
+    shareCards: list(z.object({ label: z.string(), image: z.string() })),
+
     shopIntro: text,
     shop: list(
       z.object({

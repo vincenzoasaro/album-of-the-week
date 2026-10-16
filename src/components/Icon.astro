@@ -1,5 +1,5 @@
 ---
-interface Props { name: 'play' | 'pause' | 'disc' | 'bag' | 'prev' | 'next'; size?: number; hidden?: boolean; fill?: string }
+interface Props { name: 'play' | 'pause' | 'disc' | 'bag' | 'prev' | 'next' | 'share'; size?: number; hidden?: boolean; fill?: string }
 const { name, size = 18, hidden = false, fill = 'currentColor' } = Astro.props;
 ---
 <span class="icon" data-icon={name === 'play' || name === 'pause' ? name : undefined} hidden={hidden}><svg width={size} height={size} viewBox="0 0 18 18" aria-hidden="true">
@@ -7,6 +7,7 @@ const { name, size = 18, hidden = false, fill = 'currentColor' } = Astro.props;
   {name === 'pause' && <><rect x="3" y="2" width="4" height="14" fill={fill} /><rect x="11" y="2" width="4" height="14" fill={fill} /></>}
   {name === 'disc' && <><circle cx="9" cy="9" r="7.5" fill="none" stroke={fill} stroke-width="1.5" /><circle cx="9" cy="9" r="2" fill={fill} /></>}
   {name === 'bag' && <path d="M3 6 H15 L14 16 H4 Z M6 6 V4.5 A3 3 0 0 1 12 4.5 V6" fill="none" stroke={fill} stroke-width="1.5" stroke-linejoin="round" />}
+  {name === 'share' && <path d="M9 11 V2 M5.5 5.5 L9 2 L12.5 5.5 M4 8.5 H3 V16 H15 V8.5 H14" fill="none" stroke={fill} stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />}
   {name === 'prev' && <path d="M14 3 L6 9 L14 15 Z M4 3 V15" fill="none" stroke={fill} stroke-width="1.6" stroke-linejoin="round" />}
   {name === 'next' && <path d="M4 3 L12 9 L4 15 Z M14 3 V15" fill="none" stroke={fill} stroke-width="1.6" stroke-linejoin="round" />}
 </svg></span>

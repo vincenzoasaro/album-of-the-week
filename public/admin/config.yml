@@ -3,7 +3,7 @@
 
 backend:
   name: github
-  repo: vincenzoasaro/album-of-the-week
+  repo: YOUR-GITHUB-USERNAME/YOUR-REPO
   branch: main
 
 media_folder: public/images
@@ -142,6 +142,19 @@ collections:
           - { name: answer, label: Number of the correct answer, widget: number, value_type: int, min: 1, hint: "1 = first answer in the list", i18n: duplicate }
           - { name: explanation, label: Explanation, widget: text, required: false, i18n: true }
 
+      # ---------- Share cards ----------
+      - { name: cardQuote, label: "Share card: quote", widget: text, required: false, i18n: true, hint: "Shown on the 'Liner notes' card. Leave empty to use the introduction." }
+      - name: shareCards
+        label: "Share cards: your own designs"
+        widget: list
+        required: false
+        i18n: true
+        summary: "{{label}}"
+        hint: "Optional. Upload ready-made card images (best at 1080 × 1920 pixels) to offer next to the built-in styles."
+        fields:
+          - { name: label, label: Name shown to visitors, widget: string, i18n: true }
+          - { name: image, label: Card image, widget: image, i18n: true }
+
       # ---------- Shop ----------
       - { name: shopIntro, label: "Shop: intro", widget: text, required: false, i18n: true }
       - name: shop
@@ -165,8 +178,8 @@ collections:
               - { name: price, label: Price, widget: string, required: false, i18n: true }
               - { name: retailer, label: Shop name, widget: string, required: false, i18n: true }
               - { name: url, label: Link, widget: string, required: false, i18n: true }
-              - { name: image, label: Image, widget: image, required: false, i18n: true }
-              - { name: affiliate, label: Affiliate link, widget: boolean, default: true, i18n: true }
+              - { name: image, label: Image, widget: image, required: false, i18n: duplicate }
+              - { name: affiliate, label: Affiliate link, widget: boolean, default: true, i18n: duplicate }
 
   - name: pages
     label: Pages

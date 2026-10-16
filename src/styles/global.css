@@ -237,7 +237,7 @@ html.is-playing .tt-arm { rotate: 24deg; }
 /* ---------- Listening mode ---------- */
 .listening { position: fixed; inset: 0; z-index: 50; background: var(--night); overflow-y: auto; padding: 28px var(--gutter); display: flex; flex-direction: column; gap: 24px; }
 .listening[hidden] { display: none; }
-html.listening-open { overflow: hidden; }
+html.listening-open, html.share-open { overflow: hidden; }
 .listening-top { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
 .listening-body { flex: 1; display: flex; flex-wrap: wrap; gap: 56px; align-items: center; justify-content: center; max-width: var(--wrap); width: 100%; margin: 0 auto; }
 .listening-body > * { flex: 1 1 360px; max-width: 520px; }
@@ -286,3 +286,19 @@ html.listening-open .player-slot.is-loaded.is-active[data-slot='spotify'] { aspe
 .prose p, .prose li { color: var(--paper-soft); }
 .prose a { color: var(--accent); }
 .prose ul { padding-left: 1.2em; }
+
+/* ---------- Share dialog ---------- */
+.share-dialog { position: fixed; inset: 0; z-index: 70; background: rgb(7 9 12 / 0.86); overflow-y: auto; display: grid; place-items: center; padding: 24px var(--gutter); }
+.share-panel { width: 100%; max-width: 760px; background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius-l); padding: clamp(20px, 4vw, 40px); display: flex; flex-direction: column; gap: 20px; }
+.share-top { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.share-top h2 { margin: 0; font-family: var(--display); font-weight: 800; font-size: clamp(28px, 4vw, 40px); letter-spacing: -0.02em; }
+.share-options { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 14px; }
+.share-option { display: flex; flex-direction: column; gap: 8px; padding: 8px; border-radius: 14px; border: 2px solid transparent; background: transparent; cursor: pointer; text-align: left; color: var(--paper); }
+.share-option[aria-pressed='true'] { border-color: var(--accent); }
+.share-thumb { aspect-ratio: 9 / 16; border-radius: 8px; overflow: hidden; background: var(--ink); display: grid; place-items: center; }
+.share-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.share-option span { font-family: var(--mono); font-size: 13px; }
+.share-score { display: flex; align-items: center; gap: 10px; font-family: var(--mono); font-size: 14px; cursor: pointer; min-height: 44px; }
+.share-score input { width: 20px; height: 20px; accent-color: var(--accent); }
+.share-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.hero-share { align-self: flex-start; }

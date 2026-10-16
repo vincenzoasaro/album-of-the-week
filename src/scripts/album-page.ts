@@ -1,5 +1,5 @@
 import { controllable, player, type PlayerConfig, type Source } from './player';
-import { shareCard, type CardData } from './share-card';
+import { canShareFiles, customCard, download, drawCard, share, type CardData, type CardStyle } from './share-card';
 
 interface TrackInfo { side: string; title: string; time: string; note: string }
 interface PageData {
@@ -8,6 +8,7 @@ interface PageData {
   tracks: TrackInfo[];
   labels: { play: string; pause: string; side: string; ytError: string; ytOpen: string };
   card: CardData;
+  cardStyles: { id: CardStyle; label: string }[];
 }
 
 const $ = <T extends Element = HTMLElement>(sel: string, root: ParentNode = document) => root.querySelector<T>(sel);
@@ -147,15 +148,7 @@ function init(data: PageData) {
   initQuiz();
   initArchiveFilters();
 
-  /* ----- Share card ----- */
-  for (const btn of $$<HTMLButtonElement>('[data-action="share-card"]')) {
-    btn.addEventListener('click', async () => {
-      btn.disabled = true;
-      let score: string | null = null;
-      try { score = sessionStorage.getItem(`quiz:${data.card.slug}`); } catch { /* storage unavailable */ }
-      try { await shareCard(data.card, score); } finally { btn.disabled = false; }
-    });
-  }
+  initShare(data);
 }
 
 /* ---------- Quiz: one question at a time, score at the end ---------- */
@@ -232,4 +225,111 @@ function initArchiveFilters() {
       if (empty) empty.hidden = shown > 0;
     });
   }
+}
+
+/* ---------- Share dialog: pick a card, then share or download it ---------- */
+function initShare(data: PageData) {
+  const dialog = $('[data-share-dialog]');
+  const optionsEl = dialog && $('[data-share-options]', dialog);
+  if (!dialog || !optionsEl) return;
+  const scoreRow = $('[data-share-score]', dialog)!;
+  const scoreBox = $<HTMLInputElement>('[data-share-include-score]', dialog)!;
+  const shareBtn = $<HTMLButtonElement>('[data-action="do-share"]', dialog)!;
+  const downloadBtn = $<HTMLButtonElement>('[data-action="do-download"]', dialog)!;
+  shareBtn.hidden = !canShareFiles();
+
+  type Option = { key: string; label: string; make: () => Promise<Blob> };
+  let score: string | null = null;
+  let selected = 'vinyl';
+  let opener: HTMLElement | null = null;
+  const cache = new Map<string, Promise<Blob>>();
+  const currentScore = () => (score && scoreBox.checked ? score : null);
+
+  const options: Option[] = [
+    ...data.cardStyles.map((s) => ({
+      key: s.id,
+      label: s.label,
+      make: () => drawCard(s.id, data.card, currentScore()),
+    })),
+    ...data.card.customCards.map((c, i) => ({
+      key: `custom-${i}`,
+      label: c.label,
+      make: () => customCard(c.url),
+    })),
+  ];
+  const blobFor = (o: Option) => {
+    const key = o.key.startsWith('custom') ? o.key : `${o.key}|${currentScore() ?? ''}`;
+    if (!cache.has(key)) cache.set(key, o.make());
+    return cache.get(key)!;
+  };
+
+  // One button per card, each with a small preview.
+  for (const o of options) {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'share-option';
+    btn.dataset.key = o.key;
+    btn.setAttribute('aria-pressed', String(o.key === selected));
+    btn.innerHTML = '<div class="share-thumb"></div><span></span>';
+    btn.querySelector('span')!.textContent = o.label;
+    btn.addEventListener('click', () => {
+      selected = o.key;
+      for (const b of $$('.share-option', optionsEl)) b.setAttribute('aria-pressed', String(b.dataset.key === selected));
+    });
+    optionsEl.appendChild(btn);
+  }
+
+  const renderThumbs = async () => {
+    for (const o of options) {
+      const thumb = $(`.share-option[data-key="${o.key}"] .share-thumb`, optionsEl)!;
+      try {
+        const blob = await blobFor(o);
+        const img = document.createElement('img');
+        img.alt = '';
+        img.src = URL.createObjectURL(blob);
+        thumb.replaceChildren(img);
+      } catch {
+        thumb.textContent = '–';
+      }
+    }
+  };
+
+  const close = () => {
+    dialog.hidden = true;
+    document.documentElement.classList.remove('share-open');
+    opener?.focus();
+  };
+
+  for (const btn of $$('[data-action="share-card"]')) {
+    btn.addEventListener('click', () => {
+      opener = btn;
+      try { score = sessionStorage.getItem(`quiz:${data.card.slug}`); } catch { score = null; }
+      scoreRow.hidden = !score;
+      dialog.hidden = false;
+      document.documentElement.classList.add('share-open');
+      $<HTMLElement>('.share-option[aria-pressed="true"]', optionsEl)?.focus();
+      renderThumbs();
+    });
+  }
+  scoreBox.addEventListener('change', renderThumbs);
+  $('[data-action="close-share"]', dialog)?.addEventListener('click', close);
+  dialog.addEventListener('click', (e) => { if (e.target === dialog) close(); });
+  dialog.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+
+  const chosen = async () => {
+    const o = options.find((x) => x.key === selected) ?? options[0];
+    const blob = await blobFor(o);
+    const ext = blob.type === 'image/jpeg' ? 'jpg' : blob.type === 'image/webp' ? 'webp' : 'png';
+    return { blob, name: `${data.card.slug}-${o.key}.${ext}` };
+  };
+  shareBtn.addEventListener('click', async () => {
+    shareBtn.disabled = true;
+    try { const { blob, name } = await chosen(); await share(blob, name, `${data.card.title} · ${data.card.artist}`); }
+    finally { shareBtn.disabled = false; }
+  });
+  downloadBtn.addEventListener('click', async () => {
+    downloadBtn.disabled = true;
+    try { const { blob, name } = await chosen(); download(blob, name); }
+    finally { downloadBtn.disabled = false; }
+  });
 }

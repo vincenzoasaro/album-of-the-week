@@ -8,6 +8,8 @@ import Archive from './Archive.astro';
 import Newsletter from './Newsletter.astro';
 import Footer from './Footer.astro';
 import ListeningMode from './ListeningMode.astro';
+import ShareDialog from './ShareDialog.astro';
+import { sidesOf } from '../lib/albums';
 import site from '../data/site.json';
 import { useTranslations } from '../i18n/ui';
 import { amazonEmbedUrl, appleEmbedUrl, inkOn, toSeconds, url, youtubeIds, type Album } from '../lib/albums';
@@ -35,6 +37,7 @@ if (amazon) sources.push('amazon');
 if (album.appleMusicUrl && !apple) console.warn(`[${album.slug}] The Apple Music link isn't a music.apple.com link, so Apple Music is hidden.`);
 if (album.amazonMusicEmbed && !amazon) console.warn(`[${album.slug}] The Amazon Music field needs the embed code from Share > Embed, so Amazon Music is hidden.`);
 const canControl = sources.some(controllable);
+const multiSide = sidesOf(album).length > 1;
 
 const pageData = {
   player: {
@@ -57,8 +60,21 @@ const pageData = {
     accent: album.accent,
     onAccent: inkOn(album.accent),
     siteName: site.siteName,
-    labels: { kicker: t('share.kicker'), score: t('share.score'), yourTurn: t('share.yourTurn') },
+    cover: album.cover ? url(album.cover) : '',
+    quote: album.cardQuote || album.tagline,
+    tracks: album.tracks.map((tr, i) => {
+      const side = tr.side || 'A';
+      const n = multiSide ? `${side}${album.tracks.slice(0, i + 1).filter((x) => (x.side || 'A') === side).length}` : String(i + 1);
+      return { n, title: tr.title, time: tr.time };
+    }),
+    customCards: album.shareCards.filter((c) => c.image).map((c) => ({ label: c.label, url: url(c.image) })),
+    labels: { kicker: t('share.kicker'), issue: t('hero.issue'), liner: t('share.liner'), score: t('share.score'), yourTurn: t('share.yourTurn') },
   },
+  cardStyles: [
+    { id: 'vinyl', label: t('share.styleVinyl') },
+    { id: 'sleeve', label: t('share.styleSleeve') },
+    { id: 'liner', label: t('share.styleLiner') },
+  ],
 };
 const title = isCurrent
   ? `${album.title} · ${album.artist} | ${site.siteName}`
@@ -70,16 +86,12 @@ const title = isCurrent
     <Hero album={album} isCurrent={isCurrent} sources={sources} />
     <Story album={album} canPlay={canControl} />
     <Quiz album={album} />
-    {album.quiz.length === 0 && (
-      <section class="wrap" style="padding-top:64px">
-        <button class="btn btn--primary" type="button" data-action="share-card">{t('share.button')}</button>
-      </section>
-    )}
     <Archive lang={lang} albums={archive} />
     <Newsletter lang={lang} />
   </main>
   <Footer lang={lang} />
   <ListeningMode album={album} canPlay={canControl} />
+  <ShareDialog album={album} />
   <script id="page-data" type="application/json" set:html={JSON.stringify(pageData).replace(/</g, '\\u003c')}></script>
 </Base>
 

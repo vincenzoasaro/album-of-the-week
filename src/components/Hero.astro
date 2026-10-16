@@ -82,6 +82,8 @@ const firstControllable = sources.length > 0 && controllable(sources[0]);
       </div>
     )}
 
+    <button class="btn hero-share" type="button" data-action="share-card"><Icon name="share" />{t('share.open')}</button>
+
     {album.introAudio && (
       <div class="intro-card">
         <button type="button" data-intro aria-pressed="false" aria-label={t('intro.play')}>

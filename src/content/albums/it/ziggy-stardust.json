@@ -9,7 +9,7 @@
   "publishDate": "2026-11-02T00:00:00+01:00",
   "accent": "#E0453A",
   "tagline": "Una rockstar aliena atterra su una Terra a cui restano cinque anni, salva i ragazzi attraverso la radio e poi viene divorata dalla sua stessa fama. Bowie registrò prima le canzoni e solo dopo ci costruì intorno il mito, che poi indossò sul palco finché quasi non riuscì più a toglierselo.",
-  "cover": "",
+  "cover": "/images/ziggy_stardust_bowie.jpg",
   "introAudio": "",
   "introLength": "",
   "spotifyAlbumId": "48D1hRORqJq52qsnUYZX56",
@@ -20,55 +20,243 @@
   "sessionsHeadline": "Una settimana a novembre.\nUna canzone a febbraio.",
   "sessionsText": "Bowie aveva appena finito Hunky Dory quando tornò ai Trident Studios di Soho con il produttore Ken Scott e la stessa band, senza il tastierista Rick Wakeman. Quasi tutti i brani furono registrati praticamente dal vivo, e Scott raccontò poi che la gran parte delle voci di Bowie erano prime take. Il concept arrivò dopo: la storia di Ziggy fu cucita in gran parte quando le canzoni erano già su nastro.",
   "sessions": [
-    { "date": "9 lug", "label": "1971 · Trident, Londra", "tracks": "It Ain't Easy, registrata per Hunky Dory e messa da parte" },
-    { "date": "8–15 nov", "label": "1971 · Trident, Londra", "tracks": "Star · Hang On to Yourself · Ziggy Stardust · Moonage Daydream · Soul Love · Lady Stardust · Five Years" },
-    { "date": "Gen", "label": "1972 · Blackheath e Trident", "tracks": "Tre giorni di prove, poi i primi lavori su Suffragette City e Rock 'n' Roll Suicide" },
-    { "date": "4 feb", "label": "1972 · Trident, Londra", "tracks": "Starman, scritta in pochi giorni per dare un singolo alla RCA, e le ultime take che chiudono le sessioni" }
+    {
+      "date": "9 lug",
+      "label": "1971 · Trident, Londra",
+      "tracks": "It Ain't Easy, registrata per Hunky Dory e messa da parte"
+    },
+    {
+      "date": "8–15 nov",
+      "label": "1971 · Trident, Londra",
+      "tracks": "Star · Hang On to Yourself · Ziggy Stardust · Moonage Daydream · Soul Love · Lady Stardust · Five Years"
+    },
+    {
+      "date": "Gen",
+      "label": "1972 · Blackheath e Trident",
+      "tracks": "Tre giorni di prove, poi i primi lavori su Suffragette City e Rock 'n' Roll Suicide"
+    },
+    {
+      "date": "4 feb",
+      "label": "1972 · Trident, Londra",
+      "tracks": "Starman, scritta in pochi giorni per dare un singolo alla RCA, e le ultime take che chiudono le sessioni"
+    }
   ],
   "lineupHeadline": "Un alieno.\nTre Spiders.",
   "musicians": [
-    { "name": "David Bowie", "instrument": "Voce, chitarra acustica, sassofono", "plays": "Tutte e undici le tracce; l'assolo di sax in Soul Love è suo" },
-    { "name": "Mick Ronson", "instrument": "Chitarra elettrica, pianoforte, cori, arrangiamenti d'archi", "plays": "Tutte e undici le tracce" },
-    { "name": "Trevor Bolder", "instrument": "Basso", "plays": "Tutte e undici le tracce" },
-    { "name": "Mick \"Woody\" Woodmansey", "instrument": "Batteria", "plays": "Tutte e undici le tracce; congas in Soul Love" },
-    { "name": "Rick Wakeman", "instrument": "Clavicembalo (non accreditato)", "plays": "It Ain't Easy" },
-    { "name": "Dana Gillespie", "instrument": "Cori (non accreditata)", "plays": "It Ain't Easy" },
-    { "name": "Ken Scott", "instrument": "Coproduttore, tecnico del suono", "plays": "Al mixer per tutto l'album" }
+    {
+      "name": "David Bowie",
+      "instrument": "Voce, chitarra acustica, sassofono",
+      "plays": "Tutte e undici le tracce; l'assolo di sax in Soul Love è suo"
+    },
+    {
+      "name": "Mick Ronson",
+      "instrument": "Chitarra elettrica, pianoforte, cori, arrangiamenti d'archi",
+      "plays": "Tutte e undici le tracce"
+    },
+    {
+      "name": "Trevor Bolder",
+      "instrument": "Basso",
+      "plays": "Tutte e undici le tracce"
+    },
+    {
+      "name": "Mick \"Woody\" Woodmansey",
+      "instrument": "Batteria",
+      "plays": "Tutte e undici le tracce; congas in Soul Love"
+    },
+    {
+      "name": "Rick Wakeman",
+      "instrument": "Clavicembalo (non accreditato)",
+      "plays": "It Ain't Easy"
+    },
+    {
+      "name": "Dana Gillespie",
+      "instrument": "Cori (non accreditata)",
+      "plays": "It Ain't Easy"
+    },
+    {
+      "name": "Ken Scott",
+      "instrument": "Coproduttore, tecnico del suono",
+      "plays": "Al mixer per tutto l'album"
+    }
   ],
   "tracks": [
-    { "side": "A", "title": "Five Years", "time": "4:42", "recorded": "15 nov 1971", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "Una batteria che batte come un cuore, poi la notizia: alla Terra restano cinque anni. Bowie comincia intorpidito e finisce per gridare sopra gli archi. Al pianoforte c'è Ronson." },
-    { "side": "A", "title": "Soul Love", "time": "3:34", "recorded": "12 nov 1971", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "La calma prima della fine: bonghi, battimani, chitarra acustica e l'amore in tante forme diverse. L'assolo di sassofono lo suona Bowie in persona." },
-    { "side": "A", "title": "Moonage Daydream", "time": "4:40", "recorded": "12 nov 1971", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "Ziggy si presenta. Provata già a inizio 1971 con il progetto parallelo Arnold Corns, qui viene ricostruita intorno alla chitarra di Ronson, che nel finale si avvita negli archi." },
-    { "side": "A", "title": "Starman", "time": "4:10", "recorded": "4 feb 1972", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "L'ultima canzone scritta, e quella che fece di Bowie una star. Ascolta il salto d'ottava nel ritornello, un omaggio a Over the Rainbow, e lo stacco di piano e chitarra in stile codice Morse tra strofa e ritornello." },
-    { "side": "A", "title": "It Ain't Easy", "time": "2:58", "recorded": "9 lug 1971", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "L'unico brano non scritto da Bowie, ma da Ron Davies, e l'unico fuori dalla storia. Un avanzo di Hunky Dory, con il clavicembalo di Rick Wakeman e i cori di Dana Gillespie, entrambi non accreditati." },
-    { "side": "B", "title": "Lady Stardust", "time": "3:22", "recorded": "12 nov 1971", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "Una ballata al pianoforte cantata dal punto di vista del pubblico. Il cantante viene ricordato sia al maschile sia al femminile, e la canzone si chiude nella malinconia, senza una risposta." },
-    { "side": "B", "title": "Star", "time": "2:47", "recorded": "11 nov 1971", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "In origine si chiamava Rock 'n' Roll Star. Ziggy, o forse Bowie, si chiede ad alta voce se sfondare valga davvero la pena." },
-    { "side": "B", "title": "Hang On to Yourself", "time": "2:40", "recorded": "11 nov 1971", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "Un'altra canzone degli Arnold Corns, accelerata fino al territorio di Chuck Berry ed Eddie Cochran. Meno di tre minuti, forte e veloce: punk con cinque anni d'anticipo." },
-    { "side": "B", "title": "Ziggy Stardust", "time": "3:13", "recorded": "11 nov 1971", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "L'intera ascesa e caduta in una sola canzone, sopra il riff squillante di Ronson. Non si sa chi racconti la storia: un fan, uno degli Spiders o Ziggy stesso." },
-    { "side": "B", "title": "Suffragette City", "time": "3:25", "recorded": "gen–feb 1972", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "Bowie la offrì prima ai Mott the Hoople. Occhio al finto finale prima dell'ultimo grido, e al sintetizzatore ARP, una delle prime volte che compare in un disco di Bowie." },
-    { "side": "B", "title": "Rock 'n' Roll Suicide", "time": "2:58", "recorded": "gen–feb 1972", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "L'addio di Ziggy. Una voce e una chitarra acustica crescono fino a un'orchestra intera, e la star tende la mano al pubblico invece di morire da sola. Il biografo Nicholas Pegg l'ha definita la A Day in the Life di Bowie." }
+    {
+      "side": "A",
+      "title": "Five Years",
+      "time": "4:42",
+      "recorded": "15 nov 1971",
+      "note": "Una batteria che batte come un cuore, poi la notizia: alla Terra restano cinque anni. Bowie comincia intorpidito e finisce per gridare sopra gli archi. Al pianoforte c'è Ronson.",
+      "instrumental": false,
+      "lyricsUrl": "",
+      "ytStart": ""
+    },
+    {
+      "side": "A",
+      "title": "Soul Love",
+      "time": "3:34",
+      "recorded": "12 nov 1971",
+      "note": "La calma prima della fine: bonghi, battimani, chitarra acustica e l'amore in tante forme diverse. L'assolo di sassofono lo suona Bowie in persona.",
+      "instrumental": false,
+      "lyricsUrl": "",
+      "ytStart": ""
+    },
+    {
+      "side": "A",
+      "title": "Moonage Daydream",
+      "time": "4:40",
+      "recorded": "12 nov 1971",
+      "note": "Ziggy si presenta. Provata già a inizio 1971 con il progetto parallelo Arnold Corns, qui viene ricostruita intorno alla chitarra di Ronson, che nel finale si avvita negli archi.",
+      "instrumental": false,
+      "lyricsUrl": "",
+      "ytStart": ""
+    },
+    {
+      "side": "A",
+      "title": "Starman",
+      "time": "4:10",
+      "recorded": "4 feb 1972",
+      "note": "L'ultima canzone scritta, e quella che fece di Bowie una star. Ascolta il salto d'ottava nel ritornello, un omaggio a Over the Rainbow, e lo stacco di piano e chitarra in stile codice Morse tra strofa e ritornello.",
+      "instrumental": false,
+      "lyricsUrl": "",
+      "ytStart": ""
+    },
+    {
+      "side": "A",
+      "title": "It Ain't Easy",
+      "time": "2:58",
+      "recorded": "9 lug 1971",
+      "note": "L'unico brano non scritto da Bowie, ma da Ron Davies, e l'unico fuori dalla storia. Un avanzo di Hunky Dory, con il clavicembalo di Rick Wakeman e i cori di Dana Gillespie, entrambi non accreditati.",
+      "instrumental": false,
+      "lyricsUrl": "",
+      "ytStart": ""
+    },
+    {
+      "side": "B",
+      "title": "Lady Stardust",
+      "time": "3:22",
+      "recorded": "12 nov 1971",
+      "note": "Una ballata al pianoforte cantata dal punto di vista del pubblico. Il cantante viene ricordato sia al maschile sia al femminile, e la canzone si chiude nella malinconia, senza una risposta.",
+      "instrumental": false,
+      "lyricsUrl": "",
+      "ytStart": ""
+    },
+    {
+      "side": "B",
+      "title": "Star",
+      "time": "2:47",
+      "recorded": "11 nov 1971",
+      "note": "In origine si chiamava Rock 'n' Roll Star. Ziggy, o forse Bowie, si chiede ad alta voce se sfondare valga davvero la pena.",
+      "instrumental": false,
+      "lyricsUrl": "",
+      "ytStart": ""
+    },
+    {
+      "side": "B",
+      "title": "Hang On to Yourself",
+      "time": "2:40",
+      "recorded": "11 nov 1971",
+      "note": "Un'altra canzone degli Arnold Corns, accelerata fino al territorio di Chuck Berry ed Eddie Cochran. Meno di tre minuti, forte e veloce: punk con cinque anni d'anticipo.",
+      "instrumental": false,
+      "lyricsUrl": "",
+      "ytStart": ""
+    },
+    {
+      "side": "B",
+      "title": "Ziggy Stardust",
+      "time": "3:13",
+      "recorded": "11 nov 1971",
+      "note": "L'intera ascesa e caduta in una sola canzone, sopra il riff squillante di Ronson. Non si sa chi racconti la storia: un fan, uno degli Spiders o Ziggy stesso.",
+      "instrumental": false,
+      "lyricsUrl": "",
+      "ytStart": ""
+    },
+    {
+      "side": "B",
+      "title": "Suffragette City",
+      "time": "3:25",
+      "recorded": "gen–feb 1972",
+      "note": "Bowie la offrì prima ai Mott the Hoople. Occhio al finto finale prima dell'ultimo grido, e al sintetizzatore ARP, una delle prime volte che compare in un disco di Bowie.",
+      "instrumental": false,
+      "lyricsUrl": "",
+      "ytStart": ""
+    },
+    {
+      "side": "B",
+      "title": "Rock 'n' Roll Suicide",
+      "time": "2:58",
+      "recorded": "gen–feb 1972",
+      "note": "L'addio di Ziggy. Una voce e una chitarra acustica crescono fino a un'orchestra intera, e la star tende la mano al pubblico invece di morire da sola. Il biografo Nicholas Pegg l'ha definita la A Day in the Life di Bowie.",
+      "instrumental": false,
+      "lyricsUrl": "",
+      "ytStart": ""
+    }
   ],
   "worldHeadline": "Nel frattempo…",
   "world": [
-    { "when": "21 febbraio", "what": "Richard Nixon atterra a Pechino: è il primo presidente degli Stati Uniti a visitare la Repubblica Popolare Cinese." },
-    { "when": "17 giugno", "what": "Cinque uomini vengono arrestati mentre si introducono negli uffici dei Democratici nel complesso Watergate, a Washington, il giorno dopo l'uscita di questo album nel Regno Unito." },
-    { "when": "5–6 settembre", "what": "Alle Olimpiadi di Monaco un commando palestinese prende in ostaggio la squadra israeliana; undici atleti e tecnici israeliani vengono uccisi." },
-    { "when": "Dicembre", "what": "Apollo 17 atterra sulla Luna. Da allora nessuno ci ha più camminato." }
+    {
+      "when": "21 febbraio",
+      "what": "Richard Nixon atterra a Pechino: è il primo presidente degli Stati Uniti a visitare la Repubblica Popolare Cinese."
+    },
+    {
+      "when": "17 giugno",
+      "what": "Cinque uomini vengono arrestati mentre si introducono negli uffici dei Democratici nel complesso Watergate, a Washington, il giorno dopo l'uscita di questo album nel Regno Unito."
+    },
+    {
+      "when": "5–6 settembre",
+      "what": "Alle Olimpiadi di Monaco un commando palestinese prende in ostaggio la squadra israeliana; undici atleti e tecnici israeliani vengono uccisi."
+    },
+    {
+      "when": "Dicembre",
+      "what": "Apollo 17 atterra sulla Luna. Da allora nessuno ci ha più camminato."
+    }
   ],
   "alsoThisYear": [
-    { "title": "Exile on Main St.", "artist": "The Rolling Stones" },
-    { "title": "Transformer", "artist": "Lou Reed" },
-    { "title": "Harvest", "artist": "Neil Young" },
-    { "title": "Talking Book", "artist": "Stevie Wonder" }
+    {
+      "title": "Exile on Main St.",
+      "artist": "The Rolling Stones"
+    },
+    {
+      "title": "Transformer",
+      "artist": "Lou Reed"
+    },
+    {
+      "title": "Harvest",
+      "artist": "Neil Young"
+    },
+    {
+      "title": "Talking Book",
+      "artist": "Stevie Wonder"
+    }
   ],
   "release": [
-    { "label": "Uscita", "value": "16 giugno 1972 (Regno Unito)" },
-    { "label": "Etichetta", "value": "RCA Victor" },
-    { "label": "Catalogo", "value": "SF 8287" },
-    { "label": "Produttori", "value": "David Bowie, Ken Scott" },
-    { "label": "Studio", "value": "Trident Studios, Londra" },
-    { "label": "Singolo", "value": "Starman / Suffragette City (28 aprile 1972)" },
-    { "label": "Classifica", "value": "UK 5 · USA 75" }
+    {
+      "label": "Uscita",
+      "value": "16 giugno 1972 (Regno Unito)"
+    },
+    {
+      "label": "Etichetta",
+      "value": "RCA Victor"
+    },
+    {
+      "label": "Catalogo",
+      "value": "SF 8287"
+    },
+    {
+      "label": "Produttori",
+      "value": "David Bowie, Ken Scott"
+    },
+    {
+      "label": "Studio",
+      "value": "Trident Studios, Londra"
+    },
+    {
+      "label": "Singolo",
+      "value": "Starman / Suffragette City (28 aprile 1972)"
+    },
+    {
+      "label": "Classifica",
+      "value": "UK 5 · USA 75"
+    }
   ],
   "trivia": [
     "Il retro di copertina dell'LP originale spiega come ascoltarlo: da suonare al massimo volume.",
@@ -80,49 +268,143 @@
   "quiz": [
     {
       "question": "Quale canzone scrisse Bowie all'ultimo momento perché la RCA diceva che all'album mancava un singolo?",
-      "options": ["Starman", "Suffragette City", "Ziggy Stardust", "Five Years"],
+      "options": [
+        "Starman",
+        "Suffragette City",
+        "Ziggy Stardust",
+        "Five Years"
+      ],
       "answer": 1,
       "explanation": "Starman fu registrata il 4 febbraio 1972 e prese il posto di una cover di Chuck Berry nella scaletta."
     },
     {
       "question": "Dove è stata scattata la foto di copertina?",
-      "options": ["Abbey Road", "Heddon Street, vicino a Regent Street", "Carnaby Street", "Portobello Road"],
+      "options": [
+        "Abbey Road",
+        "Heddon Street, vicino a Regent Street",
+        "Carnaby Street",
+        "Portobello Road"
+      ],
       "answer": 2,
       "explanation": "Davanti al numero 23 di Heddon Street, sotto l'insegna della pellicceria K. West."
     },
     {
       "question": "Quale band rifiutò Suffragette City prima che Bowie la tenesse per sé?",
-      "options": ["T. Rex", "Roxy Music", "Mott the Hoople", "The Stooges"],
+      "options": [
+        "T. Rex",
+        "Roxy Music",
+        "Mott the Hoople",
+        "The Stooges"
+      ],
       "answer": 3,
       "explanation": "I Mott the Hoople dissero di no, e ricevettero in cambio All the Young Dudes."
     },
     {
       "question": "Quale brano dell'album non è stato scritto da Bowie?",
-      "options": ["Lady Stardust", "Soul Love", "Star", "It Ain't Easy"],
+      "options": [
+        "Lady Stardust",
+        "Soul Love",
+        "Star",
+        "It Ain't Easy"
+      ],
       "answer": 4,
       "explanation": "It Ain't Easy è di Ron Davies, registrata durante le sessioni di Hunky Dory."
     }
   ],
+  "cardQuote": "",
+  "shareCards": [],
   "shopIntro": "Scelti per questo album.",
   "shop": [
     {
       "title": "Il disco",
       "subtitle": "L'album, nel formato che preferisci.",
       "items": [
-        { "kind": "Vinile LP", "name": "The Rise and Fall of Ziggy Stardust (2012 Remaster, 180g)", "note": "La rimasterizzazione per il 40° anniversario, curata da Ray Staff, tecnico originale dei Trident.", "price": "", "retailer": "", "url": "", "image": "", "affiliate": true },
-        { "kind": "Vinile LP", "name": "The Rise and Fall of Ziggy Stardust (50th Anniversary Half-Speed Master)", "note": "Il taglio a mezza velocità del 2022 per i 50 anni dell'album.", "price": "", "retailer": "", "url": "", "image": "", "affiliate": true },
-        { "kind": "CD", "name": "The Rise and Fall of Ziggy Stardust (2012 Remaster)", "note": "", "price": "", "retailer": "", "url": "", "image": "", "affiliate": true },
-        { "kind": "Cofanetto", "name": "Rock 'n' Roll Star!", "note": "Il cofanetto di cinque dischi del 2024 sul periodo Ziggy, con demo, scarti e registrazioni dal vivo.", "price": "", "retailer": "", "url": "", "image": "", "affiliate": true }
+        {
+          "kind": "Vinile LP",
+          "name": "The Rise and Fall of Ziggy Stardust (2012 Remaster, 180g)",
+          "note": "La rimasterizzazione per il 40° anniversario, curata da Ray Staff, tecnico originale dei Trident.",
+          "price": "",
+          "retailer": "",
+          "url": "",
+          "image": "",
+          "affiliate": true
+        },
+        {
+          "kind": "Vinile LP",
+          "name": "The Rise and Fall of Ziggy Stardust (50th Anniversary Half-Speed Master)",
+          "note": "Il taglio a mezza velocità del 2022 per i 50 anni dell'album.",
+          "price": "",
+          "retailer": "",
+          "url": "",
+          "image": "",
+          "affiliate": true
+        },
+        {
+          "kind": "CD",
+          "name": "The Rise and Fall of Ziggy Stardust (2012 Remaster)",
+          "note": "",
+          "price": "",
+          "retailer": "",
+          "url": "",
+          "image": "",
+          "affiliate": true
+        },
+        {
+          "kind": "Cofanetto",
+          "name": "Rock 'n' Roll Star!",
+          "note": "Il cofanetto di cinque dischi del 2024 sul periodo Ziggy, con demo, scarti e registrazioni dal vivo.",
+          "price": "",
+          "retailer": "",
+          "url": "",
+          "image": "",
+          "affiliate": true
+        }
       ]
     },
     {
       "title": "Per approfondire",
       "subtitle": "Per quando finisce l'ultima traccia.",
       "items": [
-        { "kind": "Libro", "name": "The Complete David Bowie", "note": "L'enciclopedia canzone per canzone di Nicholas Pegg, il riferimento per eccellenza.", "price": "", "retailer": "", "url": "", "image": "", "affiliate": true },
-        { "kind": "Libro", "name": "Spider from Mars: My Life with David Bowie", "note": "Le memorie del batterista Woody Woodmansey, raccontate da dentro la band.", "price": "", "retailer": "", "url": "", "image": "", "affiliate": true },
-        { "kind": "Libro", "name": "Moonage Daydream: The Life and Times of Ziggy Stardust", "note": "Le foto di Mick Rock degli anni di Ziggy, con i commenti di Bowie.", "price": "", "retailer": "", "url": "", "image": "", "affiliate": true },
-        { "kind": "Film", "name": "Ziggy Stardust and the Spiders from Mars", "note": "Il film di D. A. Pennebaker sull'ultimo concerto di Ziggy, all'Hammersmith Odeon il 3 luglio 1973.", "price": "", "retailer": "", "url": "", "image": "", "affiliate": true }
+        {
+          "kind": "Libro",
+          "name": "The Complete David Bowie",
+          "note": "L'enciclopedia canzone per canzone di Nicholas Pegg, il riferimento per eccellenza.",
+          "price": "",
+          "retailer": "",
+          "url": "",
+          "image": "",
+          "affiliate": true
+        },
+        {
+          "kind": "Libro",
+          "name": "Spider from Mars: My Life with David Bowie",
+          "note": "Le memorie del batterista Woody Woodmansey, raccontate da dentro la band.",
+          "price": "",
+          "retailer": "",
+          "url": "",
+          "image": "",
+          "affiliate": true
+        },
+        {
+          "kind": "Libro",
+          "name": "Moonage Daydream: The Life and Times of Ziggy Stardust",
+          "note": "Le foto di Mick Rock degli anni di Ziggy, con i commenti di Bowie.",
+          "price": "",
+          "retailer": "",
+          "url": "",
+          "image": "",
+          "affiliate": true
+        },
+        {
+          "kind": "Film",
+          "name": "Ziggy Stardust and the Spiders from Mars",
+          "note": "Il film di D. A. Pennebaker sull'ultimo concerto di Ziggy, all'Hammersmith Odeon il 3 luglio 1973.",
+          "price": "",
+          "retailer": "",
+          "url": "",
+          "image": "",
+          "affiliate": true
+        }
       ]
     }
   ]

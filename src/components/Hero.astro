@@ -73,6 +73,12 @@ const firstControllable = sources.length > 0 && controllable(sources[0]);
             </div>
           </div>
         ))}
+        {sources.includes('spotify') && (
+          <p class="player-note" data-for="spotify" hidden={sources[0] !== 'spotify'}>
+            {t('player.spotifyNote')}
+            <a href="https://open.spotify.com" target="_blank" rel="noopener">{t('player.spotifyLogin')} ↗</a>
+          </p>
+        )}
       </div>
     )}
 

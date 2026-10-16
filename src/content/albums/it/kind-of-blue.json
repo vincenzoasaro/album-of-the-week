@@ -76,7 +76,9 @@
       "time": "9:22",
       "recorded": "2 mar 1959",
       "note": "Si apre con un dialogo sommesso tra piano e contrabbasso, a cui i fiati rispondono con due note. L'intero brano si muove tra due sole scale.",
-      "instrumental": true
+      "instrumental": true,
+      "lyricsUrl": "",
+      "ytStart": ""
     },
     {
       "side": "A",
@@ -84,7 +86,9 @@
       "time": "9:46",
       "recorded": "2 mar 1959",
       "note": "L'unico blues tradizionale del disco, e l'unica traccia con Wynton Kelly al piano al posto di Bill Evans.",
-      "instrumental": true
+      "instrumental": true,
+      "lyricsUrl": "",
+      "ytStart": ""
     },
     {
       "side": "A",
@@ -92,7 +96,9 @@
       "time": "5:37",
       "recorded": "2 mar 1959",
       "note": "Cannonball Adderley resta fuori. Il brano è accreditato a Davis, ma Evans ha sempre sostenuto di averlo scritto lui.",
-      "instrumental": true
+      "instrumental": true,
+      "lyricsUrl": "",
+      "ytStart": ""
     },
     {
       "side": "B",
@@ -100,7 +106,9 @@
       "time": "11:33",
       "recorded": "22 apr 1959",
       "note": "Un blues in un ondeggiante 6/8, costruito su una figura di basso che si ripete.",
-      "instrumental": true
+      "instrumental": true,
+      "lyricsUrl": "",
+      "ytStart": ""
     },
     {
       "side": "B",
@@ -108,7 +116,9 @@
       "time": "9:26",
       "recorded": "22 apr 1959",
       "note": "Cinque scale, suonate in sequenza. Ogni solista decide quanto restare su ciascuna prima di passare alla successiva.",
-      "instrumental": true
+      "instrumental": true,
+      "lyricsUrl": "",
+      "ytStart": ""
     }
   ],
   "worldHeadline": "Nel frattempo…",
@@ -221,12 +231,12 @@
       "subtitle": "L'album, nel formato che preferisci.",
       "items": [
         {
-          "kind": "Vinile LP",
+          "kind": "Vinile LP Blu",
           "name": "Kind of Blue",
           "note": "",
           "price": "",
-          "retailer": "",
-          "url": "",
+          "retailer": "Amazon",
+          "url": "https://link.amazon/B05FnN47k",
           "image": "",
           "affiliate": true
         },

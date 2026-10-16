@@ -3,7 +3,7 @@
 
 backend:
   name: github
-  repo: vincenzoasaro/album-of-the-week
+  repo: YOUR-GITHUB-USERNAME/YOUR-REPO
   branch: main
 
 media_folder: public/images
@@ -58,9 +58,9 @@ collections:
         required: false
         i18n: true
         fields:
-          - { name: date, label: Big date, widget: string, hint: "e.g. 2 Mar" }
-          - { name: label, label: Small label, widget: string, required: false }
-          - { name: tracks, label: Tracks recorded, widget: string, required: false }
+          - { name: date, label: Big date, widget: string, hint: "e.g. 2 Mar", i18n: true }
+          - { name: label, label: Small label, widget: string, required: false, i18n: true }
+          - { name: tracks, label: Tracks recorded, widget: string, required: false, i18n: true }
 
       - { name: lineupHeadline, label: "Lineup: headline", widget: text, required: false, i18n: true }
       - name: musicians
@@ -70,9 +70,9 @@ collections:
         i18n: true
         summary: "{{name}} ({{instrument}})"
         fields:
-          - { name: name, label: Name, widget: string }
-          - { name: instrument, label: Instrument, widget: string, required: false }
-          - { name: plays, label: Plays on, widget: string, required: false }
+          - { name: name, label: Name, widget: string, i18n: true }
+          - { name: instrument, label: Instrument, widget: string, required: false, i18n: true }
+          - { name: plays, label: Plays on, widget: string, required: false, i18n: true }
 
       - name: tracks
         label: Tracks
@@ -81,14 +81,14 @@ collections:
         i18n: true
         summary: "{{side}} · {{title}} ({{time}})"
         fields:
-          - { name: side, label: Side, widget: string, default: A, hint: "A, B, C… Leave A for every track if the album has no sides." }
-          - { name: title, label: Title, widget: string }
-          - { name: time, label: Length, widget: string, required: false }
-          - { name: recorded, label: Recorded on, widget: string, required: false }
-          - { name: note, label: Listening note, widget: text, required: false, hint: "Shown in the track list and in listening mode." }
-          - { name: instrumental, label: Instrumental, widget: boolean, default: false, required: false }
-          - { name: lyricsUrl, label: Link to licensed lyrics, widget: string, required: false, hint: "e.g. the song's page on Genius or Musixmatch." }
-          - { name: ytStart, label: Start time in the YouTube video, widget: string, required: false, hint: "Only for a single full-album video, e.g. 9:22" }
+          - { name: side, label: Side, widget: string, default: A, hint: "A, B, C… Leave A for every track if the album has no sides.", i18n: duplicate }
+          - { name: title, label: Title, widget: string, i18n: true }
+          - { name: time, label: Length, widget: string, required: false, i18n: duplicate }
+          - { name: recorded, label: Recorded on, widget: string, required: false, i18n: true }
+          - { name: note, label: Listening note, widget: text, required: false, hint: "Shown in the track list and in listening mode.", i18n: true }
+          - { name: instrumental, label: Instrumental, widget: boolean, default: false, required: false, i18n: duplicate }
+          - { name: lyricsUrl, label: Link to licensed lyrics, widget: string, required: false, hint: "e.g. the song's page on Genius or Musixmatch.", i18n: duplicate }
+          - { name: ytStart, label: Start time in the YouTube video, widget: string, required: false, hint: "Only for a single full-album video, e.g. 9:22", i18n: duplicate }
 
       - { name: worldHeadline, label: "World: headline", widget: text, required: false, i18n: true }
       - name: world
@@ -97,16 +97,16 @@ collections:
         required: false
         i18n: true
         fields:
-          - { name: when, label: When, widget: string }
-          - { name: what, label: What happened, widget: text }
+          - { name: when, label: When, widget: string, i18n: true }
+          - { name: what, label: What happened, widget: text, i18n: true }
       - name: alsoThisYear
         label: "World: other albums that year"
         widget: list
         required: false
         i18n: true
         fields:
-          - { name: title, label: Album, widget: string }
-          - { name: artist, label: Artist, widget: string, required: false }
+          - { name: title, label: Album, widget: string, i18n: true }
+          - { name: artist, label: Artist, widget: string, required: false, i18n: duplicate }
 
       - name: release
         label: Release facts
@@ -115,15 +115,15 @@ collections:
         i18n: true
         summary: "{{label}}: {{value}}"
         fields:
-          - { name: label, label: Label, widget: string, hint: "e.g. Released, Producer" }
-          - { name: value, label: Value, widget: string }
+          - { name: label, label: Label, widget: string, hint: "e.g. Released, Producer", i18n: true }
+          - { name: value, label: Value, widget: string, i18n: true }
 
       - name: trivia
         label: Trivia
         widget: list
         required: false
         i18n: true
-        field: { name: fact, label: Fact, widget: text }
+        field: { name: fact, label: Fact, widget: text, i18n: true }
 
       # ---------- Quiz ----------
       - name: quiz
@@ -133,13 +133,14 @@ collections:
         i18n: true
         summary: "{{question}}"
         fields:
-          - { name: question, label: Question, widget: text }
+          - { name: question, label: Question, widget: text, i18n: true }
           - name: options
             label: Answers
             widget: list
-            field: { name: option, label: Answer, widget: string }
-          - { name: answer, label: Number of the correct answer, widget: number, value_type: int, min: 1, hint: "1 = first answer in the list" }
-          - { name: explanation, label: Explanation, widget: text, required: false }
+            i18n: true
+            field: { name: option, label: Answer, widget: string, i18n: true }
+          - { name: answer, label: Number of the correct answer, widget: number, value_type: int, min: 1, hint: "1 = first answer in the list", i18n: duplicate }
+          - { name: explanation, label: Explanation, widget: text, required: false, i18n: true }
 
       # ---------- Shop ----------
       - { name: shopIntro, label: "Shop: intro", widget: text, required: false, i18n: true }
@@ -150,21 +151,22 @@ collections:
         i18n: true
         summary: "{{title}}"
         fields:
-          - { name: title, label: Group title, widget: string }
-          - { name: subtitle, label: Group subtitle, widget: string, required: false }
+          - { name: title, label: Group title, widget: string, i18n: true }
+          - { name: subtitle, label: Group subtitle, widget: string, required: false, i18n: true }
           - name: items
             label: Products
             widget: list
+            i18n: true
             summary: "{{kind}}: {{name}}"
             fields:
-              - { name: kind, label: Type, widget: string, required: false, hint: "e.g. Vinyl LP, Book" }
-              - { name: name, label: Product name, widget: string }
-              - { name: note, label: Why it's here, widget: text, required: false }
-              - { name: price, label: Price, widget: string, required: false }
-              - { name: retailer, label: Shop name, widget: string, required: false }
-              - { name: url, label: Link, widget: string, required: false }
-              - { name: image, label: Image, widget: image, required: false }
-              - { name: affiliate, label: Affiliate link, widget: boolean, default: true }
+              - { name: kind, label: Type, widget: string, required: false, hint: "e.g. Vinyl LP, Book", i18n: true }
+              - { name: name, label: Product name, widget: string, i18n: true }
+              - { name: note, label: Why it's here, widget: text, required: false, i18n: true }
+              - { name: price, label: Price, widget: string, required: false, i18n: true }
+              - { name: retailer, label: Shop name, widget: string, required: false, i18n: true }
+              - { name: url, label: Link, widget: string, required: false, i18n: true }
+              - { name: image, label: Image, widget: image, required: false, i18n: duplicate }
+              - { name: affiliate, label: Affiliate link, widget: boolean, default: true, i18n: duplicate }
 
   - name: pages
     label: Pages

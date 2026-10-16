@@ -1,0 +1,129 @@
+{
+  "slug": "ziggy-stardust",
+  "title": "The Rise and Fall of Ziggy Stardust and the Spiders from Mars",
+  "artist": "David Bowie",
+  "year": 1972,
+  "label": "RCA Victor",
+  "genre": "Glam rock",
+  "length": "38:29",
+  "publishDate": "2026-11-02T00:00:00+01:00",
+  "accent": "#E0453A",
+  "tagline": "An alien rock star lands on an Earth with five years left, saves its kids through the radio, then is eaten alive by his own fame. Bowie recorded the songs first and built the myth around them afterwards, then wore it on stage until he could barely take it off.",
+  "cover": "",
+  "introAudio": "",
+  "introLength": "",
+  "spotifyAlbumId": "48D1hRORqJq52qsnUYZX56",
+  "youtubePlaylistId": "",
+  "youtubeVideoId": "",
+  "appleMusicUrl": "",
+  "amazonMusicEmbed": "",
+  "sessionsHeadline": "One week in November.\nOne song in February.",
+  "sessionsText": "Bowie had barely finished Hunky Dory when he went back into Trident Studios in Soho with producer Ken Scott and the same band, minus keyboard player Rick Wakeman. Most songs were cut almost live, and Scott later said nearly all of Bowie's vocals were first takes. The concept came later: the story of Ziggy was largely stitched together after the songs were already on tape.",
+  "sessions": [
+    { "date": "9 Jul", "label": "1971 · Trident, London", "tracks": "It Ain't Easy, recorded for Hunky Dory and saved for later" },
+    { "date": "8–15 Nov", "label": "1971 · Trident, London", "tracks": "Star · Hang On to Yourself · Ziggy Stardust · Moonage Daydream · Soul Love · Lady Stardust · Five Years" },
+    { "date": "Jan", "label": "1972 · Blackheath and Trident", "tracks": "Three days of rehearsals, then first work on Suffragette City and Rock 'n' Roll Suicide" },
+    { "date": "4 Feb", "label": "1972 · Trident, London", "tracks": "Starman, written in days to give RCA a single, plus the final takes that close the sessions" }
+  ],
+  "lineupHeadline": "One alien.\nThree Spiders.",
+  "musicians": [
+    { "name": "David Bowie", "instrument": "Vocals, acoustic guitar, saxophone", "plays": "All eleven tracks; the sax solo on Soul Love is his" },
+    { "name": "Mick Ronson", "instrument": "Electric guitar, piano, backing vocals, string arrangements", "plays": "All eleven tracks" },
+    { "name": "Trevor Bolder", "instrument": "Bass", "plays": "All eleven tracks" },
+    { "name": "Mick \"Woody\" Woodmansey", "instrument": "Drums", "plays": "All eleven tracks; congas on Soul Love" },
+    { "name": "Rick Wakeman", "instrument": "Harpsichord (uncredited)", "plays": "It Ain't Easy" },
+    { "name": "Dana Gillespie", "instrument": "Backing vocals (uncredited)", "plays": "It Ain't Easy" },
+    { "name": "Ken Scott", "instrument": "Co-producer, engineer", "plays": "Behind the desk for the whole album" }
+  ],
+  "tracks": [
+    { "side": "A", "title": "Five Years", "time": "4:42", "recorded": "15 Nov 1971", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "A drumbeat like a heartbeat, then the news: the Earth has five years left. Bowie starts numb and ends up shouting over the strings. Ronson plays the piano." },
+    { "side": "A", "title": "Soul Love", "time": "3:34", "recorded": "12 Nov 1971", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "The calm before the end: bongos, handclaps and acoustic guitar, and love in several forms. Bowie plays the saxophone solo himself." },
+    { "side": "A", "title": "Moonage Daydream", "time": "4:40", "recorded": "12 Nov 1971", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "Ziggy introduces himself. First tried in early 1971 with Bowie's side project Arnold Corns, then rebuilt here around Ronson's guitar, which spirals out into strings at the end." },
+    { "side": "A", "title": "Starman", "time": "4:10", "recorded": "4 Feb 1972", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "The last song written and the one that made Bowie a star. Listen for the octave leap in the chorus, a nod to Over the Rainbow, and the morse-code break of piano and guitar between verse and chorus." },
+    { "side": "A", "title": "It Ain't Easy", "time": "2:58", "recorded": "9 Jul 1971", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "The only song Bowie didn't write, by Ron Davies, and the only one outside the story. A Hunky Dory leftover, with uncredited harpsichord by Rick Wakeman and backing vocals by Dana Gillespie." },
+    { "side": "B", "title": "Lady Stardust", "time": "3:22", "recorded": "12 Nov 1971", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "A piano ballad sung from the crowd's side of the stage. The singer is remembered as both he and she, and the song ends on melancholy rather than an answer." },
+    { "side": "B", "title": "Star", "time": "2:47", "recorded": "11 Nov 1971", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "Originally called Rock 'n' Roll Star. Ziggy, or Bowie, wonders out loud whether making it big would be worth it." },
+    { "side": "B", "title": "Hang On to Yourself", "time": "2:40", "recorded": "11 Nov 1971", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "Another Arnold Corns song, sped up into Chuck Berry and Eddie Cochran territory. Under three minutes, loud and fast: punk five years early." },
+    { "side": "B", "title": "Ziggy Stardust", "time": "3:13", "recorded": "11 Nov 1971", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "The whole rise and fall in one song, on top of Ronson's ringing riff. Nobody says who is telling the story: a fan, one of the Spiders, or Ziggy himself." },
+    { "side": "B", "title": "Suffragette City", "time": "3:25", "recorded": "Jan–Feb 1972", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "Bowie first offered it to Mott the Hoople. Watch out for the false ending before the final shout, and the ARP synthesiser, one of the first times it appears on a Bowie record." },
+    { "side": "B", "title": "Rock 'n' Roll Suicide", "time": "2:58", "recorded": "Jan–Feb 1972", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "Ziggy's farewell. One voice and an acoustic guitar grow into a full orchestra, and the star reaches out to the audience instead of dying alone. Biographer Nicholas Pegg called it Bowie's own A Day in the Life." }
+  ],
+  "worldHeadline": "Meanwhile…",
+  "world": [
+    { "when": "21 February", "what": "Richard Nixon lands in Beijing, the first US president to visit the People's Republic of China." },
+    { "when": "17 June", "what": "Five men are arrested breaking into the Democratic offices at the Watergate building in Washington, the day after this album comes out in Britain." },
+    { "when": "5–6 September", "what": "Palestinian militants take Israeli athletes hostage at the Munich Olympics; eleven members of the Israeli team are killed." },
+    { "when": "December", "what": "Apollo 17 lands on the Moon. No one has walked there since." }
+  ],
+  "alsoThisYear": [
+    { "title": "Exile on Main St.", "artist": "The Rolling Stones" },
+    { "title": "Transformer", "artist": "Lou Reed" },
+    { "title": "Harvest", "artist": "Neil Young" },
+    { "title": "Talking Book", "artist": "Stevie Wonder" }
+  ],
+  "release": [
+    { "label": "Released", "value": "16 June 1972 (UK)" },
+    { "label": "Label", "value": "RCA Victor" },
+    { "label": "Catalogue", "value": "SF 8287" },
+    { "label": "Producers", "value": "David Bowie, Ken Scott" },
+    { "label": "Studio", "value": "Trident Studios, London" },
+    { "label": "Single", "value": "Starman / Suffragette City (28 April 1972)" },
+    { "label": "Chart peak", "value": "UK 5 · US 75" }
+  ],
+  "trivia": [
+    "The back cover of the original LP tells you how to listen: to be played at maximum volume.",
+    "The cover was shot on a rainy January evening in 1972 in Heddon Street, just off Regent Street. Bowie had flu, the band stayed indoors, and he stood under the sign of a furrier called K. West. A plaque marks the spot today.",
+    "Starman was a last-minute addition. RCA complained there was no single, so Bowie wrote one and it pushed a Chuck Berry cover off the album. Until mid-December the record was even going to be called Round and Round.",
+    "Bowie offered Suffragette City to Mott the Hoople. They turned it down, so he wrote them All the Young Dudes instead.",
+    "For years the release date was given as 6 June. In 2015 a letter from an RCA manager turned up showing it was actually 16 June."
+  ],
+  "quiz": [
+    {
+      "question": "Which song did Bowie write at the last minute because RCA said the album had no single?",
+      "options": ["Starman", "Suffragette City", "Ziggy Stardust", "Five Years"],
+      "answer": 1,
+      "explanation": "Starman was recorded on 4 February 1972 and replaced a Chuck Berry cover on the track list."
+    },
+    {
+      "question": "Where was the cover photo taken?",
+      "options": ["Abbey Road", "Heddon Street, off Regent Street", "Carnaby Street", "Portobello Road"],
+      "answer": 2,
+      "explanation": "Outside number 23 Heddon Street, under the sign of the furriers K. West."
+    },
+    {
+      "question": "Which band turned down Suffragette City before Bowie kept it for himself?",
+      "options": ["T. Rex", "Roxy Music", "Mott the Hoople", "The Stooges"],
+      "answer": 3,
+      "explanation": "Mott the Hoople said no, and got All the Young Dudes instead."
+    },
+    {
+      "question": "Which song on the album was not written by Bowie?",
+      "options": ["Lady Stardust", "Soul Love", "Star", "It Ain't Easy"],
+      "answer": 4,
+      "explanation": "It Ain't Easy is by Ron Davies, recorded during the Hunky Dory sessions."
+    }
+  ],
+  "shopIntro": "Picked for this album.",
+  "shop": [
+    {
+      "title": "Own the record",
+      "subtitle": "The album itself, in the format you play.",
+      "items": [
+        { "kind": "Vinyl LP", "name": "The Rise and Fall of Ziggy Stardust (2012 Remaster, 180g)", "note": "The 40th-anniversary remaster, overseen by original Trident engineer Ray Staff.", "price": "", "retailer": "", "url": "", "image": "", "affiliate": true },
+        { "kind": "Vinyl LP", "name": "The Rise and Fall of Ziggy Stardust (50th Anniversary Half-Speed Master)", "note": "The 2022 half-speed cut for the album's 50th birthday.", "price": "", "retailer": "", "url": "", "image": "", "affiliate": true },
+        { "kind": "CD", "name": "The Rise and Fall of Ziggy Stardust (2012 Remaster)", "note": "", "price": "", "retailer": "", "url": "", "image": "", "affiliate": true },
+        { "kind": "Box set", "name": "Rock 'n' Roll Star!", "note": "The 2024 five-disc box of the Ziggy period, with demos, outtakes and live recordings.", "price": "", "retailer": "", "url": "", "image": "", "affiliate": true }
+      ]
+    },
+    {
+      "title": "Go deeper",
+      "subtitle": "For after the last track.",
+      "items": [
+        { "kind": "Book", "name": "The Complete David Bowie", "note": "Nicholas Pegg's song-by-song encyclopedia, the standard reference.", "price": "", "retailer": "", "url": "", "image": "", "affiliate": true },
+        { "kind": "Book", "name": "Spider from Mars: My Life with David Bowie", "note": "Drummer Woody Woodmansey's memoir, from inside the band.", "price": "", "retailer": "", "url": "", "image": "", "affiliate": true },
+        { "kind": "Book", "name": "Moonage Daydream: The Life and Times of Ziggy Stardust", "note": "Mick Rock's photographs of the Ziggy years, with Bowie's own commentary.", "price": "", "retailer": "", "url": "", "image": "", "affiliate": true },
+        { "kind": "Film", "name": "Ziggy Stardust and the Spiders from Mars", "note": "D. A. Pennebaker's film of the last Ziggy show, Hammersmith Odeon, 3 July 1973.", "price": "", "retailer": "", "url": "", "image": "", "affiliate": true }
+      ]
+    }
+  ]
+}

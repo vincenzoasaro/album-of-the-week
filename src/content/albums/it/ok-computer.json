@@ -9,7 +9,7 @@
   "publishDate": "2026-10-19T00:00:00+02:00",
   "accent": "#A9C7D9",
   "tagline": "Dodici canzoni su automobili, computer, politici e il ronzio sordo dell'ansia moderna, registrate in una sala prove e in un'antica villa vicino a Bath. Il disco con cui i Radiohead hanno smesso di essere 'quelli di Creep'.",
-  "cover": "",
+  "cover": "/images/Ok_Computer_Radiohead.png",
   "introAudio": "",
   "introLength": "",
   "spotifyAlbumId": "6dVIqQ8qmQ5GBnJ9shOYGE",
@@ -314,6 +314,8 @@
       "explanation": "Da una battuta della serie radiofonica della Guida galattica per gli autostoppisti, che ha dato il nome anche a Paranoid Android."
     }
   ],
+  "cardQuote": "",
+  "shareCards": [],
   "shopIntro": "Scelti per questo album.",
   "shop": [
     {

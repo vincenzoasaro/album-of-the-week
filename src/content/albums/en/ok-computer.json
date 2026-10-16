@@ -9,7 +9,7 @@
   "publishDate": "2026-10-19T00:00:00+02:00",
   "accent": "#A9C7D9",
   "tagline": "Twelve songs about cars, computers, politicians and the low hum of modern anxiety, recorded in a rehearsal shed and an old manor house near Bath. The record where Radiohead stopped being 'the band that did Creep'.",
-  "cover": "",
+  "cover": "/images/Ok_Computer_Radiohead.png",
   "introAudio": "",
   "introLength": "",
   "spotifyAlbumId": "6dVIqQ8qmQ5GBnJ9shOYGE",
@@ -314,6 +314,8 @@
       "explanation": "A line from the radio series of The Hitchhiker's Guide to the Galaxy, which also gave Paranoid Android its name."
     }
   ],
+  "cardQuote": "",
+  "shareCards": [],
   "shopIntro": "Picked for this album.",
   "shop": [
     {

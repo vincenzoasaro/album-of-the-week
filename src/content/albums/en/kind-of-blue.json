@@ -225,7 +225,16 @@
     }
   ],
   "cardQuote": "",
-  "shareCards": [],
+  "shareCards": [
+    {
+      "label": "The bass asks",
+      "image": "/images/so-what-card-en.png"
+    },
+    {
+      "label": "So What Cubist",
+      "image": "/images/so-what-cubist-en.png"
+    }
+  ],
   "shopIntro": "Picked for this album.",
   "shop": [
     {

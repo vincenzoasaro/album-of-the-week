@@ -315,7 +315,16 @@
     }
   ],
   "cardQuote": "",
-  "shareCards": [],
+  "shareCards": [
+    {
+      "label": "OK Computer Airbag Card",
+      "image": "/images/ok_computer_airbag-card-en.png"
+    },
+    {
+      "label": "OK Computer pop card",
+      "image": "/images/ok_computer_airbag-pop-en.png"
+    }
+  ],
   "shopIntro": "Picked for this album.",
   "shop": [
     {

@@ -9,7 +9,7 @@
   "publishDate": "2026-10-26T00:00:00+01:00",
   "accent": "#E3B23C",
   "tagline": "I Beatles smettono di andare in tour, si inventano una band finta dietro cui nascondersi e passano cinque mesi a trasformare lo studio di registrazione in uno strumento. Tredici canzoni, un circo vittoriano e l'accordo finale più famoso della musica pop.",
-  "cover": "",
+  "cover": "/images/Sgt._Pepper's_Lonely_Hearts_Club_Band_album_art.jpg",
   "introAudio": "",
   "introLength": "",
   "spotifyAlbumId": "6QaVfG1pHYl1z15ZxkvVDW",
@@ -20,59 +20,271 @@
   "sessionsHeadline": "Basta palchi.\nSolo lo studio.",
   "sessionsText": "Dopo l'ultimo concerto a pagamento, a San Francisco nell'agosto 1966, i Beatles smisero di andare in tour. Così furono liberi di scrivere canzoni che non avrebbero mai potuto suonare dal vivo. Con il produttore George Martin e un tecnico del suono di vent'anni, Geoff Emerick, passarono l'inverno negli studi EMI di Abbey Road, unendo nastri a quattro piste, cambiando la velocità dei nastri e inserendo effetti sonori nella musica.",
   "sessions": [
-    { "date": "Nov 66", "label": "EMI Studios, Abbey Road", "tracks": "Strawberry Fields Forever apre le sessioni, ma finisce su un singolo con Penny Lane" },
-    { "date": "Dic 66", "label": "Studio 2, Abbey Road", "tracks": "When I'm Sixty-Four, la prima canzone registrata per l'album" },
-    { "date": "Feb 67", "label": "Regent Sound, Tottenham Court Road", "tracks": "Fixing a Hole, la prima sessione della band fuori dalla EMI" },
-    { "date": "10 feb 67", "label": "Studio 1, Abbey Road", "tracks": "Un'orchestra di 40 elementi suona il crescendo di A Day in the Life" },
-    { "date": "Apr 67", "label": "Studio 2, Abbey Road", "tracks": "La ripresa, i missaggi finali e i suoni strani nascosti nel solco di chiusura" }
+    {
+      "date": "Nov 66",
+      "label": "EMI Studios, Abbey Road",
+      "tracks": "Strawberry Fields Forever apre le sessioni, ma finisce su un singolo con Penny Lane"
+    },
+    {
+      "date": "Dic 66",
+      "label": "Studio 2, Abbey Road",
+      "tracks": "When I'm Sixty-Four, la prima canzone registrata per l'album"
+    },
+    {
+      "date": "Feb 67",
+      "label": "Regent Sound, Tottenham Court Road",
+      "tracks": "Fixing a Hole, la prima sessione della band fuori dalla EMI"
+    },
+    {
+      "date": "10 feb 67",
+      "label": "Studio 1, Abbey Road",
+      "tracks": "Un'orchestra di 40 elementi suona il crescendo di A Day in the Life"
+    },
+    {
+      "date": "Apr 67",
+      "label": "Studio 2, Abbey Road",
+      "tracks": "La ripresa, i missaggi finali e i suoni strani nascosti nel solco di chiusura"
+    }
   ],
   "lineupHeadline": "Quattro Beatles.\nUna band immaginaria.",
   "musicians": [
-    { "name": "John Lennon", "instrument": "Voce, chitarra, pianoforte, organo", "plays": "Tutte le tracce tranne Within You Without You; solo voce in She's Leaving Home" },
-    { "name": "Paul McCartney", "instrument": "Voce, basso, pianoforte, chitarra", "plays": "Tutte le tracce tranne Within You Without You; solo voce in She's Leaving Home" },
-    { "name": "George Harrison", "instrument": "Chitarra, sitar, tanpura, voce", "plays": "Tutte le tracce tranne She's Leaving Home" },
-    { "name": "Ringo Starr", "instrument": "Batteria, percussioni, voce solista", "plays": "Tutte le tracce tranne She's Leaving Home e Within You Without You" },
-    { "name": "George Martin", "instrument": "Produttore, tastiere, arrangiamenti", "plays": "Clavicembalo in Fixing a Hole, organo in Mr. Kite" },
-    { "name": "Geoff Emerick", "instrument": "Tecnico del suono", "plays": "Al banco di regia per tutto il disco" }
+    {
+      "name": "John Lennon",
+      "instrument": "Voce, chitarra, pianoforte, organo",
+      "plays": "Tutte le tracce tranne Within You Without You; solo voce in She's Leaving Home"
+    },
+    {
+      "name": "Paul McCartney",
+      "instrument": "Voce, basso, pianoforte, chitarra",
+      "plays": "Tutte le tracce tranne Within You Without You; solo voce in She's Leaving Home"
+    },
+    {
+      "name": "George Harrison",
+      "instrument": "Chitarra, sitar, tanpura, voce",
+      "plays": "Tutte le tracce tranne She's Leaving Home"
+    },
+    {
+      "name": "Ringo Starr",
+      "instrument": "Batteria, percussioni, voce solista",
+      "plays": "Tutte le tracce tranne She's Leaving Home e Within You Without You"
+    },
+    {
+      "name": "George Martin",
+      "instrument": "Produttore, tastiere, arrangiamenti",
+      "plays": "Clavicembalo in Fixing a Hole, organo in Mr. Kite"
+    },
+    {
+      "name": "Geoff Emerick",
+      "instrument": "Tecnico del suono",
+      "plays": "Al banco di regia per tutto il disco"
+    }
   ],
   "tracks": [
-    { "side": "A", "title": "Sgt. Pepper's Lonely Hearts Club Band", "time": "2:02", "recorded": "", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "Un'idea di Paul McCartney: i Beatles fingono di essere un'altra band, per sfuggire alla propria immagine. Si apre con un'orchestra che accorda gli strumenti e un pubblico che prende posto." },
-    { "side": "A", "title": "With a Little Help from My Friends", "time": "2:44", "recorded": "", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "Scritta per Ringo, presentato come il cantante 'Billy Shears'. Il rumore del pubblico del brano d'apertura ci entra direttamente, così le due canzoni suonano come una sola." },
-    { "side": "A", "title": "Lucy in the Sky with Diamonds", "time": "3:28", "recorded": "", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "Il titolo nasce da un disegno di Julian, il figlio di quattro anni di John, che ritraeva una compagna di classe di nome Lucy. Lennon ha sempre negato che fosse un riferimento in codice all'LSD." },
-    { "side": "A", "title": "Getting Better", "time": "2:47", "recorded": "", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "Era l'espressione preferita di Jimmie Nicol, il batterista che sostituì Ringo per parte del tour del 1964. All'ottimismo di Paul risponde il brontolio di John: 'peggio di così non può andare'." },
-    { "side": "A", "title": "Fixing a Hole", "time": "2:36", "recorded": "9 feb 1967", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "Registrata in parte ai Regent Sound, nel centro di Londra, perché Abbey Road era occupato. Al clavicembalo c'è George Martin." },
-    { "side": "A", "title": "She's Leaving Home", "time": "3:35", "recorded": "", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "Ispirata a un articolo di giornale su una ragazza scappata di casa. Nessun Beatle suona: archi e arpa sono arrangiati da Mike Leander." },
-    { "side": "A", "title": "Being for the Benefit of Mr. Kite!", "time": "2:37", "recorded": "", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "John riprese il testo quasi parola per parola da un manifesto di circo del 1843 comprato in un negozio di antiquariato. Per l'effetto da giostra, i nastri di un organo a vapore furono tagliati a strisce, mescolati e rimontati." },
-    { "side": "B", "title": "Within You Without You", "time": "5:05", "recorded": "", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "La canzone di George Harrison, suonata con musicisti indiani dell'Asian Music Circle di Londra. È l'unico Beatle presente. Si chiude con uno scoppio di risate." },
-    { "side": "B", "title": "When I'm Sixty-Four", "time": "2:37", "recorded": "6 dic 1966", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "Paul scrisse la melodia da ragazzo. Il nastro fu leggermente accelerato per far sembrare la sua voce più giovane, e tre clarinetti le danno un'aria da music hall." },
-    { "side": "B", "title": "Lovely Rita", "time": "2:42", "recorded": "", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "Una canzone d'amore per una vigilessa. Fate caso alla band che suona pettini avvolti nella carta, e ai respiri affannosi verso la fine." },
-    { "side": "B", "title": "Good Morning Good Morning", "time": "2:41", "recorded": "", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "Lennon partì da una pubblicità televisiva di cornflakes. I versi degli animali alla fine sono in un ordine in cui ognuno potrebbe inseguire o mangiare il precedente, e l'ultimo verso della gallina diventa la chitarra del brano successivo." },
-    { "side": "B", "title": "Sgt. Pepper's Lonely Hearts Club Band (Reprise)", "time": "1:18", "recorded": "1 apr 1967", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "Fu il road manager Neil Aspinall a suggerire di far tornare la band finta per chiudere lo spettacolo. Più veloce e grezza del brano d'apertura." },
-    { "side": "B", "title": "A Day in the Life", "time": "5:39", "recorded": "gen–feb 1967", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "Le strofe di John vengono da notizie di giornale; la parte centrale di Paul è un'altra canzone, su una mattina di corsa. Due salite orchestrali portano a un unico accordo di mi maggiore, suonato su più pianoforti insieme e lasciato risuonare per circa quaranta secondi." }
+    {
+      "side": "A",
+      "title": "Sgt. Pepper's Lonely Hearts Club Band",
+      "time": "2:02",
+      "recorded": "",
+      "note": "Un'idea di Paul McCartney: i Beatles fingono di essere un'altra band, per sfuggire alla propria immagine. Si apre con un'orchestra che accorda gli strumenti e un pubblico che prende posto.",
+      "instrumental": false,
+      "lyricsUrl": "",
+      "ytStart": ""
+    },
+    {
+      "side": "A",
+      "title": "With a Little Help from My Friends",
+      "time": "2:44",
+      "recorded": "",
+      "note": "Scritta per Ringo, presentato come il cantante 'Billy Shears'. Il rumore del pubblico del brano d'apertura ci entra direttamente, così le due canzoni suonano come una sola.",
+      "instrumental": false,
+      "lyricsUrl": "",
+      "ytStart": ""
+    },
+    {
+      "side": "A",
+      "title": "Lucy in the Sky with Diamonds",
+      "time": "3:28",
+      "recorded": "",
+      "note": "Il titolo nasce da un disegno di Julian, il figlio di quattro anni di John, che ritraeva una compagna di classe di nome Lucy. Lennon ha sempre negato che fosse un riferimento in codice all'LSD.",
+      "instrumental": false,
+      "lyricsUrl": "",
+      "ytStart": ""
+    },
+    {
+      "side": "A",
+      "title": "Getting Better",
+      "time": "2:47",
+      "recorded": "",
+      "note": "Era l'espressione preferita di Jimmie Nicol, il batterista che sostituì Ringo per parte del tour del 1964. All'ottimismo di Paul risponde il brontolio di John: 'peggio di così non può andare'.",
+      "instrumental": false,
+      "lyricsUrl": "",
+      "ytStart": ""
+    },
+    {
+      "side": "A",
+      "title": "Fixing a Hole",
+      "time": "2:36",
+      "recorded": "9 feb 1967",
+      "note": "Registrata in parte ai Regent Sound, nel centro di Londra, perché Abbey Road era occupato. Al clavicembalo c'è George Martin.",
+      "instrumental": false,
+      "lyricsUrl": "",
+      "ytStart": ""
+    },
+    {
+      "side": "A",
+      "title": "She's Leaving Home",
+      "time": "3:35",
+      "recorded": "",
+      "note": "Ispirata a un articolo di giornale su una ragazza scappata di casa. Nessun Beatle suona: archi e arpa sono arrangiati da Mike Leander.",
+      "instrumental": false,
+      "lyricsUrl": "",
+      "ytStart": ""
+    },
+    {
+      "side": "A",
+      "title": "Being for the Benefit of Mr. Kite!",
+      "time": "2:37",
+      "recorded": "",
+      "note": "John riprese il testo quasi parola per parola da un manifesto di circo del 1843 comprato in un negozio di antiquariato. Per l'effetto da giostra, i nastri di un organo a vapore furono tagliati a strisce, mescolati e rimontati.",
+      "instrumental": false,
+      "lyricsUrl": "",
+      "ytStart": ""
+    },
+    {
+      "side": "B",
+      "title": "Within You Without You",
+      "time": "5:05",
+      "recorded": "",
+      "note": "La canzone di George Harrison, suonata con musicisti indiani dell'Asian Music Circle di Londra. È l'unico Beatle presente. Si chiude con uno scoppio di risate.",
+      "instrumental": false,
+      "lyricsUrl": "",
+      "ytStart": ""
+    },
+    {
+      "side": "B",
+      "title": "When I'm Sixty-Four",
+      "time": "2:37",
+      "recorded": "6 dic 1966",
+      "note": "Paul scrisse la melodia da ragazzo. Il nastro fu leggermente accelerato per far sembrare la sua voce più giovane, e tre clarinetti le danno un'aria da music hall.",
+      "instrumental": false,
+      "lyricsUrl": "",
+      "ytStart": ""
+    },
+    {
+      "side": "B",
+      "title": "Lovely Rita",
+      "time": "2:42",
+      "recorded": "",
+      "note": "Una canzone d'amore per una vigilessa. Fate caso alla band che suona pettini avvolti nella carta, e ai respiri affannosi verso la fine.",
+      "instrumental": false,
+      "lyricsUrl": "",
+      "ytStart": ""
+    },
+    {
+      "side": "B",
+      "title": "Good Morning Good Morning",
+      "time": "2:41",
+      "recorded": "",
+      "note": "Lennon partì da una pubblicità televisiva di cornflakes. I versi degli animali alla fine sono in un ordine in cui ognuno potrebbe inseguire o mangiare il precedente, e l'ultimo verso della gallina diventa la chitarra del brano successivo.",
+      "instrumental": false,
+      "lyricsUrl": "",
+      "ytStart": ""
+    },
+    {
+      "side": "B",
+      "title": "Sgt. Pepper's Lonely Hearts Club Band (Reprise)",
+      "time": "1:18",
+      "recorded": "1 apr 1967",
+      "note": "Fu il road manager Neil Aspinall a suggerire di far tornare la band finta per chiudere lo spettacolo. Più veloce e grezza del brano d'apertura.",
+      "instrumental": false,
+      "lyricsUrl": "",
+      "ytStart": ""
+    },
+    {
+      "side": "B",
+      "title": "A Day in the Life",
+      "time": "5:39",
+      "recorded": "gen–feb 1967",
+      "note": "Le strofe di John vengono da notizie di giornale; la parte centrale di Paul è un'altra canzone, su una mattina di corsa. Due salite orchestrali portano a un unico accordo di mi maggiore, suonato su più pianoforti insieme e lasciato risuonare per circa quaranta secondi.",
+      "instrumental": false,
+      "lyricsUrl": "",
+      "ytStart": ""
+    }
   ],
   "worldHeadline": "Nel frattempo…",
   "world": [
-    { "when": "5 giugno", "what": "Inizia la Guerra dei sei giorni tra Israele e i paesi vicini Egitto, Giordania e Siria." },
-    { "when": "16 giugno", "what": "Si apre il Monterey Pop Festival in California, l'inizio della 'Summer of Love'. Jimi Hendrix dà fuoco alla sua chitarra." },
-    { "when": "25 giugno", "what": "Our World, la prima trasmissione mondiale in diretta via satellite, raggiunge centinaia di milioni di spettatori. Per il Regno Unito ci sono i Beatles con All You Need Is Love." },
-    { "when": "3 dicembre", "what": "Il chirurgo Christiaan Barnard esegue il primo trapianto di cuore umano a Città del Capo." }
+    {
+      "when": "5 giugno",
+      "what": "Inizia la Guerra dei sei giorni tra Israele e i paesi vicini Egitto, Giordania e Siria."
+    },
+    {
+      "when": "16 giugno",
+      "what": "Si apre il Monterey Pop Festival in California, l'inizio della 'Summer of Love'. Jimi Hendrix dà fuoco alla sua chitarra."
+    },
+    {
+      "when": "25 giugno",
+      "what": "Our World, la prima trasmissione mondiale in diretta via satellite, raggiunge centinaia di milioni di spettatori. Per il Regno Unito ci sono i Beatles con All You Need Is Love."
+    },
+    {
+      "when": "3 dicembre",
+      "what": "Il chirurgo Christiaan Barnard esegue il primo trapianto di cuore umano a Città del Capo."
+    }
   ],
   "alsoThisYear": [
-    { "title": "The Velvet Underground & Nico", "artist": "The Velvet Underground" },
-    { "title": "Are You Experienced", "artist": "The Jimi Hendrix Experience" },
-    { "title": "The Piper at the Gates of Dawn", "artist": "Pink Floyd" },
-    { "title": "The Doors", "artist": "The Doors" }
+    {
+      "title": "The Velvet Underground & Nico",
+      "artist": "The Velvet Underground"
+    },
+    {
+      "title": "Are You Experienced",
+      "artist": "The Jimi Hendrix Experience"
+    },
+    {
+      "title": "The Piper at the Gates of Dawn",
+      "artist": "Pink Floyd"
+    },
+    {
+      "title": "The Doors",
+      "artist": "The Doors"
+    }
   ],
   "release": [
-    { "label": "Uscita", "value": "26 maggio 1967 (Regno Unito) · 2 giugno 1967 (USA)" },
-    { "label": "Etichetta", "value": "Parlophone (Regno Unito) · Capitol (USA)" },
-    { "label": "Produttore", "value": "George Martin" },
-    { "label": "Tecnico del suono", "value": "Geoff Emerick" },
-    { "label": "Studi", "value": "EMI Studios (Abbey Road) · Regent Sound, Londra" },
-    { "label": "Copertina", "value": "Peter Blake e Jann Haworth · fotografia di Michael Cooper" },
-    { "label": "Singoli", "value": "Nessuno estratto dall'album nel Regno Unito o negli USA all'epoca" },
-    { "label": "Classifiche", "value": "N. 1 nel Regno Unito per 27 settimane · N. 1 negli USA per 15 settimane" },
-    { "label": "Premi", "value": "Quattro Grammy (1968), tra cui Album dell'anno: il primo album rock a vincerlo" }
+    {
+      "label": "Uscita",
+      "value": "26 maggio 1967 (Regno Unito) · 2 giugno 1967 (USA)"
+    },
+    {
+      "label": "Etichetta",
+      "value": "Parlophone (Regno Unito) · Capitol (USA)"
+    },
+    {
+      "label": "Produttore",
+      "value": "George Martin"
+    },
+    {
+      "label": "Tecnico del suono",
+      "value": "Geoff Emerick"
+    },
+    {
+      "label": "Studi",
+      "value": "EMI Studios (Abbey Road) · Regent Sound, Londra"
+    },
+    {
+      "label": "Copertina",
+      "value": "Peter Blake e Jann Haworth · fotografia di Michael Cooper"
+    },
+    {
+      "label": "Singoli",
+      "value": "Nessuno estratto dall'album nel Regno Unito o negli USA all'epoca"
+    },
+    {
+      "label": "Classifiche",
+      "value": "N. 1 nel Regno Unito per 27 settimane · N. 1 negli USA per 15 settimane"
+    },
+    {
+      "label": "Premi",
+      "value": "Quattro Grammy (1968), tra cui Album dell'anno: il primo album rock a vincerlo"
+    }
   ],
   "trivia": [
     "È stato uno dei primi album rock a stampare tutti i testi sulla copertina.",
@@ -83,48 +295,133 @@
   "quiz": [
     {
       "question": "Quale Beatle canta nei panni del fittizio 'Billy Shears'?",
-      "options": ["John Lennon", "Paul McCartney", "George Harrison", "Ringo Starr"],
+      "options": [
+        "John Lennon",
+        "Paul McCartney",
+        "George Harrison",
+        "Ringo Starr"
+      ],
       "answer": 4,
       "explanation": "Ringo, presentato come Billy Shears alla fine del brano d'apertura prima di cantare With a Little Help from My Friends."
     },
     {
       "question": "Dove trovò John Lennon le parole di Being for the Benefit of Mr. Kite!?",
-      "options": ["Il titolo di un giornale", "Un manifesto di circo vittoriano", "Un libro per bambini", "Una pubblicità in TV"],
+      "options": [
+        "Il titolo di un giornale",
+        "Un manifesto di circo vittoriano",
+        "Un libro per bambini",
+        "Una pubblicità in TV"
+      ],
       "answer": 2,
       "explanation": "Un manifesto del 1843 per uno spettacolo circense, comprato in un negozio di antiquariato e appeso nella sua stanza della musica."
     },
     {
       "question": "Qual è stata la prima canzone registrata per l'album?",
-      "options": ["A Day in the Life", "Sgt. Pepper's Lonely Hearts Club Band", "When I'm Sixty-Four", "Lucy in the Sky with Diamonds"],
+      "options": [
+        "A Day in the Life",
+        "Sgt. Pepper's Lonely Hearts Club Band",
+        "When I'm Sixty-Four",
+        "Lucy in the Sky with Diamonds"
+      ],
       "answer": 3,
       "explanation": "When I'm Sixty-Four, nel dicembre 1966. Strawberry Fields Forever e Penny Lane vennero prima, ma finirono su un singolo."
     },
     {
       "question": "Quale Beatle è l'unico a suonare in Within You Without You?",
-      "options": ["John Lennon", "Paul McCartney", "George Harrison", "Ringo Starr"],
+      "options": [
+        "John Lennon",
+        "Paul McCartney",
+        "George Harrison",
+        "Ringo Starr"
+      ],
       "answer": 3,
       "explanation": "George Harrison, autore del brano, che lo registrò con musicisti indiani dell'Asian Music Circle di Londra."
     }
   ],
+  "cardQuote": "",
+  "shareCards": [],
   "shopIntro": "Scelti per questo album.",
   "shop": [
     {
       "title": "Il disco",
       "subtitle": "L'album, nel formato che preferisci.",
       "items": [
-        { "kind": "Vinile LP", "name": "Sgt. Pepper's Lonely Hearts Club Band (mix stereo 2017)", "note": "Il mix di Giles Martin per il cinquantenario, ricavato dai nastri originali a quattro piste.", "price": "", "retailer": "", "url": "", "image": "", "affiliate": true },
-        { "kind": "Vinile LP", "name": "Sgt. Pepper's Lonely Hearts Club Band (mono)", "note": "La versione mono che la band seguì davvero nel 1967, con piccole differenze di suono e velocità.", "price": "", "retailer": "", "url": "", "image": "", "affiliate": true },
-        { "kind": "CD", "name": "Sgt. Pepper's Lonely Hearts Club Band", "note": "", "price": "", "retailer": "", "url": "", "image": "", "affiliate": true },
-        { "kind": "Cofanetto", "name": "Sgt. Pepper's Lonely Hearts Club Band Super Deluxe Edition", "note": "Il cofanetto del 2017 con le prove in studio, il mix mono, un documentario e un libro rilegato.", "price": "", "retailer": "", "url": "", "image": "", "affiliate": true }
+        {
+          "kind": "Vinile LP",
+          "name": "Sgt. Pepper's Lonely Hearts Club Band (mix stereo 2017)",
+          "note": "Il mix di Giles Martin per il cinquantenario, ricavato dai nastri originali a quattro piste.",
+          "price": "",
+          "retailer": "",
+          "url": "",
+          "image": "",
+          "affiliate": true
+        },
+        {
+          "kind": "Vinile LP",
+          "name": "Sgt. Pepper's Lonely Hearts Club Band (mono)",
+          "note": "La versione mono che la band seguì davvero nel 1967, con piccole differenze di suono e velocità.",
+          "price": "",
+          "retailer": "",
+          "url": "",
+          "image": "",
+          "affiliate": true
+        },
+        {
+          "kind": "CD",
+          "name": "Sgt. Pepper's Lonely Hearts Club Band",
+          "note": "",
+          "price": "",
+          "retailer": "",
+          "url": "",
+          "image": "",
+          "affiliate": true
+        },
+        {
+          "kind": "Cofanetto",
+          "name": "Sgt. Pepper's Lonely Hearts Club Band Super Deluxe Edition",
+          "note": "Il cofanetto del 2017 con le prove in studio, il mix mono, un documentario e un libro rilegato.",
+          "price": "",
+          "retailer": "",
+          "url": "",
+          "image": "",
+          "affiliate": true
+        }
       ]
     },
     {
       "title": "Per approfondire",
       "subtitle": "Per quando l'ultimo accordo si spegne.",
       "items": [
-        { "kind": "Libro", "name": "Here, There and Everywhere", "note": "Le memorie di Geoff Emerick, tecnico del suono dei Beatles, comprese le sessioni di Sgt. Pepper.", "price": "", "retailer": "", "url": "", "image": "", "affiliate": true },
-        { "kind": "Libro", "name": "Revolution in the Head", "note": "La guida di Ian MacDonald a ogni registrazione dei Beatles, canzone per canzone.", "price": "", "retailer": "", "url": "", "image": "", "affiliate": true },
-        { "kind": "Libro", "name": "Summer of Love: The Making of Sgt. Pepper", "note": "Il racconto di George Martin su come ha prodotto l'album.", "price": "", "retailer": "", "url": "", "image": "", "affiliate": true }
+        {
+          "kind": "Libro",
+          "name": "Here, There and Everywhere",
+          "note": "Le memorie di Geoff Emerick, tecnico del suono dei Beatles, comprese le sessioni di Sgt. Pepper.",
+          "price": "",
+          "retailer": "",
+          "url": "",
+          "image": "",
+          "affiliate": true
+        },
+        {
+          "kind": "Libro",
+          "name": "Revolution in the Head",
+          "note": "La guida di Ian MacDonald a ogni registrazione dei Beatles, canzone per canzone.",
+          "price": "",
+          "retailer": "",
+          "url": "",
+          "image": "",
+          "affiliate": true
+        },
+        {
+          "kind": "Libro",
+          "name": "Summer of Love: The Making of Sgt. Pepper",
+          "note": "Il racconto di George Martin su come ha prodotto l'album.",
+          "price": "",
+          "retailer": "",
+          "url": "",
+          "image": "",
+          "affiliate": true
+        }
       ]
     }
   ]

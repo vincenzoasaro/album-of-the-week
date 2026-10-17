@@ -9,7 +9,7 @@
   "publishDate": "2026-10-26T00:00:00+01:00",
   "accent": "#E3B23C",
   "tagline": "The Beatles stop touring, invent a fake band to hide behind, and spend five months turning a recording studio into an instrument. Thirteen songs, one Victorian circus, and the most famous final chord in pop.",
-  "cover": "",
+  "cover": "/images/Sgt._Pepper's_Lonely_Hearts_Club_Band_album_art.jpg",
   "introAudio": "",
   "introLength": "",
   "spotifyAlbumId": "6QaVfG1pHYl1z15ZxkvVDW",
@@ -20,59 +20,271 @@
   "sessionsHeadline": "No more stages.\nJust the studio.",
   "sessionsText": "After their last paid concert, in San Francisco in August 1966, the Beatles gave up touring. That freed them to write songs they could never play live. With producer George Martin and a 20-year-old engineer, Geoff Emerick, they spent the winter at EMI's studios on Abbey Road, bouncing four-track tapes together, varying tape speeds and cutting sound effects into the music.",
   "sessions": [
-    { "date": "Nov 66", "label": "EMI Studios, Abbey Road", "tracks": "Strawberry Fields Forever opens the sessions, then goes out as a single with Penny Lane instead" },
-    { "date": "Dec 66", "label": "Studio 2, Abbey Road", "tracks": "When I'm Sixty-Four, the first song recorded for the album" },
-    { "date": "Feb 67", "label": "Regent Sound, Tottenham Court Road", "tracks": "Fixing a Hole, the band's first session outside EMI" },
-    { "date": "10 Feb 67", "label": "Studio 1, Abbey Road", "tracks": "A 40-piece orchestra plays the rising crescendo of A Day in the Life" },
-    { "date": "Apr 67", "label": "Studio 2, Abbey Road", "tracks": "The reprise, final mixes and the strange sounds hidden in the run-out groove" }
+    {
+      "date": "Nov 66",
+      "label": "EMI Studios, Abbey Road",
+      "tracks": "Strawberry Fields Forever opens the sessions, then goes out as a single with Penny Lane instead"
+    },
+    {
+      "date": "Dec 66",
+      "label": "Studio 2, Abbey Road",
+      "tracks": "When I'm Sixty-Four, the first song recorded for the album"
+    },
+    {
+      "date": "Feb 67",
+      "label": "Regent Sound, Tottenham Court Road",
+      "tracks": "Fixing a Hole, the band's first session outside EMI"
+    },
+    {
+      "date": "10 Feb 67",
+      "label": "Studio 1, Abbey Road",
+      "tracks": "A 40-piece orchestra plays the rising crescendo of A Day in the Life"
+    },
+    {
+      "date": "Apr 67",
+      "label": "Studio 2, Abbey Road",
+      "tracks": "The reprise, final mixes and the strange sounds hidden in the run-out groove"
+    }
   ],
   "lineupHeadline": "Four Beatles.\nOne imaginary band.",
   "musicians": [
-    { "name": "John Lennon", "instrument": "Vocals, guitar, piano, organ", "plays": "All tracks except Within You Without You; vocals only on She's Leaving Home" },
-    { "name": "Paul McCartney", "instrument": "Vocals, bass, piano, guitar", "plays": "All tracks except Within You Without You; vocals only on She's Leaving Home" },
-    { "name": "George Harrison", "instrument": "Guitar, sitar, tambura, vocals", "plays": "All tracks except She's Leaving Home" },
-    { "name": "Ringo Starr", "instrument": "Drums, percussion, lead vocal", "plays": "All tracks except She's Leaving Home and Within You Without You" },
-    { "name": "George Martin", "instrument": "Producer, keyboards, arrangements", "plays": "Harpsichord on Fixing a Hole, organ on Mr. Kite" },
-    { "name": "Geoff Emerick", "instrument": "Engineer", "plays": "Behind the desk throughout" }
+    {
+      "name": "John Lennon",
+      "instrument": "Vocals, guitar, piano, organ",
+      "plays": "All tracks except Within You Without You; vocals only on She's Leaving Home"
+    },
+    {
+      "name": "Paul McCartney",
+      "instrument": "Vocals, bass, piano, guitar",
+      "plays": "All tracks except Within You Without You; vocals only on She's Leaving Home"
+    },
+    {
+      "name": "George Harrison",
+      "instrument": "Guitar, sitar, tambura, vocals",
+      "plays": "All tracks except She's Leaving Home"
+    },
+    {
+      "name": "Ringo Starr",
+      "instrument": "Drums, percussion, lead vocal",
+      "plays": "All tracks except She's Leaving Home and Within You Without You"
+    },
+    {
+      "name": "George Martin",
+      "instrument": "Producer, keyboards, arrangements",
+      "plays": "Harpsichord on Fixing a Hole, organ on Mr. Kite"
+    },
+    {
+      "name": "Geoff Emerick",
+      "instrument": "Engineer",
+      "plays": "Behind the desk throughout"
+    }
   ],
   "tracks": [
-    { "side": "A", "title": "Sgt. Pepper's Lonely Hearts Club Band", "time": "2:02", "recorded": "", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "Paul McCartney's idea: the Beatles pretend to be a different band, so they can escape their own image. It opens with an orchestra tuning up and an audience settling in." },
-    { "side": "A", "title": "With a Little Help from My Friends", "time": "2:44", "recorded": "", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "Written for Ringo, introduced as the singer 'Billy Shears'. The crowd noise from the opening song runs straight into it, so the two play as one." },
-    { "side": "A", "title": "Lucy in the Sky with Diamonds", "time": "3:28", "recorded": "", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "The title came from a drawing by John's four-year-old son Julian of his classmate Lucy. Lennon always denied it was a coded reference to LSD." },
-    { "side": "A", "title": "Getting Better", "time": "2:47", "recorded": "", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "The phrase was a favourite of Jimmie Nicol, the drummer who stood in for Ringo on part of the 1964 tour. Paul's optimism is answered by John's grumpy 'it can't get no worse'." },
-    { "side": "A", "title": "Fixing a Hole", "time": "2:36", "recorded": "9 Feb 1967", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "Recorded partly at Regent Sound in central London, because Abbey Road was booked. George Martin plays the harpsichord." },
-    { "side": "A", "title": "She's Leaving Home", "time": "3:35", "recorded": "", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "Inspired by a newspaper story about a teenage girl who ran away from home. No Beatle plays an instrument: the strings and harp were arranged by Mike Leander." },
-    { "side": "A", "title": "Being for the Benefit of Mr. Kite!", "time": "2:37", "recorded": "", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "John took the words almost directly from an 1843 circus poster he bought in an antique shop. For the fairground swirl, tapes of steam organ were cut into strips, shuffled and spliced back together." },
-    { "side": "B", "title": "Within You Without You", "time": "5:05", "recorded": "", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "George Harrison's song, played with Indian musicians from London's Asian Music Circle. He is the only Beatle on it. It ends with a burst of laughter." },
-    { "side": "B", "title": "When I'm Sixty-Four", "time": "2:37", "recorded": "6 Dec 1966", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "Paul wrote the tune as a teenager. The tape was sped up slightly to make his voice sound younger, and three clarinets give it a music-hall feel." },
-    { "side": "B", "title": "Lovely Rita", "time": "2:42", "recorded": "", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "A love song to a traffic warden. Listen for the band blowing through combs wrapped in paper, and the heavy breathing near the end." },
-    { "side": "B", "title": "Good Morning Good Morning", "time": "2:41", "recorded": "", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "Lennon's starting point was a cornflakes TV advert. The animal sounds at the end are ordered so each one could chase or eat the one before, and the last chicken cluck turns into the guitar of the next track." },
-    { "side": "B", "title": "Sgt. Pepper's Lonely Hearts Club Band (Reprise)", "time": "1:18", "recorded": "1 Apr 1967", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "Road manager Neil Aspinall suggested bringing the fake band back to close the show. Faster and rougher than the opener." },
-    { "side": "B", "title": "A Day in the Life", "time": "5:39", "recorded": "Jan–Feb 1967", "instrumental": false, "lyricsUrl": "", "ytStart": "", "note": "John's verses come from newspaper stories; Paul's middle section is a separate song about a morning rush. Two orchestral climbs lead to one E major chord, struck on several pianos at once and left to ring for about forty seconds." }
+    {
+      "side": "A",
+      "title": "Sgt. Pepper's Lonely Hearts Club Band",
+      "time": "2:02",
+      "recorded": "",
+      "note": "Paul McCartney's idea: the Beatles pretend to be a different band, so they can escape their own image. It opens with an orchestra tuning up and an audience settling in.",
+      "instrumental": false,
+      "lyricsUrl": "",
+      "ytStart": ""
+    },
+    {
+      "side": "A",
+      "title": "With a Little Help from My Friends",
+      "time": "2:44",
+      "recorded": "",
+      "note": "Written for Ringo, introduced as the singer 'Billy Shears'. The crowd noise from the opening song runs straight into it, so the two play as one.",
+      "instrumental": false,
+      "lyricsUrl": "",
+      "ytStart": ""
+    },
+    {
+      "side": "A",
+      "title": "Lucy in the Sky with Diamonds",
+      "time": "3:28",
+      "recorded": "",
+      "note": "The title came from a drawing by John's four-year-old son Julian of his classmate Lucy. Lennon always denied it was a coded reference to LSD.",
+      "instrumental": false,
+      "lyricsUrl": "",
+      "ytStart": ""
+    },
+    {
+      "side": "A",
+      "title": "Getting Better",
+      "time": "2:47",
+      "recorded": "",
+      "note": "The phrase was a favourite of Jimmie Nicol, the drummer who stood in for Ringo on part of the 1964 tour. Paul's optimism is answered by John's grumpy 'it can't get no worse'.",
+      "instrumental": false,
+      "lyricsUrl": "",
+      "ytStart": ""
+    },
+    {
+      "side": "A",
+      "title": "Fixing a Hole",
+      "time": "2:36",
+      "recorded": "9 Feb 1967",
+      "note": "Recorded partly at Regent Sound in central London, because Abbey Road was booked. George Martin plays the harpsichord.",
+      "instrumental": false,
+      "lyricsUrl": "",
+      "ytStart": ""
+    },
+    {
+      "side": "A",
+      "title": "She's Leaving Home",
+      "time": "3:35",
+      "recorded": "",
+      "note": "Inspired by a newspaper story about a teenage girl who ran away from home. No Beatle plays an instrument: the strings and harp were arranged by Mike Leander.",
+      "instrumental": false,
+      "lyricsUrl": "",
+      "ytStart": ""
+    },
+    {
+      "side": "A",
+      "title": "Being for the Benefit of Mr. Kite!",
+      "time": "2:37",
+      "recorded": "",
+      "note": "John took the words almost directly from an 1843 circus poster he bought in an antique shop. For the fairground swirl, tapes of steam organ were cut into strips, shuffled and spliced back together.",
+      "instrumental": false,
+      "lyricsUrl": "",
+      "ytStart": ""
+    },
+    {
+      "side": "B",
+      "title": "Within You Without You",
+      "time": "5:05",
+      "recorded": "",
+      "note": "George Harrison's song, played with Indian musicians from London's Asian Music Circle. He is the only Beatle on it. It ends with a burst of laughter.",
+      "instrumental": false,
+      "lyricsUrl": "",
+      "ytStart": ""
+    },
+    {
+      "side": "B",
+      "title": "When I'm Sixty-Four",
+      "time": "2:37",
+      "recorded": "6 Dec 1966",
+      "note": "Paul wrote the tune as a teenager. The tape was sped up slightly to make his voice sound younger, and three clarinets give it a music-hall feel.",
+      "instrumental": false,
+      "lyricsUrl": "",
+      "ytStart": ""
+    },
+    {
+      "side": "B",
+      "title": "Lovely Rita",
+      "time": "2:42",
+      "recorded": "",
+      "note": "A love song to a traffic warden. Listen for the band blowing through combs wrapped in paper, and the heavy breathing near the end.",
+      "instrumental": false,
+      "lyricsUrl": "",
+      "ytStart": ""
+    },
+    {
+      "side": "B",
+      "title": "Good Morning Good Morning",
+      "time": "2:41",
+      "recorded": "",
+      "note": "Lennon's starting point was a cornflakes TV advert. The animal sounds at the end are ordered so each one could chase or eat the one before, and the last chicken cluck turns into the guitar of the next track.",
+      "instrumental": false,
+      "lyricsUrl": "",
+      "ytStart": ""
+    },
+    {
+      "side": "B",
+      "title": "Sgt. Pepper's Lonely Hearts Club Band (Reprise)",
+      "time": "1:18",
+      "recorded": "1 Apr 1967",
+      "note": "Road manager Neil Aspinall suggested bringing the fake band back to close the show. Faster and rougher than the opener.",
+      "instrumental": false,
+      "lyricsUrl": "",
+      "ytStart": ""
+    },
+    {
+      "side": "B",
+      "title": "A Day in the Life",
+      "time": "5:39",
+      "recorded": "Jan–Feb 1967",
+      "note": "John's verses come from newspaper stories; Paul's middle section is a separate song about a morning rush. Two orchestral climbs lead to one E major chord, struck on several pianos at once and left to ring for about forty seconds.",
+      "instrumental": false,
+      "lyricsUrl": "",
+      "ytStart": ""
+    }
   ],
   "worldHeadline": "Meanwhile…",
   "world": [
-    { "when": "5 June", "what": "The Six-Day War begins between Israel and its neighbours Egypt, Jordan and Syria." },
-    { "when": "16 June", "what": "The Monterey Pop Festival opens in California, launching the 'Summer of Love'. Jimi Hendrix sets his guitar on fire." },
-    { "when": "25 June", "what": "Our World, the first live global satellite broadcast, reaches hundreds of millions of viewers. Britain's contribution is the Beatles performing All You Need Is Love." },
-    { "when": "3 December", "what": "Surgeon Christiaan Barnard performs the first human heart transplant in Cape Town." }
+    {
+      "when": "5 June",
+      "what": "The Six-Day War begins between Israel and its neighbours Egypt, Jordan and Syria."
+    },
+    {
+      "when": "16 June",
+      "what": "The Monterey Pop Festival opens in California, launching the 'Summer of Love'. Jimi Hendrix sets his guitar on fire."
+    },
+    {
+      "when": "25 June",
+      "what": "Our World, the first live global satellite broadcast, reaches hundreds of millions of viewers. Britain's contribution is the Beatles performing All You Need Is Love."
+    },
+    {
+      "when": "3 December",
+      "what": "Surgeon Christiaan Barnard performs the first human heart transplant in Cape Town."
+    }
   ],
   "alsoThisYear": [
-    { "title": "The Velvet Underground & Nico", "artist": "The Velvet Underground" },
-    { "title": "Are You Experienced", "artist": "The Jimi Hendrix Experience" },
-    { "title": "The Piper at the Gates of Dawn", "artist": "Pink Floyd" },
-    { "title": "The Doors", "artist": "The Doors" }
+    {
+      "title": "The Velvet Underground & Nico",
+      "artist": "The Velvet Underground"
+    },
+    {
+      "title": "Are You Experienced",
+      "artist": "The Jimi Hendrix Experience"
+    },
+    {
+      "title": "The Piper at the Gates of Dawn",
+      "artist": "Pink Floyd"
+    },
+    {
+      "title": "The Doors",
+      "artist": "The Doors"
+    }
   ],
   "release": [
-    { "label": "Released", "value": "26 May 1967 (UK) · 2 June 1967 (US)" },
-    { "label": "Label", "value": "Parlophone (UK) · Capitol (US)" },
-    { "label": "Producer", "value": "George Martin" },
-    { "label": "Engineer", "value": "Geoff Emerick" },
-    { "label": "Studios", "value": "EMI Studios (Abbey Road) · Regent Sound, London" },
-    { "label": "Artwork", "value": "Peter Blake and Jann Haworth · photograph by Michael Cooper" },
-    { "label": "Singles", "value": "None released from the album in the UK or US at the time" },
-    { "label": "Charts", "value": "No. 1 in the UK for 27 weeks · No. 1 in the US for 15 weeks" },
-    { "label": "Awards", "value": "Four Grammys (1968), including Album of the Year: the first rock album to win it" }
+    {
+      "label": "Released",
+      "value": "26 May 1967 (UK) · 2 June 1967 (US)"
+    },
+    {
+      "label": "Label",
+      "value": "Parlophone (UK) · Capitol (US)"
+    },
+    {
+      "label": "Producer",
+      "value": "George Martin"
+    },
+    {
+      "label": "Engineer",
+      "value": "Geoff Emerick"
+    },
+    {
+      "label": "Studios",
+      "value": "EMI Studios (Abbey Road) · Regent Sound, London"
+    },
+    {
+      "label": "Artwork",
+      "value": "Peter Blake and Jann Haworth · photograph by Michael Cooper"
+    },
+    {
+      "label": "Singles",
+      "value": "None released from the album in the UK or US at the time"
+    },
+    {
+      "label": "Charts",
+      "value": "No. 1 in the UK for 27 weeks · No. 1 in the US for 15 weeks"
+    },
+    {
+      "label": "Awards",
+      "value": "Four Grammys (1968), including Album of the Year: the first rock album to win it"
+    }
   ],
   "trivia": [
     "It was one of the first rock albums to print the full lyrics on the sleeve.",
@@ -83,48 +295,133 @@
   "quiz": [
     {
       "question": "Which Beatle sings as the fictional 'Billy Shears'?",
-      "options": ["John Lennon", "Paul McCartney", "George Harrison", "Ringo Starr"],
+      "options": [
+        "John Lennon",
+        "Paul McCartney",
+        "George Harrison",
+        "Ringo Starr"
+      ],
       "answer": 4,
       "explanation": "Ringo, who is introduced as Billy Shears at the end of the title track before singing With a Little Help from My Friends."
     },
     {
       "question": "Where did John Lennon find the words for Being for the Benefit of Mr. Kite!?",
-      "options": ["A newspaper headline", "A Victorian circus poster", "A children's book", "A TV advert"],
+      "options": [
+        "A newspaper headline",
+        "A Victorian circus poster",
+        "A children's book",
+        "A TV advert"
+      ],
       "answer": 2,
       "explanation": "An 1843 poster for a circus show, which he bought in an antique shop and hung in his music room."
     },
     {
       "question": "Which song was the first recorded for the album?",
-      "options": ["A Day in the Life", "Sgt. Pepper's Lonely Hearts Club Band", "When I'm Sixty-Four", "Lucy in the Sky with Diamonds"],
+      "options": [
+        "A Day in the Life",
+        "Sgt. Pepper's Lonely Hearts Club Band",
+        "When I'm Sixty-Four",
+        "Lucy in the Sky with Diamonds"
+      ],
       "answer": 3,
       "explanation": "When I'm Sixty-Four, in December 1966. Strawberry Fields Forever and Penny Lane came earlier but ended up on a single."
     },
     {
       "question": "Which Beatle is the only one who plays on Within You Without You?",
-      "options": ["John Lennon", "Paul McCartney", "George Harrison", "Ringo Starr"],
+      "options": [
+        "John Lennon",
+        "Paul McCartney",
+        "George Harrison",
+        "Ringo Starr"
+      ],
       "answer": 3,
       "explanation": "George Harrison, the song's writer, recorded with Indian musicians from London's Asian Music Circle."
     }
   ],
+  "cardQuote": "",
+  "shareCards": [],
   "shopIntro": "Picked for this album.",
   "shop": [
     {
       "title": "Own the record",
       "subtitle": "The album itself, in the format you play.",
       "items": [
-        { "kind": "Vinyl LP", "name": "Sgt. Pepper's Lonely Hearts Club Band (2017 stereo mix)", "note": "Giles Martin's 50th-anniversary mix, made from the original four-track tapes.", "price": "", "retailer": "", "url": "", "image": "", "affiliate": true },
-        { "kind": "Vinyl LP", "name": "Sgt. Pepper's Lonely Hearts Club Band (mono)", "note": "The mono version the band actually supervised in 1967, with small differences in sound and speed.", "price": "", "retailer": "", "url": "", "image": "", "affiliate": true },
-        { "kind": "CD", "name": "Sgt. Pepper's Lonely Hearts Club Band", "note": "", "price": "", "retailer": "", "url": "", "image": "", "affiliate": true },
-        { "kind": "Box set", "name": "Sgt. Pepper's Lonely Hearts Club Band Super Deluxe Edition", "note": "The 2017 box with session outtakes, the mono mix, a documentary and a hardback book.", "price": "", "retailer": "", "url": "", "image": "", "affiliate": true }
+        {
+          "kind": "Vinyl LP",
+          "name": "Sgt. Pepper's Lonely Hearts Club Band (2017 stereo mix)",
+          "note": "Giles Martin's 50th-anniversary mix, made from the original four-track tapes.",
+          "price": "",
+          "retailer": "",
+          "url": "",
+          "image": "",
+          "affiliate": true
+        },
+        {
+          "kind": "Vinyl LP",
+          "name": "Sgt. Pepper's Lonely Hearts Club Band (mono)",
+          "note": "The mono version the band actually supervised in 1967, with small differences in sound and speed.",
+          "price": "",
+          "retailer": "",
+          "url": "",
+          "image": "",
+          "affiliate": true
+        },
+        {
+          "kind": "CD",
+          "name": "Sgt. Pepper's Lonely Hearts Club Band",
+          "note": "",
+          "price": "",
+          "retailer": "",
+          "url": "",
+          "image": "",
+          "affiliate": true
+        },
+        {
+          "kind": "Box set",
+          "name": "Sgt. Pepper's Lonely Hearts Club Band Super Deluxe Edition",
+          "note": "The 2017 box with session outtakes, the mono mix, a documentary and a hardback book.",
+          "price": "",
+          "retailer": "",
+          "url": "",
+          "image": "",
+          "affiliate": true
+        }
       ]
     },
     {
       "title": "Go deeper",
       "subtitle": "For after the last chord fades.",
       "items": [
-        { "kind": "Book", "name": "Here, There and Everywhere", "note": "Geoff Emerick's memoir of engineering the Beatles, including the Sgt. Pepper sessions.", "price": "", "retailer": "", "url": "", "image": "", "affiliate": true },
-        { "kind": "Book", "name": "Revolution in the Head", "note": "Ian MacDonald's song-by-song guide to every Beatles recording.", "price": "", "retailer": "", "url": "", "image": "", "affiliate": true },
-        { "kind": "Book", "name": "Summer of Love: The Making of Sgt. Pepper", "note": "George Martin's own account of producing the album.", "price": "", "retailer": "", "url": "", "image": "", "affiliate": true }
+        {
+          "kind": "Book",
+          "name": "Here, There and Everywhere",
+          "note": "Geoff Emerick's memoir of engineering the Beatles, including the Sgt. Pepper sessions.",
+          "price": "",
+          "retailer": "",
+          "url": "",
+          "image": "",
+          "affiliate": true
+        },
+        {
+          "kind": "Book",
+          "name": "Revolution in the Head",
+          "note": "Ian MacDonald's song-by-song guide to every Beatles recording.",
+          "price": "",
+          "retailer": "",
+          "url": "",
+          "image": "",
+          "affiliate": true
+        },
+        {
+          "kind": "Book",
+          "name": "Summer of Love: The Making of Sgt. Pepper",
+          "note": "George Martin's own account of producing the album.",
+          "price": "",
+          "retailer": "",
+          "url": "",
+          "image": "",
+          "affiliate": true
+        }
       ]
     }
   ]

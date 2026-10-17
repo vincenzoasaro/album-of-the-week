@@ -352,7 +352,16 @@
     }
   ],
   "cardQuote": "",
-  "shareCards": [],
+  "shareCards": [
+    {
+      "label": "Pet Sounds Card",
+      "image": "/images/pet-sounds-card-en.png"
+    },
+    {
+      "label": "Pet Sounds 60s",
+      "image": "/images/pet-sounds-psychedelic-en.png"
+    }
+  ],
   "shopIntro": "Picked for this album.",
   "shop": [
     {

@@ -7,7 +7,7 @@
   "genre": "Alternative rock",
   "length": "53:21",
   "publishDate": "2026-10-19T00:00:00+02:00",
-  "accent": "#A9C7D9",
+  "accent": "#c8473a",
   "tagline": "Twelve songs about cars, computers, politicians and the low hum of modern anxiety, recorded in a rehearsal shed and an old manor house near Bath. The record where Radiohead stopped being 'the band that did Creep'.",
   "cover": "/images/Ok_Computer_Radiohead.png",
   "introAudio": "",
@@ -327,19 +327,19 @@
           "name": "OK Computer",
           "note": "The original twelve tracks across four sides.",
           "price": "",
-          "retailer": "",
-          "url": "",
-          "image": "",
+          "retailer": "Amazon",
+          "url": "https://link.amazon/B02b22zNT",
+          "image": "/images/Ok_Computer_Double_Vinyl.jpg",
           "affiliate": true
         },
         {
-          "kind": "Triple vinyl LP",
-          "name": "OK Computer OKNOTOK 1997 2017",
-          "note": "The remastered album plus B-sides and three unreleased songs from the era.",
+          "kind": "Double vinyl Classic LP",
+          "name": "OK Computer",
+          "note": "",
           "price": "",
-          "retailer": "",
-          "url": "",
-          "image": "",
+          "retailer": "Amazon",
+          "url": "https://link.amazon/B02bjahbH",
+          "image": "/images/Ok_Computer.jpg",
           "affiliate": true
         },
         {
@@ -347,9 +347,9 @@
           "name": "OK Computer",
           "note": "",
           "price": "",
-          "retailer": "",
-          "url": "",
-          "image": "",
+          "retailer": "Amazon",
+          "url": "https://link.amazon/B0e3QMOe2",
+          "image": "/images/Ok_Computer.jpg",
           "affiliate": true
         }
       ]
@@ -363,9 +363,9 @@
           "name": "Radiohead's OK Computer (33⅓ series)",
           "note": "Dai Griffiths' short, track-by-track study of the album.",
           "price": "",
-          "retailer": "",
-          "url": "",
-          "image": "",
+          "retailer": "Amazon",
+          "url": "https://link.amazon/B0hTnItN8",
+          "image": "/images/Ok_Computer_Dai_Griffiths_Book.jpg",
           "affiliate": true
         },
         {
@@ -373,9 +373,9 @@
           "name": "Dead Children Playing",
           "note": "Stanley Donwood and Thom Yorke's collection of the artwork behind Radiohead's records.",
           "price": "",
-          "retailer": "",
-          "url": "",
-          "image": "",
+          "retailer": "Amazon",
+          "url": "https://link.amazon/B03SeXhZN",
+          "image": "/images/Dead_Children_Book.jpg",
           "affiliate": true
         },
         {
@@ -383,10 +383,10 @@
           "name": "Meeting People Is Easy",
           "note": "Grant Gee's documentary following the band through the exhausting OK Computer tour.",
           "price": "",
-          "retailer": "",
-          "url": "",
+          "retailer": "Amazon Prime Video",
+          "url": "https://www.primevideo.com/detail/0NPXH4JHZ0L8GRVMW55UMKM7AC",
           "image": "",
-          "affiliate": true
+          "affiliate": false
         }
       ]
     }

@@ -7,7 +7,7 @@
   "genre": "Rock alternativo",
   "length": "53:21",
   "publishDate": "2026-10-19T00:00:00+02:00",
-  "accent": "#A9C7D9",
+  "accent": "#c8473a",
   "tagline": "Dodici canzoni su automobili, computer, politici e il ronzio sordo dell'ansia moderna, registrate in una sala prove e in un'antica villa vicino a Bath. Il disco con cui i Radiohead hanno smesso di essere 'quelli di Creep'.",
   "cover": "/images/Ok_Computer_Radiohead.png",
   "introAudio": "",
@@ -329,7 +329,7 @@
           "price": "",
           "retailer": "",
           "url": "",
-          "image": "",
+          "image": "/images/Ok_Computer_Double_Vinyl.jpg",
           "affiliate": true
         },
         {
@@ -339,7 +339,7 @@
           "price": "",
           "retailer": "",
           "url": "",
-          "image": "",
+          "image": "/images/Ok_Computer.jpg",
           "affiliate": true
         },
         {
@@ -349,7 +349,7 @@
           "price": "",
           "retailer": "",
           "url": "",
-          "image": "",
+          "image": "/images/Ok_Computer.jpg",
           "affiliate": true
         }
       ]
@@ -365,7 +365,7 @@
           "price": "",
           "retailer": "",
           "url": "",
-          "image": "",
+          "image": "/images/Ok_Computer_Dai_Griffiths_Book.jpg",
           "affiliate": true
         },
         {
@@ -375,7 +375,7 @@
           "price": "",
           "retailer": "",
           "url": "",
-          "image": "",
+          "image": "/images/Dead_Children_Book.jpg",
           "affiliate": true
         },
         {
@@ -386,7 +386,7 @@
           "retailer": "",
           "url": "",
           "image": "",
-          "affiliate": true
+          "affiliate": false
         }
       ]
     }

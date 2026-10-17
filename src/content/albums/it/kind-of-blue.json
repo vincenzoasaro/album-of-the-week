@@ -225,7 +225,16 @@
     }
   ],
   "cardQuote": "",
-  "shareCards": [],
+  "shareCards": [
+    {
+      "label": "Il contrabbasso chiede",
+      "image": "/images/so-what-card-it.png"
+    },
+    {
+      "label": "So What cubista",
+      "image": "/images/so-what-cubist-it.png"
+    }
+  ],
   "shopIntro": "Scelti per questo album.",
   "shop": [
     {

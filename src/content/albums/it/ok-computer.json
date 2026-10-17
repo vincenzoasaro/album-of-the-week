@@ -315,7 +315,16 @@
     }
   ],
   "cardQuote": "",
-  "shareCards": [],
+  "shareCards": [
+    {
+      "label": "OK Computer Airbnb card",
+      "image": "/images/ok_computer_airbag-card-it.png"
+    },
+    {
+      "label": "OK Computer pop card",
+      "image": "/images/ok_computer_airbag-pop-it.png"
+    }
+  ],
   "shopIntro": "Scelti per questo album.",
   "shop": [
     {

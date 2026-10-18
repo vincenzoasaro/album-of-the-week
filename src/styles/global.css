@@ -317,3 +317,69 @@ html.listening-open .player-slot.is-loaded.is-active[data-slot='spotify'] { aspe
   .share-dots { display: flex; }
   .share-hint { display: block; }
 }
+
+/* ---------- Share cards strip ("Take it with you", under the quiz) ---------- */
+.share-strip { padding-top: 96px; display: flex; flex-direction: column; gap: 28px; }
+.strip-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 20px 32px; }
+.strip-copy { display: flex; flex-direction: column; gap: 14px; max-width: 34em; }
+.strip-lede { margin: 0; color: var(--paper-soft); font-size: 19px; }
+.strip-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; }
+.strip-arrows { display: flex; gap: 8px; }
+.strip-arrow {
+  width: 48px; height: 48px; border-radius: 50%; border: 1px solid var(--line-strong); background: transparent;
+  display: grid; place-items: center; cursor: pointer; transition: border-color 0.2s, opacity 0.2s;
+}
+.strip-arrow:hover:not(:disabled) { border-color: var(--accent); color: var(--accent); }
+.strip-arrow:disabled { opacity: 0.35; cursor: default; }
+.strip-track {
+  display: flex; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; overscroll-behavior-x: contain;
+  padding-block: 4px 10px; scrollbar-width: none;
+}
+.strip-track::-webkit-scrollbar { display: none; }
+.strip-track .share-slide { flex: 0 0 clamp(220px, 23%, 270px); scroll-snap-align: start; }
+.strip-track .share-thumb { border-radius: 14px; box-shadow: 0 24px 48px -28px var(--accent); }
+.strip-dots { display: none; }
+@media (max-width: 640px) {
+  .share-strip { padding-top: 72px; gap: 22px; }
+  .strip-arrows { display: none; }
+  /* Full-bleed row: the next card peeks in from the edge, which says "swipe". */
+  .strip-track { margin-inline: calc(-1 * var(--gutter)); padding-inline: 11%; scroll-padding-inline: 11%; gap: 14px; }
+  .strip-track .share-slide { flex-basis: 78%; scroll-snap-align: center; transition: transform 0.35s ease, opacity 0.35s ease; }
+  .strip-track .share-slide:not(.is-on) { transform: scale(0.93); opacity: 0.55; }
+  .strip-dots { display: flex; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .strip-track .share-slide { transition: none; }
+  .strip-track .share-slide:not(.is-on) { transform: none; }
+}
+
+/* ---------- Welcome popup (once per visitor, home page) ---------- */
+html.welcome-open { overflow: hidden; }
+.welcome { position: fixed; inset: 0; z-index: 80; background: rgb(7 9 12 / 0.78); display: grid; place-items: center; padding: 24px var(--gutter); overflow-y: auto; }
+.welcome-panel {
+  position: relative; overflow: hidden; width: 100%; max-width: 560px; background: var(--panel); border: 1px solid var(--accent);
+  border-radius: var(--radius-l); padding: clamp(28px, 5vw, 48px); padding-right: clamp(28px, 18vw, 150px);
+  display: flex; flex-direction: column; gap: 18px; animation: welcome-in 0.45s cubic-bezier(.2,.8,.2,1);
+}
+.welcome-panel h2 { margin: 0; font-family: var(--display); font-weight: 800; font-size: clamp(32px, 4.4vw, 46px); line-height: 0.98; letter-spacing: -0.03em; }
+.welcome-panel p { margin: 0; color: var(--paper-soft); font-size: 18px; }
+.welcome-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 22px; margin-top: 6px; }
+.welcome-link { font-family: var(--mono); font-size: 14px; color: var(--paper); }
+.welcome-x { position: absolute; top: 14px; right: 14px; z-index: 2; width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--line-strong); background: var(--panel); cursor: pointer; }
+.welcome-x:hover { border-color: var(--paper); }
+/* A record sliding out of the right edge, turning at 33⅓. */
+.welcome-disc {
+  position: absolute; right: -110px; top: 50%; width: 220px; aspect-ratio: 1; margin-top: -110px; border-radius: 50%;
+  background: repeating-radial-gradient(circle at center, #0a0a0b 0 2px, #17181a 3px, #0a0a0b 4px);
+  display: grid; place-items: center; animation: spin var(--rpm) linear infinite;
+}
+.welcome-disc::after { content: ''; width: 34%; aspect-ratio: 1; border-radius: 50%; background: var(--accent); }
+@keyframes welcome-in { from { opacity: 0; transform: translateY(18px); } }
+@media (max-width: 640px) {
+  .welcome { place-items: end stretch; padding: 0; }
+  .welcome-panel { max-width: none; border-radius: var(--radius-l) var(--radius-l) 0 0; border-width: 1px 0 0; padding: 32px var(--gutter) 36px; padding-top: 120px; }
+  .welcome-disc { right: auto; left: var(--gutter); top: -96px; margin-top: 0; width: 190px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .welcome-panel, .welcome-disc { animation: none; }
+}

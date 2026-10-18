@@ -254,12 +254,15 @@ function drawLiner(ctx: CanvasRenderingContext2D, d: CardData, score: string | n
   }
 
   if (score) {
+    // The pill grows with the text, so longer labels (e.g. Italian) still fit.
+    const label = `${d.labels.score} ${score}`;
+    ctx.font = `600 40px ${DISPLAY}`;
+    const w = Math.min(W - 2 * M, ctx.measureText(label).width + 80);
     ctx.fillStyle = d.accent;
-    roundRect(ctx, M, H - 330, 420, 110, 55);
+    roundRect(ctx, M, H - 330, w, 110, 55);
     ctx.fill();
     ctx.fillStyle = d.onAccent;
-    ctx.font = `600 40px ${DISPLAY}`;
-    ctx.fillText(`${d.labels.score} ${score}`, M + 40, H - 262);
+    ctx.fillText(label, M + 40, H - 262);
   }
   footer(ctx, d, '#5B6470');
 }

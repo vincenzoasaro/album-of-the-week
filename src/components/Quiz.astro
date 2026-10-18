@@ -1,6 +1,7 @@
 ---
 import { useTranslations } from '../i18n/ui';
 import type { Album } from '../lib/albums';
+import ShareStrip from './ShareStrip.astro';
 interface Props { album: Album }
 const { album } = Astro.props;
 const t = useTranslations(album.lang);
@@ -38,3 +39,6 @@ const total = album.quiz.length;
   </div>
 </section>
 )}
+
+<!-- The swipeable share cards sit right after the quiz, where the score is earned. -->
+<ShareStrip album={album} />

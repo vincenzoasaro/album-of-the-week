@@ -1,5 +1,7 @@
 import { controllable, player, type PlayerConfig, type Source } from './player';
-import { canShareFiles, customCard, download, drawCard, share, type CardData, type CardStyle } from './share-card';
+import type { CardData, CardStyle } from './share-card';
+import { createCardRow, quizScore, type ShareSetup } from './share-ui';
+import { initWelcome } from './welcome';
 
 interface TrackInfo { side: string; title: string; time: string; note: string }
 interface PageData {
@@ -148,7 +150,15 @@ function init(data: PageData) {
   initQuiz();
   initArchiveFilters();
 
-  initShare(data);
+  const setup: ShareSetup = { card: data.card, cardStyles: data.cardStyles, labels: shareLabels() };
+  initShare(setup);
+  initShareStrip(setup);
+  initWelcome();
+}
+
+function shareLabels() {
+  const d = $<HTMLElement>('[data-share-labels]')?.dataset;
+  return { share: d?.share || 'Share', download: d?.download || 'Download' };
 }
 
 /* ---------- Quiz: one question at a time, score at the end ---------- */
@@ -187,6 +197,8 @@ function initQuiz() {
         $('[data-score]', result!)!.textContent = `${score}/${questions.length}`;
         result!.hidden = false;
         try { sessionStorage.setItem(`quiz:${root.dataset.quiz}`, `${score}/${questions.length}`); } catch { /* storage unavailable */ }
+        // Lets the cards section below add the new score straight away.
+        document.dispatchEvent(new CustomEvent('quiz:scored', { detail: `${score}/${questions.length}` }));
       }
     });
   });
@@ -228,92 +240,15 @@ function initArchiveFilters() {
 }
 
 /* ---------- Share dialog: swipe through the cards, share or download any of them ---------- */
-function initShare(data: PageData) {
+function initShare(setup: ShareSetup) {
   const dialog = $('[data-share-dialog]');
   const track = dialog && $('[data-share-options]', dialog);
   if (!dialog || !track) return;
-  const dots = $('[data-share-dots]', dialog)!;
   const scoreRow = $('[data-share-score]', dialog)!;
   const scoreBox = $<HTMLInputElement>('[data-share-include-score]', dialog)!;
-  const labels = $<HTMLElement>('[data-share-labels]', dialog)!.dataset;
-  const canShare = canShareFiles();
-
-  type Option = { key: string; label: string; make: () => Promise<Blob> };
   let score: string | null = null;
   let opener: HTMLElement | null = null;
-  const cache = new Map<string, Promise<Blob>>();
-  const currentScore = () => (score && scoreBox.checked ? score : null);
-
-  const options: Option[] = [
-    ...data.cardStyles.map((st) => ({ key: st.id, label: st.label, make: () => drawCard(st.id, data.card, currentScore()) })),
-    ...data.card.customCards.map((c, i) => ({ key: `custom-${i}`, label: c.label, make: () => customCard(c.url) })),
-  ];
-  const blobFor = (o: Option) => {
-    const key = o.key.startsWith('custom') ? o.key : `${o.key}|${currentScore() ?? ''}`;
-    if (!cache.has(key)) cache.set(key, o.make());
-    return cache.get(key)!;
-  };
-  const fileName = (o: Option, blob: Blob) => {
-    const ext = blob.type === 'image/jpeg' ? 'jpg' : blob.type === 'image/webp' ? 'webp' : 'png';
-    return `${data.card.slug}-${o.key}.${ext}`;
-  };
-
-  // One slide per card: preview, name, then its own Share / Download buttons.
-  for (const o of options) {
-    const slide = document.createElement('div');
-    slide.className = 'share-slide';
-    slide.setAttribute('role', 'listitem');
-    slide.dataset.key = o.key;
-    slide.innerHTML = '<div class="share-thumb"></div><p class="share-slide-name"></p><div class="share-slide-actions"></div>';
-    $('.share-slide-name', slide)!.textContent = o.label;
-    const actions = $('.share-slide-actions', slide)!;
-
-    const makeButton = (text: string, primary: boolean, run: (blob: Blob, name: string) => Promise<void> | void) => {
-      const b = document.createElement('button');
-      b.type = 'button';
-      b.className = primary ? 'btn btn--primary' : 'btn';
-      b.textContent = text;
-      b.setAttribute('aria-label', `${text}: ${o.label}`);
-      b.addEventListener('click', async () => {
-        b.disabled = true;
-        try { const blob = await blobFor(o); await run(blob, fileName(o, blob)); }
-        finally { b.disabled = false; }
-      });
-      actions.appendChild(b);
-    };
-    if (canShare) makeButton(labels.share!, true, (blob, name) => share(blob, name, `${data.card.title} · ${data.card.artist}`));
-    makeButton(labels.download!, !canShare, (blob, name) => download(blob, name));
-    track.appendChild(slide);
-    dots.appendChild(document.createElement('span'));
-  }
-
-  // Dots under the carousel follow the card in view (shown on phones).
-  const dotEls = $$('span', dots);
-  const slides = $$('.share-slide', track);
-  const observer = new IntersectionObserver((entries) => {
-    for (const e of entries) {
-      if (e.isIntersecting) {
-        const i = slides.indexOf(e.target as HTMLElement);
-        dotEls.forEach((d, n) => d.classList.toggle('is-on', n === i));
-      }
-    }
-  }, { root: track, threshold: 0.6 });
-  slides.forEach((sl) => observer.observe(sl));
-
-  const renderThumbs = async () => {
-    for (const o of options) {
-      const thumb = $(`.share-slide[data-key="${o.key}"] .share-thumb`, track)!;
-      try {
-        const blob = await blobFor(o);
-        const img = document.createElement('img');
-        img.alt = o.label;
-        img.src = URL.createObjectURL(blob);
-        thumb.replaceChildren(img);
-      } catch {
-        thumb.textContent = '–';
-      }
-    }
-  };
+  const row = createCardRow(setup, track, $('[data-share-dots]', dialog), () => (score && scoreBox.checked ? score : null));
 
   const close = () => {
     dialog.hidden = true;
@@ -324,17 +259,57 @@ function initShare(data: PageData) {
   for (const btn of $$('[data-action="share-card"]')) {
     btn.addEventListener('click', () => {
       opener = btn;
-      try { score = sessionStorage.getItem(`quiz:${data.card.slug}`); } catch { score = null; }
+      score = quizScore(setup.card.slug);
       scoreRow.hidden = !score;
       dialog.hidden = false;
       document.documentElement.classList.add('share-open');
       track.scrollLeft = 0;
       $<HTMLElement>('.share-slide-actions .btn', track)?.focus();
-      renderThumbs();
+      row.render();
     });
   }
-  scoreBox.addEventListener('change', renderThumbs);
+  scoreBox.addEventListener('change', row.render);
   $('[data-action="close-share"]', dialog)?.addEventListener('click', close);
   dialog.addEventListener('click', (e) => { if (e.target === dialog) close(); });
   dialog.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+}
+
+/* ---------- "Take it with you": the same cards, always visible on the page ---------- */
+function initShareStrip(setup: ShareSetup) {
+  const root = $('[data-share-strip]');
+  const track = root && $('[data-strip-track]', root);
+  if (!root || !track) return;
+  const scoreRow = $('[data-strip-score]', root)!;
+  const scoreBox = $<HTMLInputElement>('[data-strip-include-score]', root)!;
+  let score = quizScore(setup.card.slug);
+  scoreRow.hidden = !score;
+  const row = createCardRow(setup, track, $('[data-strip-dots]', root), () => (score && scoreBox.checked ? score : null));
+
+  // Prev/next arrows for mouse users; phones simply swipe.
+  const prev = $<HTMLButtonElement>('[data-strip="prev"]', root);
+  const next = $<HTMLButtonElement>('[data-strip="next"]', root);
+  prev?.addEventListener('click', () => row.go(-1));
+  next?.addEventListener('click', () => row.go(1));
+  const syncArrows = () => {
+    const max = track.scrollWidth - track.clientWidth - 2;
+    if (prev) prev.disabled = track.scrollLeft <= 2;
+    if (next) next.disabled = track.scrollLeft >= max;
+  };
+  track.addEventListener('scroll', syncArrows, { passive: true });
+  addEventListener('resize', syncArrows);
+  syncArrows();
+
+  // Draw the cards only when the section is about to come into view, so the page loads light.
+  const lazy = new IntersectionObserver((entries) => {
+    if (entries.some((e) => e.isIntersecting)) { lazy.disconnect(); row.render().then(syncArrows); }
+  }, { rootMargin: '600px 0px' });
+  lazy.observe(root);
+
+  scoreBox.addEventListener('change', () => { if (row.drawn) row.render(); });
+  document.addEventListener('quiz:scored', (e) => {
+    score = (e as CustomEvent<string>).detail;
+    scoreRow.hidden = false;
+    scoreBox.checked = true;
+    if (row.drawn) row.render();
+  });
 }

@@ -212,3 +212,11 @@ collections:
           - { name: description_it, label: Description (Italian), widget: text }
           - { name: newsletterAction, label: Newsletter form URL, widget: string, required: false, hint: "From your newsletter provider. Leave empty to show 'coming soon'." }
           - { name: contactEmail, label: Contact email, widget: string, required: false }
+          - { name: welcomeEnabled, label: "Welcome popup: show it", widget: boolean, default: true, required: false, hint: "Shown once per visitor, on the home page only." }
+          - { name: welcomeVersion, label: "Welcome popup: version", widget: string, default: "1", required: false, hint: "Change this (e.g. 1 → 2) when you rewrite the message, so everyone sees it once more." }
+          - { name: welcomeTitle_en, label: "Welcome popup: title (English)", widget: string, required: false, hint: "Leave empty to use the default text." }
+          - { name: welcomeText_en, label: "Welcome popup: text (English)", widget: text, required: false }
+          - { name: welcomeButton_en, label: "Welcome popup: button (English)", widget: string, required: false }
+          - { name: welcomeTitle_it, label: "Welcome popup: title (Italian)", widget: string, required: false }
+          - { name: welcomeText_it, label: "Welcome popup: text (Italian)", widget: text, required: false }
+          - { name: welcomeButton_it, label: "Welcome popup: button (Italian)", widget: string, required: false }

@@ -1,0 +1,33 @@
+---
+import site from '../data/site.json';
+import { useTranslations, type Lang } from '../i18n/ui';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+// Everything below can be changed in the editor: Settings › Site settings › Welcome popup.
+// Empty fields fall back to the default text in src/i18n/ui.ts.
+const s = site as Record<string, unknown>;
+const pick = (field: string, key: Parameters<typeof t>[0]) => {
+  const v = s[`${field}_${lang}`];
+  return typeof v === 'string' && v.trim() ? v.trim() : t(key);
+};
+const enabled = s.welcomeEnabled !== false;
+const version = String(s.welcomeVersion ?? '1');
+const title = pick('welcomeTitle', 'welcome.title');
+const text = pick('welcomeText', 'welcome.text');
+const button = pick('welcomeButton', 'welcome.button');
+---
+{enabled && (
+  <div class="welcome" data-welcome data-version={version} hidden role="dialog" aria-modal="true" aria-labelledby="welcome-title">
+    <div class="welcome-panel">
+      <div class="welcome-disc" aria-hidden="true"></div>
+      <button class="welcome-x" type="button" data-welcome-close aria-label={t('share.close')}>✕</button>
+      <h2 id="welcome-title">{title}</h2>
+      <p>{text}</p>
+      <div class="welcome-actions">
+        <button class="btn btn--primary" type="button" data-welcome-go>{button}</button>
+        {site.newsletterAction && <a class="welcome-link" href="#newsletter" data-welcome-close>{t('welcome.newsletter')}</a>}
+      </div>
+    </div>
+  </div>
+)}

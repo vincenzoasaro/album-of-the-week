@@ -1,6 +1,7 @@
 ---
 import Turntable from './Turntable.astro';
 import Icon from './Icon.astro';
+import WelcomePopup from './WelcomePopup.astro';
 import { useTranslations } from '../i18n/ui';
 import { formatWeek, homeUrl, privacyUrl, shopUrl, url, type Album } from '../lib/albums';
 import { controllable, type Source } from '../scripts/player';
@@ -99,3 +100,6 @@ const firstControllable = sources.length > 0 && controllable(sources[0]);
     {!isCurrent && <a class="hero-back" href={homeUrl(lang)}>{t('hero.back')}</a>}
   </div>
 </section>
+
+<!-- One-time welcome popup: home page only (the current album). -->
+{isCurrent && <WelcomePopup lang={lang} />}

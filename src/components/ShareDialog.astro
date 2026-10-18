@@ -11,17 +11,15 @@ const t = useTranslations(album.lang);
       <h2 id="share-title">{t('share.title')}</h2>
       <button class="pill" type="button" data-action="close-share">{t('share.close')} ✕</button>
     </div>
-    <p class="mono muted" style="margin:0">{t('share.choose')}</p>
-    <div class="share-options" role="group" aria-label={t('share.choose')} data-share-options>
-      <!-- Filled in by the page script: one button per card style, plus any cards uploaded in the editor. -->
-    </div>
+    <p class="mono muted share-hint" style="margin:0">{t('share.swipe')}</p>
+    <!-- One slide per card (built-in styles plus any uploaded in the editor), each with its own buttons.
+         Filled in by the page script. Swipe sideways on phones. -->
+    <div class="share-track" data-share-options role="list"></div>
+    <div class="share-dots" data-share-dots aria-hidden="true"></div>
     <label class="share-score" data-share-score hidden>
       <input type="checkbox" checked data-share-include-score />
       <span>{t('share.includeScore')}</span>
     </label>
-    <div class="share-actions">
-      <button class="btn btn--primary" type="button" data-action="do-share" hidden>{t('share.share')}</button>
-      <button class="btn" type="button" data-action="do-download">{t('share.download')}</button>
-    </div>
+    <template data-share-labels data-share={t('share.share')} data-download={t('share.download')}></template>
   </div>
 </div>

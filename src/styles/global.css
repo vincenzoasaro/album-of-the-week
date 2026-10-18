@@ -289,16 +289,31 @@ html.listening-open .player-slot.is-loaded.is-active[data-slot='spotify'] { aspe
 
 /* ---------- Share dialog ---------- */
 .share-dialog { position: fixed; inset: 0; z-index: 70; background: rgb(7 9 12 / 0.86); overflow-y: auto; display: grid; place-items: center; padding: 24px var(--gutter); }
-.share-panel { width: 100%; max-width: 760px; background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius-l); padding: clamp(20px, 4vw, 40px); display: flex; flex-direction: column; gap: 20px; }
+.share-panel { width: 100%; max-width: 860px; background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius-l); padding: clamp(20px, 4vw, 40px); display: flex; flex-direction: column; gap: 18px; min-width: 0; }
 .share-top { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
 .share-top h2 { margin: 0; font-family: var(--display); font-weight: 800; font-size: clamp(28px, 4vw, 40px); letter-spacing: -0.02em; }
-.share-options { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 14px; }
-.share-option { display: flex; flex-direction: column; gap: 8px; padding: 8px; border-radius: 14px; border: 2px solid transparent; background: transparent; cursor: pointer; text-align: left; color: var(--paper); }
-.share-option[aria-pressed='true'] { border-color: var(--accent); }
-.share-thumb { aspect-ratio: 9 / 16; border-radius: 8px; overflow: hidden; background: var(--ink); display: grid; place-items: center; }
+/* Horizontal carousel: swipe on phones, scroll or drag sideways elsewhere. */
+.share-track {
+  display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; overscroll-behavior-x: contain;
+  padding-bottom: 6px; margin-inline: calc(-1 * clamp(20px, 4vw, 40px)); padding-inline: clamp(20px, 4vw, 40px);
+  scroll-padding-inline: clamp(20px, 4vw, 40px); scrollbar-width: thin;
+}
+.share-slide { flex: 0 0 clamp(200px, 30%, 240px); scroll-snap-align: start; display: flex; flex-direction: column; gap: 10px; }
+.share-thumb { aspect-ratio: 9 / 16; border-radius: 10px; overflow: hidden; background: var(--ink); display: grid; place-items: center; border: 1px solid var(--line); }
 .share-thumb img { width: 100%; height: 100%; object-fit: cover; }
-.share-option span { font-family: var(--mono); font-size: 13px; }
+.share-slide-name { margin: 0; font-family: var(--mono); font-size: 13px; color: var(--muted); }
+.share-slide-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.share-slide-actions .btn { min-height: 44px; padding: 0 16px; font-size: 15px; flex: 1 1 auto; justify-content: center; }
+.share-dots { display: none; justify-content: center; gap: 8px; }
+.share-dots span { width: 8px; height: 8px; border-radius: 50%; background: var(--line-strong); transition: background-color 0.2s; }
+.share-dots span.is-on { background: var(--accent); }
+.share-hint { display: none; }
 .share-score { display: flex; align-items: center; gap: 10px; font-family: var(--mono); font-size: 14px; cursor: pointer; min-height: 44px; }
 .share-score input { width: 20px; height: 20px; accent-color: var(--accent); }
-.share-actions { display: flex; flex-wrap: wrap; gap: 12px; }
-.hero-share { align-self: flex-start; }
+@media (max-width: 640px) {
+  .share-dialog { padding: 0; place-items: stretch; }
+  .share-panel { border-radius: 0; border: 0; min-height: 100%; }
+  .share-slide { flex-basis: 78%; scroll-snap-align: center; }
+  .share-dots { display: flex; }
+  .share-hint { display: block; }
+}

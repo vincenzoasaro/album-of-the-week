@@ -46,6 +46,7 @@ const firstControllable = sources.length > 0 && controllable(sources[0]);
       {hasShop && (
         <a class="btn" href={shopUrl(lang, album.slug)}><Icon name="bag" />{t('hero.shop')}</a>
       )}
+      <button class="btn" type="button" data-action="share-card"><Icon name="share" />{t('share.open')}</button>
     </div>
 
     {sources.length > 0 && (
@@ -81,8 +82,6 @@ const firstControllable = sources.length > 0 && controllable(sources[0]);
         )}
       </div>
     )}
-
-    <button class="btn hero-share" type="button" data-action="share-card"><Icon name="share" />{t('share.open')}</button>
 
     {album.introAudio && (
       <div class="intro-card">

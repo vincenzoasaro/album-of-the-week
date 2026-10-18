@@ -227,65 +227,86 @@ function initArchiveFilters() {
   }
 }
 
-/* ---------- Share dialog: pick a card, then share or download it ---------- */
+/* ---------- Share dialog: swipe through the cards, share or download any of them ---------- */
 function initShare(data: PageData) {
   const dialog = $('[data-share-dialog]');
-  const optionsEl = dialog && $('[data-share-options]', dialog);
-  if (!dialog || !optionsEl) return;
+  const track = dialog && $('[data-share-options]', dialog);
+  if (!dialog || !track) return;
+  const dots = $('[data-share-dots]', dialog)!;
   const scoreRow = $('[data-share-score]', dialog)!;
   const scoreBox = $<HTMLInputElement>('[data-share-include-score]', dialog)!;
-  const shareBtn = $<HTMLButtonElement>('[data-action="do-share"]', dialog)!;
-  const downloadBtn = $<HTMLButtonElement>('[data-action="do-download"]', dialog)!;
-  shareBtn.hidden = !canShareFiles();
+  const labels = $<HTMLElement>('[data-share-labels]', dialog)!.dataset;
+  const canShare = canShareFiles();
 
   type Option = { key: string; label: string; make: () => Promise<Blob> };
   let score: string | null = null;
-  let selected = 'vinyl';
   let opener: HTMLElement | null = null;
   const cache = new Map<string, Promise<Blob>>();
   const currentScore = () => (score && scoreBox.checked ? score : null);
 
   const options: Option[] = [
-    ...data.cardStyles.map((s) => ({
-      key: s.id,
-      label: s.label,
-      make: () => drawCard(s.id, data.card, currentScore()),
-    })),
-    ...data.card.customCards.map((c, i) => ({
-      key: `custom-${i}`,
-      label: c.label,
-      make: () => customCard(c.url),
-    })),
+    ...data.cardStyles.map((st) => ({ key: st.id, label: st.label, make: () => drawCard(st.id, data.card, currentScore()) })),
+    ...data.card.customCards.map((c, i) => ({ key: `custom-${i}`, label: c.label, make: () => customCard(c.url) })),
   ];
   const blobFor = (o: Option) => {
     const key = o.key.startsWith('custom') ? o.key : `${o.key}|${currentScore() ?? ''}`;
     if (!cache.has(key)) cache.set(key, o.make());
     return cache.get(key)!;
   };
+  const fileName = (o: Option, blob: Blob) => {
+    const ext = blob.type === 'image/jpeg' ? 'jpg' : blob.type === 'image/webp' ? 'webp' : 'png';
+    return `${data.card.slug}-${o.key}.${ext}`;
+  };
 
-  // One button per card, each with a small preview.
+  // One slide per card: preview, name, then its own Share / Download buttons.
   for (const o of options) {
-    const btn = document.createElement('button');
-    btn.type = 'button';
-    btn.className = 'share-option';
-    btn.dataset.key = o.key;
-    btn.setAttribute('aria-pressed', String(o.key === selected));
-    btn.innerHTML = '<div class="share-thumb"></div><span></span>';
-    btn.querySelector('span')!.textContent = o.label;
-    btn.addEventListener('click', () => {
-      selected = o.key;
-      for (const b of $$('.share-option', optionsEl)) b.setAttribute('aria-pressed', String(b.dataset.key === selected));
-    });
-    optionsEl.appendChild(btn);
+    const slide = document.createElement('div');
+    slide.className = 'share-slide';
+    slide.setAttribute('role', 'listitem');
+    slide.dataset.key = o.key;
+    slide.innerHTML = '<div class="share-thumb"></div><p class="share-slide-name"></p><div class="share-slide-actions"></div>';
+    $('.share-slide-name', slide)!.textContent = o.label;
+    const actions = $('.share-slide-actions', slide)!;
+
+    const makeButton = (text: string, primary: boolean, run: (blob: Blob, name: string) => Promise<void> | void) => {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.className = primary ? 'btn btn--primary' : 'btn';
+      b.textContent = text;
+      b.setAttribute('aria-label', `${text}: ${o.label}`);
+      b.addEventListener('click', async () => {
+        b.disabled = true;
+        try { const blob = await blobFor(o); await run(blob, fileName(o, blob)); }
+        finally { b.disabled = false; }
+      });
+      actions.appendChild(b);
+    };
+    if (canShare) makeButton(labels.share!, true, (blob, name) => share(blob, name, `${data.card.title} · ${data.card.artist}`));
+    makeButton(labels.download!, !canShare, (blob, name) => download(blob, name));
+    track.appendChild(slide);
+    dots.appendChild(document.createElement('span'));
   }
+
+  // Dots under the carousel follow the card in view (shown on phones).
+  const dotEls = $$('span', dots);
+  const slides = $$('.share-slide', track);
+  const observer = new IntersectionObserver((entries) => {
+    for (const e of entries) {
+      if (e.isIntersecting) {
+        const i = slides.indexOf(e.target as HTMLElement);
+        dotEls.forEach((d, n) => d.classList.toggle('is-on', n === i));
+      }
+    }
+  }, { root: track, threshold: 0.6 });
+  slides.forEach((sl) => observer.observe(sl));
 
   const renderThumbs = async () => {
     for (const o of options) {
-      const thumb = $(`.share-option[data-key="${o.key}"] .share-thumb`, optionsEl)!;
+      const thumb = $(`.share-slide[data-key="${o.key}"] .share-thumb`, track)!;
       try {
         const blob = await blobFor(o);
         const img = document.createElement('img');
-        img.alt = '';
+        img.alt = o.label;
         img.src = URL.createObjectURL(blob);
         thumb.replaceChildren(img);
       } catch {
@@ -307,7 +328,8 @@ function initShare(data: PageData) {
       scoreRow.hidden = !score;
       dialog.hidden = false;
       document.documentElement.classList.add('share-open');
-      $<HTMLElement>('.share-option[aria-pressed="true"]', optionsEl)?.focus();
+      track.scrollLeft = 0;
+      $<HTMLElement>('.share-slide-actions .btn', track)?.focus();
       renderThumbs();
     });
   }
@@ -315,21 +337,4 @@ function initShare(data: PageData) {
   $('[data-action="close-share"]', dialog)?.addEventListener('click', close);
   dialog.addEventListener('click', (e) => { if (e.target === dialog) close(); });
   dialog.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
-
-  const chosen = async () => {
-    const o = options.find((x) => x.key === selected) ?? options[0];
-    const blob = await blobFor(o);
-    const ext = blob.type === 'image/jpeg' ? 'jpg' : blob.type === 'image/webp' ? 'webp' : 'png';
-    return { blob, name: `${data.card.slug}-${o.key}.${ext}` };
-  };
-  shareBtn.addEventListener('click', async () => {
-    shareBtn.disabled = true;
-    try { const { blob, name } = await chosen(); await share(blob, name, `${data.card.title} · ${data.card.artist}`); }
-    finally { shareBtn.disabled = false; }
-  });
-  downloadBtn.addEventListener('click', async () => {
-    downloadBtn.disabled = true;
-    try { const { blob, name } = await chosen(); download(blob, name); }
-    finally { downloadBtn.disabled = false; }
-  });
 }

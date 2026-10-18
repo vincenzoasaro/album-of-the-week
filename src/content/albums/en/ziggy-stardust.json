@@ -312,7 +312,16 @@
     }
   ],
   "cardQuote": "",
-  "shareCards": [],
+  "shareCards": [
+    {
+      "label": "Ziggy Stardust Starman card",
+      "image": "/images/ziggy-stardust-starman-card-en.png"
+    },
+    {
+      "label": "Ziggy Stardust Moonage Daydream card",
+      "image": "/images/ziggy-stardust-moonage-daydream-card-en.png"
+    }
+  ],
   "shopIntro": "Picked for this album.",
   "shop": [
     {

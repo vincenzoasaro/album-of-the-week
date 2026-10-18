@@ -339,7 +339,16 @@
     }
   ],
   "cardQuote": "",
-  "shareCards": [],
+  "shareCards": [
+    {
+      "label": "Sgt, Pepper Card",
+      "image": "/images/sgt-pepper-card-it.png"
+    },
+    {
+      "label": "Sgt. Peppper Lucy Card",
+      "image": "/images/sgt-pepper-lucy-card-it.png"
+    }
+  ],
   "shopIntro": "Scelti per questo album.",
   "shop": [
     {
